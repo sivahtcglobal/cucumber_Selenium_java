@@ -1,0 +1,104 @@
+16:00:43.845 INFO  ePortal.TestNGDynamic -readMasterData -Start of Executing method name: excelwrite
+16:00:44.548 INFO  ePortal.TestNGDynamic -readMasterData -End of updating the test rail excel sheet with values of actual result and step status
+16:00:44.548 INFO  ePortal.TestNGDynamic -readMasterData -End of Executing method name: excelwrite
+16:00:44.549 INFO  ePortal.TestNGDynamic -main -METHOD(TestNGDynamic) EXECUTION STARTED SUCCESSFULLY
+16:00:45.153 INFO  utilities.Report -initialize -INTEND TO CREATE AN INSTANCE OF EXTENT REPORT WITH NAME AND APPEND STATUS
+16:00:45.154 INFO  utilities.Report -initializeHTML -INTEND TO INITIALIZE AN HTML REPORT
+16:00:45.154 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:00:45.155 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:00:45.155 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:00:45.155 INFO  utilities.Report -formatGiven -INTENDED TO CHECK IF THE FILE NAME HAS THE FILE EXTENSION
+16:00:45.155 INFO  utilities.Report -formatGiven -FILE FORMAT IS PROVIDED WITH THE FILE NAME(ePortal_PoC_Test_Execution_Report.html)
+16:00:45.155 INFO  utilities.Report -formatGiven -SUCCESSFULLY CHECKED IF THE FILE NAME HAS THE FILE EXTENSION
+16:00:45.156 INFO  utilities.Report -getFileFormat -INTENDED TO RETRIEVE THE FORMAT OF THE FILE
+16:00:45.156 INFO  utilities.Report -getFileFormat -SUCCESSFULLY GOT THE FILE FORMAT(.html) FROM THE FILE NAME(ePortal_PoC_Test_Execution_Report.html)
+
+16:00:45.156 INFO  utilities.Report -getFileFormat -SUCCESSFULLY RETRIEVED THE FORMAT OF THE FILE
+16:00:45.156 INFO  utilities.Report -fileFormatIs -INTENDED TO CHECK IF THE FILE BELONGS TO THE GIVEN FORMAT
+16:00:45.156 INFO  utilities.Report -fileFormatIs -EXPECTED AND ACTUAL FILE FORMATS ARE THE SAME
+16:00:45.156 INFO  utilities.Report -fileFormatIs -SUCCESSFULLY CHECKED IF THE FILE BELONGS TO THE GIVEN FORMAT
+16:00:45.157 INFO  utilities.Report -createInstanceOfHTMLReport -INTEND TO CREATE AN INSTANCE OF HTML REPORT WITH NAME
+16:00:45.230 INFO  utilities.Report -createInstanceOfHTMLReport -SUCCESSFULLY CREATED AN INSTANCE OF HTML REPORT WITH NAME(ePortal_PoC_Test_Execution_Report.html)
+16:00:45.230 INFO  utilities.Report -appendToExistingReport -INTED TO ADD THE CONTENTS TO EXTENT REPORT BASED ON THE APPEND STATUS
+16:00:45.231 INFO  utilities.Report -appendToExistingReport -CONTENTS ARE ADDED TO EXTENT REPORT BASED ON THE APPEND STATUS(false)
+16:00:45.231 INFO  utilities.Report -setHTMLReportName -INTEND TO SET A NAME FOR THE HTML REPORT 
+16:00:45.231 INFO  utilities.Report -setHTMLReportName -HTML REPORT NAME(Test Case Summary) WAS SET SUCCESSFULLY
+16:00:45.231 INFO  utilities.Report -setChartVisibility -INTEND TO SET A Chart Visibility FOR THE HTML REPORT 
+16:00:45.231 INFO  utilities.Report -setChartVisibility -HTML REPORT CHART VISIBILITY(false) WAS SET SUCCESSFULLY
+16:00:45.232 INFO  utilities.Report -setHTMLReportTheme -INTEND TO SET A THEME FOR THE HTML REPORT 
+16:00:45.232 INFO  utilities.Report -setHTMLReportTheme -HTML REPORT THEME WAS SET SUCCESSFULLY
+16:00:45.232 INFO  utilities.Report -initializeHTML -SUCCESSFULLY INITIALIZED AN HTML REPORT(ePortal_PoC_Test_Execution_Report.html)
+16:00:45.233 INFO  utilities.Report -createInstanceOfExtentReport -INTEND TO CREATE AN INSTANCE OF EXTENT REPORT
+16:00:45.241 INFO  utilities.Report -createInstanceOfExtentReport -SUCCESSFULLY CREATED AN INSTANCE OF EXTENT REPORT
+16:00:45.241 INFO  utilities.Report -attachHTMLReport -INTEND TO ATTACH HTML REPORT TO EXTENT REPORT
+16:00:45.352 INFO  utilities.Report -attachHTMLReport -SUCCESSFULLY ATTACHED HTML REPORT TO EXTENT REPORT
+16:00:45.352 INFO  utilities.Report -initialize -SUCCESSFULLY CREATED AN INSTANCE OF EXTENT REPORT WITH NAME(ePortal_PoC_Test_Execution_Report.html) AND APPEND STATUS(false)
+16:00:45.353 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+16:00:45.353 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Operating System : WINDOWS OS) IN EXTENT REPORT
+16:00:45.354 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+16:00:45.354 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Java : 1.8) IN EXTENT REPORT
+16:00:45.354 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+16:00:45.354 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Selenium Version : 3.4) IN EXTENT REPORT
+16:00:45.653 INFO  utilities.BaseClass -splitToMap -METHOD(splitToMap) EXECUTION STARTED SUCCESSFULLY
+16:00:45.680 INFO  utilities.BaseClass -splitToMap -METHOD(splitToMap) EXECUTED SUCCESSFULLY
+16:00:45.681 INFO  utilities.BaseClass -readSpecificTestData -End of updating the excel sheet with values of actual result and step status
+16:00:45.685 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION STARTED SUCCESSFULLY
+16:00:50.991 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION ENDED SUCCESSFULLY
+16:00:50.997 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+16:00:50.998 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:00:50.998 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:00:50.998 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:00:51.002 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(ePortal_PoC) IN EXTENT REPORT
+16:00:51.002 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+16:00:51.005 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(ePortal_PoC) TO A TEST CASE IN EXTENT REPORT
+16:00:51.005 INFO  pageObjects.LoginPage -login -METHOD(login) STARTED SUCCESSFULLY
+16:00:51.007 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+16:00:52.009 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+16:00:52.026 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:00:52.026 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:00:52.026 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:02:33.122 ERROR wrapperClasses.MyWait -until -UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+16:02:33.123 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+16:02:34.123 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+16:02:34.123 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:02:34.123 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:02:34.124 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:04:14.815 ERROR wrapperClasses.MyWait -until -UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+16:04:14.816 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+16:04:15.817 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+16:04:15.817 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:04:15.818 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:04:15.818 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:05:57.250 ERROR wrapperClasses.MyWait -until -UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+16:05:57.816 ERROR wrapperClasses.MyWebElement -enterText -UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+
+16:05:58.383 ERROR pageObjects.LoginPage -login -UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+
+
+16:05:59.548 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+16:05:59.549 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:05:59.549 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:05:59.549 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:05:59.550 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:05:59.550 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:05:59.550 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:05:59.550 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+16:05:59.551 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+16:05:59.551 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+16:05:59.551 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+16:05:59.552 INFO  utilities.Report -filePresent -FILE(C:\Automation\CucumberBaseFramework\Results\Screenshots_2019-04-29_16_00_45_151\1_Error_Logging_into_ePortal.png) IS PRESENT
+16:05:59.552 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+16:05:59.562 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(FAIL) WITH DESCRIPTION(<font color=red><b>Error while Logging into 'ePortal' application: </b></font><br />UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+
+<br />) AND SNAPSHOT(C:\Automation\CucumberBaseFramework\Results\Screenshots_2019-04-29_16_00_45_151\1_Error_Logging_into_ePortal.png) IN EXTENT REPORT
+16:05:59.571 INFO  utilities.Report -writeContents -INTEND TO WRITE ALL THE CONENTS INTO EXTENT REPORT
+16:05:59.978 INFO  utilities.Report -writeContents -SUCCESSFULY WROTE ALL THE CONENTS INTO EXTENT REPORT

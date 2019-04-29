@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="RegressionSuite" duration-ms="315192" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:36:00Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="runScenario" class="com.ePortal.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test" duration-ms="315192" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:36:00Z">
+      <class name="com.ePortal.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="setUpClass" is-config="true" duration-ms="498" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:30:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="runScenario" duration-ms="314002" started-at="2019-04-29T10:30:45Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-04-29T10:35:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login to ePortal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login to ePortal application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.ePortal.utilities.MyOwnException">
+            <message>
+              <![CDATA[Unable To login to the ePortalapplication 
+UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+
+
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication 
+UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
+
+
+
+at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)
+at com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)
+at com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)
+at ✽.user login to "ePortal" application(src/test/resources/features/ePortal_PoC.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.ePortal.utilities.MyOwnException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="tearDownClass" is-config="true" duration-ms="471" started-at="2019-04-29T10:35:59Z" finished-at="2019-04-29T10:36:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.ePortal.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- RegressionSuite -->
+</testng-results>

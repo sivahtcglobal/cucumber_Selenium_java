@@ -1,0 +1,124 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 15,
+        "name": "Login to ePortal",
+        "description": "",
+        "id": "login-to-eportal-application;login-to-eportal;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 93651600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user get the Test data \"ePortal\" and \"Application 1\" type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ePortal",
+                  "offset": 24
+                },
+                {
+                  "val": "Application 1",
+                  "offset": 38
+                }
+              ],
+              "location": "CommonSteps.readTestData(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5306412299,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user launches \"ePortal\" URL",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ePortal",
+                  "offset": 15
+                }
+              ],
+              "location": "CommonSteps.launchUrl(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication \nUNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator \u0027By.name: P101_USERNAME\u0027)\nUNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) \nExpected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator \u0027By.name: P101_USERNAME\u0027 (tried for 100 second(s) with 500 milliseconds interval)\n\n\n\r\n\tat com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)\r\n\tat com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)\r\n\tat com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)\r\n\tat ✽.user login to \"ePortal\" application(src/test/resources/features/ePortal_PoC.feature:9)\r\n",
+              "duration": 308571099000,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "user login to \"ePortal\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ePortal",
+                  "offset": 15
+                }
+              ],
+              "location": "LoginPageSteps.login(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user logout from \"ePortal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ePortal",
+                  "offset": 18
+                }
+              ],
+              "location": "CommonSteps.logout(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "user quits the browser",
+            "match": {
+              "location": "CommonSteps.closeBrowser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Approved"
+          }
+        ]
+      }
+    ],
+    "name": "Login to ePortal application",
+    "description": "\tI want to log into ePortal as part of Cucumber PoC\t",
+    "id": "login-to-eportal-application",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/ePortal_PoC.feature",
+    "tags": [
+      {
+        "name": "@Approved",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

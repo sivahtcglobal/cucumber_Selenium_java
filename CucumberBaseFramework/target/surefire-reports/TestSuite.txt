@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.889 sec <<< FAILURE! - in TestSuite
+runScenario(com.ePortal.TestRunner)  Time elapsed: 4.226 sec  <<< FAILURE!
+java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:853)
+	at com.ePortal.utilities.BaseClass.initialization(BaseClass.java:155)
+	at com.ePortal.stepDefinations.CommonSteps.launchUrl(CommonSteps.java:50)
+	at ?.user launches "ePortal" URL(src/test/resources/features/ePortal_PoC.feature:8)
+

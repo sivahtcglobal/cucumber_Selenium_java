@@ -1,0 +1,10 @@
+browser=IE
+chromeDriver=webdriver.chrome.driver
+IEDriver=webdriver.ie.driver
+firefoxDriver=webdriver.gecko.driver
+TGQUrl=https://www1.pgactest.com/mars/login.jsp?logout=true&redirect=%2Fagency%2Fdefault.jsp
+TGQUserName=NTVNDM31
+TGQPassword=Angular123456
+InitAppSheetName=ePortal_TestData
+TestDataFileName=ePortalTestData.xlsx
+PositiveScreenshot=True

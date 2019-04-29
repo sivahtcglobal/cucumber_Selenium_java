@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">RegressionSuite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">315,192</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RegressionSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.ePortal.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1556533845567</td><td rowspan="1">314002</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">com.ePortal.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login to ePortal&quot;</td><td>&quot;Login to ePortal application&quot;</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages"><div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div><br/><div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div><br/><div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div><br/><div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div><br/><div "result">user quits the browser (SKIPPED)</div></div></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication 
+UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator &apos;By.name: P101_USERNAME&apos;)
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.name: P101_USERNAME&apos; (tried for 100 second(s) with 500 milliseconds interval)
+
+
+
+	at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)
+	at com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)
+	at com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)
+	at ✽.user login to &quot;ePortal&quot; application(src/test/resources/features/ePortal_PoC.feature:9)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
