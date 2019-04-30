@@ -8,22 +8,25 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">RegressionSuite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">315,192</td><td></td><td></td></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">45,962</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RegressionSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.ePortal.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1556533845567</td><td rowspan="1">314002</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.ePortal.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1556543455785</td><td rowspan="1">44653</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.ePortal.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login to ePortal&quot;</td><td>&quot;Login to ePortal application&quot;</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages"><div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div><br/><div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div><br/><div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div><br/><div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div><br/><div "result">user quits the browser (SKIPPED)</div></div></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication 
-UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator &apos;By.name: P101_USERNAME&apos;)
-UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
-Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.name: P101_USERNAME&apos; (tried for 100 second(s) with 500 milliseconds interval)
-
-
+<h2>Default test</h2><h3 id="m0">com.ePortal.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login to ePortal&quot;</td><td>&quot;Login to ePortal application&quot;</td></tr><tr><th colspan="2">Messages</th></tr><tr><td colspan="2"><div class="messages"><div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div><br/><div "result">user launches &quot;ePortal&quot; URL (PASSED : 6s)</div><br/><div "result">user login to &quot;ePortal&quot; application (PASSED : 35s)</div><br/><div "result">user logout from &quot;ePortal&quot; (FAILED : 1s)</div><br/><div "result">user quits the browser (SKIPPED)</div></div></td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">com.ePortal.utilities.MyOwnException: UNABLE TO Logout from  ePortal application 
+Unable to find element with link text == Logout
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 7ba44ab4-0c19-4eca-be6c-443c6ece9a0b
+*** Element info: {Using=link text, value=Logout}
 
 	at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)
-	at com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)
-	at com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)
-	at ✽.user login to &quot;ePortal&quot; application(src/test/resources/features/ePortal_PoC.feature:9)
+	at com.ePortal.global.pageObjects.GlobalCommonObjects.logOut_ePortal(GlobalCommonObjects.java:51)
+	at com.ePortal.stepDefinations.CommonSteps.logout(CommonSteps.java:64)
+	at ✽.user logout from &quot;ePortal&quot;(src/test/resources/features/ePortal_PoC.feature:10)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

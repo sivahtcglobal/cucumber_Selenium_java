@@ -89,8 +89,7 @@ formatter.match({
   "location": "LoginPageSteps.login(String)"
 });
 formatter.result({
-  "error_message": "com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication \nUNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator \u0027By.name: P101_USERNAME\u0027)\nUNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) \nExpected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator \u0027By.name: P101_USERNAME\u0027 (tried for 100 second(s) with 500 milliseconds interval)\n\n\n\r\n\tat com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)\r\n\tat com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)\r\n\tat com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)\r\n\tat ✽.user login to \"ePortal\" application(src/test/resources/features/ePortal_PoC.feature:9)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "user logout from \"ePortal\"",
@@ -100,7 +99,8 @@ formatter.match({
   "location": "CommonSteps.logout(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "com.ePortal.utilities.MyOwnException: UNABLE TO Logout from  ePortal application \nUnable to find element with link text \u003d\u003d Logout\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NTISHTCD13\u0027, ip: \u002710.180.20.66\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.ie.InternetExplorerDriver\nCapabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}\nSession ID: 7ba44ab4-0c19-4eca-be6c-443c6ece9a0b\n*** Element info: {Using\u003dlink text, value\u003dLogout}\n\r\n\tat com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)\r\n\tat com.ePortal.global.pageObjects.GlobalCommonObjects.logOut_ePortal(GlobalCommonObjects.java:51)\r\n\tat com.ePortal.stepDefinations.CommonSteps.logout(CommonSteps.java:64)\r\n\tat ✽.user logout from \"ePortal\"(src/test/resources/features/ePortal_PoC.feature:10)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "user quits the browser",

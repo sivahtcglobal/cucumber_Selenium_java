@@ -5,31 +5,31 @@
       <![CDATA[<div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div>]]>
+      <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 6s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div>]]>
+      <![CDATA[<div "result">user login to &quot;ePortal&quot; application (PASSED : 35s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div>]]>
+      <![CDATA[<div "result">user logout from &quot;ePortal&quot; (FAILED : 1s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
     </line>
   </reporter-output>
-  <suite name="RegressionSuite" duration-ms="315192" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:36:00Z">
+  <suite name="Default suite" duration-ms="45962" started-at="2019-04-29T13:10:55Z" finished-at="2019-04-29T13:11:40Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="runScenario" class="com.ePortal.TestRunner"/>
+        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="runScenario" class="com.ePortal.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="315192" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:36:00Z">
+    <test name="Default test" duration-ms="45962" started-at="2019-04-29T13:10:55Z" finished-at="2019-04-29T13:11:40Z">
       <class name="com.ePortal.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="setUpClass" is-config="true" duration-ms="498" started-at="2019-04-29T10:30:44Z" finished-at="2019-04-29T10:30:45Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="setUpClass" is-config="true" duration-ms="589" started-at="2019-04-29T13:10:55Z" finished-at="2019-04-29T13:10:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="runScenario" duration-ms="314002" started-at="2019-04-29T10:30:45Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-04-29T10:35:59Z">
+        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="runScenario" duration-ms="44653" started-at="2019-04-29T13:10:55Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-04-29T13:11:40Z">
           <params>
             <param index="0">
               <value>
@@ -44,26 +44,32 @@
           </params>
           <exception class="com.ePortal.utilities.MyOwnException">
             <message>
-              <![CDATA[Unable To login to the ePortalapplication 
-UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
-UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
-Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
-
-
+              <![CDATA[UNABLE TO Logout from  ePortal application 
+Unable to find element with link text == Logout
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 7ba44ab4-0c19-4eca-be6c-443c6ece9a0b
+*** Element info: {Using=link text, value=Logout}
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[com.ePortal.utilities.MyOwnException: Unable To login to the ePortalapplication 
-UNABLE TO ENTER THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME')
-UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
-Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: P101_USERNAME' (tried for 100 second(s) with 500 milliseconds interval)
-
-
+              <![CDATA[com.ePortal.utilities.MyOwnException: UNABLE TO Logout from  ePortal application 
+Unable to find element with link text == Logout
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 7ba44ab4-0c19-4eca-be6c-443c6ece9a0b
+*** Element info: {Using=link text, value=Logout}
 
 at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)
-at com.ePortal.global.pageObjects.LoginPage.login(LoginPage.java:68)
-at com.ePortal.stepDefinations.LoginPageSteps.login(LoginPageSteps.java:25)
-at ✽.user login to "ePortal" application(src/test/resources/features/ePortal_PoC.feature:9)
+at com.ePortal.global.pageObjects.GlobalCommonObjects.logOut_ePortal(GlobalCommonObjects.java:51)
+at com.ePortal.stepDefinations.CommonSteps.logout(CommonSteps.java:64)
+at ✽.user logout from "ePortal"(src/test/resources/features/ePortal_PoC.feature:10)
 ]]>
             </full-stacktrace>
           </exception> <!-- com.ePortal.utilities.MyOwnException -->
@@ -72,24 +78,24 @@ at ✽.user login to "ePortal" application(src/test/resources/features/ePortal_P
               <![CDATA[<div "result">user get the Test data &quot;ePortal&quot; and &quot;Application 1&quot; type (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div>]]>
+              <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 6s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user login to &quot;ePortal&quot; application (FAILED : 308s)</div>]]>
+              <![CDATA[<div "result">user login to &quot;ePortal&quot; application (PASSED : 35s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user logout from &quot;ePortal&quot; (SKIPPED)</div>]]>
+              <![CDATA[<div "result">user logout from &quot;ePortal&quot; (FAILED : 1s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@56dc1551]" name="tearDownClass" is-config="true" duration-ms="471" started-at="2019-04-29T10:35:59Z" finished-at="2019-04-29T10:36:00Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="tearDownClass" is-config="true" duration-ms="517" started-at="2019-04-29T13:11:40Z" finished-at="2019-04-29T13:11:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.ePortal.TestRunner -->
-    </test> <!-- Test -->
-  </suite> <!-- RegressionSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

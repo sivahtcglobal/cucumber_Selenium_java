@@ -21,8 +21,8 @@ public class EportalAllPages extends BaseClass {
 
 	
 
-	public LoginPage loginPage() {
-		return new LoginPage(ldriver);
+	public MarsApplicationLoginPage loginPage() {
+		return new MarsApplicationLoginPage(ldriver);
 	}
 
 }
