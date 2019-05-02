@@ -77,13 +77,14 @@ public class BaseClass {
 	public static FileInputStream fs;
 	public static FileOutputStream os;
 	public static boolean result;
-
+	public static List<HashMap<String, String>> mydata = new ArrayList<HashMap<String, String>>();
 	public static String testRunTimeStamp;
 	public static String screenShotFolderPath;
 	public static ExtentReports report;
 	public static ExtentTest parentTestCase;
 	public static EportalAllPages ePortalAllPages;
-
+	private static final String Name_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	private static final String Addres_Number_STRING ="1234567890";
 	public static Row row;
 	public static Workbook wb;
 	public static Sheet sh;
@@ -112,6 +113,67 @@ public class BaseClass {
 		}
 	}
 
+	public void readTestDataFromExcel(String appType, String testDataType) {
+
+        try {
+            
+                readSpecificTestData(
+                        System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\"
+                                + prop.getProperty("TestDataFileName"),
+                        prop.getProperty("InitAppSheetName"),testDataType);
+            
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    public static void readSpecificTestData(String fileName, String sheetName ,String testCaseId)
+            throws IOException, MyOwnException {        
+        File file = new File(fileName);
+        wb = new XSSFWorkbook(new FileInputStream(file));
+        sh = wb.getSheet(sheetName);
+
+            Row HeaderRow = sh.getRow(0);
+            for (int i = 1; i < sh.getPhysicalNumberOfRows(); i++) {
+                Row currentRow = sh.getRow(i);
+                HashMap<String, String> currentHash = new HashMap<String, String>();
+                for (int j = 0; j < currentRow.getPhysicalNumberOfCells(); j++) {
+                    Cell currentCell = currentRow.getCell(j);
+                    switch (currentCell.getCellType()) {
+                        case Cell.CELL_TYPE_STRING:
+                            currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
+                            break;
+                        case Cell.CELL_TYPE_NUMERIC:
+                            currentHash.put(HeaderRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getNumericCellValue()));
+                            break;
+                    }
+            
+                }
+                mydata.add(currentHash);
+                System.out.println("Username"+currentHash.get("Username"));
+              
+                }
+            return ;
+}
+
+	public static String randomNameString(int count) {
+		StringBuilder builder = new StringBuilder();
+		while (count-- != 0) {
+			int character = (int) (Math.random() * Name_STRING.length());
+			builder.append(Name_STRING.charAt(character));
+		}
+		return builder.toString();
+	}
+	public static String randomAddressNumberString(int count) {
+		StringBuilder builder = new StringBuilder();
+		while (count-- != 0) {
+			int character = (int) (Math.random() * Addres_Number_STRING.length());
+			builder.append(Addres_Number_STRING.charAt(character));
+		}
+		return builder.toString();
+	}
 	public static void initialization(String applicationType) throws MyOwnException {
 
 		log.info("METHOD(initialization) EXECUTION STARTED SUCCESSFULLY");
@@ -330,7 +392,7 @@ public class BaseClass {
 		throw new MyOwnException(message);
 	}
 
-	public void readTestDataFromExcel(String appType, String testDataType) {
+	public void readTestDataFromExcel(String appType, String testDataType,String testCaseId) {
 
 		try {
 			if (appType.equals("ePortal")) {
@@ -346,64 +408,7 @@ public class BaseClass {
 
 	}
 
-	public static void readSpecificTestData(String fileName, String sheetName, String testDataType)
-			throws IOException, MyOwnException {
 
-		StringBuffer testDataBeforeSplit = new StringBuffer();
-		File file = new File(fileName);
-
-		try {
-			fs = new FileInputStream(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-
-		String extension = fileName.substring(fileName.indexOf("."));
-		if (extension.equalsIgnoreCase(".xlsx")) {
-			try {
-				wb = new XSSFWorkbook(fs);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} else {
-			try {
-				wb = new HSSFWorkbook(fs);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
-		sh = wb.getSheet(sheetName);
-		int rowCount = sh.getLastRowNum() - sh.getFirstRowNum();
-		main: for (int i = 1; i <= rowCount; i++) {
-
-			Row row = sh.getRow(i);
-
-			if (row.getCell(0).toString().equalsIgnoreCase(testDataType)
-					&& row.getCell(1).toString().equalsIgnoreCase("Yes")) {
-				testExecutionStatus = true;
-				int noOfCells = row.getPhysicalNumberOfCells();
-				for (int j = 2; j < row.getPhysicalNumberOfCells() - 1; j++) {
-					if (j + 1 == row.getPhysicalNumberOfCells() - 1) {
-						testDataBeforeSplit.append(row.getCell(j).toString());
-
-					} else {
-						testDataBeforeSplit.append(row.getCell(j).toString() + "\n");
-					}
-
-				}
-
-				ePortalTestDataMap = splitToMap(testDataBeforeSplit.toString());
-
-				break main;
-			}
-		}
-
-		log.info("End of updating the excel sheet with values of actual result and step status");
-
-		fs.close();
-
-	}
 
 	public static Map<String, String> splitToMap(String data) throws MyOwnException {
 

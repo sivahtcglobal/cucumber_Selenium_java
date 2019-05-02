@@ -20,7 +20,8 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 	private static final Logger log = LogManager.getLogger(TGQ_RatingInfo_Page.class.getName());
 
 	// Page Factory
-
+	@FindBy(how = How.XPATH, using = "//*[@id=\"quoteSummaryTable\"]/tbody/tr[1]/td[4]")
+	public WebElement pol_type;
 	@FindBy(how = How.ID, using = "quoteBean.insFirstName.value")
 	public WebElement tgq_first_name;
 	@FindBy(how = How.ID, using = "quoteBean.insLastName.value")
@@ -131,7 +132,7 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 	public WebElement show_messages;
 	@FindBy(how = How.LINK_TEXT, using = "Get Quote")
 	public WebElement get_quote;
-	
+
 	WebDriver ldriver;
 
 	public TGQ_RatingInfo_Page(WebDriver dr) {
@@ -140,96 +141,140 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void ratinginfo(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
-				MyWebElement.enterText(tgq_first_name, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(tgq_last_name, prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(tgq_street, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(tgq_city, prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(tgq_area, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(tgq_exchange, prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(tgq_station, prop.getProperty("TGQPassword"));
-				Select mailing_address = new Select(mailing_address_yes_no);
-				mailing_address.selectByVisibleText( prop.getProperty("TGQPassword"));
+			MyWebElement.enterText(tgq_first_name, randomNameString(7));
+			MyWebElement.enterText(tgq_last_name, randomNameString(5));
+			MyWebElement.enterText(tgq_street,randomAddressNumberString(3)+","+ prop.getProperty("tgq_street"));
+			MyWebElement.enterText(tgq_city, prop.getProperty("tgq_city"));
+			MyWebElement.enterText(tgq_area, prop.getProperty("tgq_area"));
+			MyWebElement.enterText(tgq_exchange, prop.getProperty("tgq_exchange"));
+			MyWebElement.enterText(tgq_station, prop.getProperty("tgq_station"));
+			Select mailing_address = new Select(mailing_address_yes_no);
+			mailing_address.selectByVisibleText(prop.getProperty("mailing_address_yes_no"));
+			if (!prop.getProperty("term").equals("Nil")) {
 				Select term_cov = new Select(term);
-				term_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select pay_plan_cov = new Select(pay_plan);
-				pay_plan_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				term_cov.selectByVisibleText(prop.getProperty("term"));
+			}
+			Select pay_plan_cov = new Select(pay_plan);
+			pay_plan_cov.selectByVisibleText(prop.getProperty("pay_plan"));
+			if (!prop.getProperty("type_policy").equals("Nil")) {
 				Select type_policy_cov = new Select(type_policy);
-				type_policy_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				type_policy_cov.selectByVisibleText(prop.getProperty("type_policy"));
+			}
+			if (!prop.getProperty("type_policy").equals("Nil")) {
 				Select liability_insurance_cov = new Select(liability_insurance_coverage);
-				liability_insurance_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				liability_insurance_cov.selectByVisibleText(prop.getProperty("liability_insurance_coverage"));
+			}
+			if (!prop.getProperty("prior_BILimits").equals("Nil")) {
 				Select prior_BILimits_cov = new Select(prior_BILimits);
-				prior_BILimits_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				prior_BILimits_cov.selectByVisibleText(prop.getProperty("prior_BILimits"));
+			}
+			if (!prop.getProperty("duration_of_insurance").equals("Nil")) {
 				Select duration_of_insurance_cov = new Select(duration_of_insurance);
-				duration_of_insurance_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select term_life_referral_cov = new Select(term_life_referral);
-				term_life_referral_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select primary_insurance_cov = new Select(primary_insurance);
-				primary_insurance_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				duration_of_insurance_cov.selectByVisibleText(prop.getProperty("duration_of_insurance"));
+			}
+			Select term_life_referral_cov = new Select(term_life_referral);
+			term_life_referral_cov.selectByVisibleText(prop.getProperty("term_life_referral"));
+			Select primary_insurance_cov = new Select(primary_insurance);
+			primary_insurance_cov.selectByVisibleText(prop.getProperty("primary_insurance"));
+			if (!prop.getProperty("road_side_ast").equals("Nil")) {
 				Select road_side_ast_cov = new Select(road_side_ast);
-				road_side_ast_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				road_side_ast_cov.selectByVisibleText(prop.getProperty("road_side_ast"));
+				MyWebElement.clickOn(road_side_ast_1);
+				MyWebElement.clickOn(road_side_ast_2);
+				MyWebElement.clickOn(road_side_ast_3);
+				MyWebElement.clickOn(road_side_ast_4);
+			}
+			if (!prop.getProperty("homeOwner_disc").equals("Nil")) {
 				Select homeOwner_disc_cov = new Select(homeOwner_disc);
-				homeOwner_disc_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
-				road_side_ast_1.click();
-				road_side_ast_2.click();
-				road_side_ast_3.click();
-				road_side_ast_4.click();
+				homeOwner_disc_cov.selectByVisibleText(prop.getProperty("homeOwner_disc"));
+			}
+		
+			if (!prop.getProperty("liability_bi_pd_cov").equals("Nil")) {
 				Select liability_bi_pd_ = new Select(liability_bi_pd_cov);
-				liability_bi_pd_.selectByVisibleText( prop.getProperty("TGQPassword"));
+				liability_bi_pd_.selectByVisibleText(prop.getProperty("liability_bi_pd_cov"));
+			}
+			if (!prop.getProperty("umbi_cov").equals("Nil")) {
 				Select umbi = new Select(umbi_cov);
-				umbi.selectByVisibleText( prop.getProperty("TGQPassword"));
+				umbi.selectByVisibleText(prop.getProperty("umbi_cov"));
+			}
+			if (!prop.getProperty("umpd_cov").equals("Nil")) {
 				Select umpd = new Select(umpd_cov);
-				umpd.selectByVisibleText( prop.getProperty("TGQPassword"));
+				umpd.selectByVisibleText(prop.getProperty("umpd_cov"));
+			}
+			if (!prop.getProperty("umpd_ded").equals("Nil")) {
 				Select umpd_ded_cov = new Select(umpd_ded);
-				umpd_ded_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				umpd_ded_cov.selectByVisibleText(prop.getProperty("umpd_ded"));
+			}
+			if (!prop.getProperty("medical_payments").equals("Nil")) {
 				Select medical_payments_cov = new Select(medical_payments);
-				medical_payments_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				medical_payments_cov.selectByVisibleText(prop.getProperty("medical_payments"));
+			}
+			if (!prop.getProperty("rental_reim").equals("Nil")) {
 				Select rental_reim_cov = new Select(rental_reim);
-				rental_reim_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
+				rental_reim_cov.selectByVisibleText(prop.getProperty("rental_reim"));
+			}
+			if (!prop.getProperty("est_credit").equals("Nil")) {
 				Select est_credit_cov = new Select(est_credit);
-				est_credit_cov.selectByVisibleText( prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(dob_mo, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(dob_dy, prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(dob_yr, prop.getProperty("TGQUserName"));
-				Select gender_dr = new Select(gender);
-				gender_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select marital_status_dr = new Select(marital_status);
-				marital_status_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select sr22_dr = new Select(sr22);
-				sr22_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(date_liscenced_mo, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(date_liscenced_dy, prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(date_liscenced_yr, prop.getProperty("TGQUserName"));
-				Select lic_status_dr = new Select(lic_status);
-				lic_status_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select sr_driver = new Select(sr_drvr);
-				sr_driver.selectByVisibleText( prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(vin, prop.getProperty("TGQPassword"));
-				get_vehicle.click();
-				MyWebElement.enterText(year, prop.getProperty("TGQUserName"));
-				Select make_veh = new Select(make);
-				make_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select model_veh = new Select(model);
-				model_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
-				Select type_veh = new Select(type_vehicle);
-				type_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
+				est_credit_cov.selectByVisibleText(prop.getProperty("est_credit"));
+			}
+			MyWebElement.enterText(dob_mo, "01");
+			MyWebElement.enterText(dob_dy, "01");
+			MyWebElement.enterText(dob_yr, "1991");
+			Select gender_dr = new Select(gender);
+			gender_dr.selectByVisibleText("Female");
+			Select marital_status_dr = new Select(marital_status);
+			marital_status_dr.selectByVisibleText("Single");
+			Select sr22_dr = new Select(sr22);
+			sr22_dr.selectByVisibleText("No");
+			// MyWebElement.enterText(date_liscenced_mo,
+			// prop.getProperty("date_liscenced_mo"));
+			// MyWebElement.enterText(date_liscenced_dy,
+			// prop.getProperty("date_liscenced_dy"));
+			// MyWebElement.enterText(date_liscenced_yr,
+			// prop.getProperty("date_liscenced_yr"));
+			Select lic_status_dr = new Select(lic_status);
+			lic_status_dr.selectByVisibleText("Active");
+			Select sr_driver = new Select(sr_drvr);
+			sr_driver.selectByVisibleText("No");
+			if (!pol_type.getText().equals("Bond") ) {
+			MyWebElement.enterText(vin, "1FTSW21P97EB36008");
+			MyWebElement.clickOn(get_vehicle);
+			}
+			// MyWebElement.enterText(year, prop.getProperty("year"));
+			// Select make_veh = new Select(make);
+			// make_veh.selectByVisibleText(prop.getProperty("make"));
+			// Select model_veh = new Select(model);
+			// model_veh.selectByVisibleText(prop.getProperty("model"));
+			// Select type_veh = new Select(type_vehicle);
+			// type_veh.selectByVisibleText(prop.getProperty("type_vehicle"));
+			if (!prop.getProperty("comp_ded").equals("Nil")) {
 				Select comp_ded_veh = new Select(comp_ded);
-				comp_ded_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
+				comp_ded_veh.selectByVisibleText(prop.getProperty("comp_ded"));
+			}
+			if (!prop.getProperty("coll_ded").equals("Nil")) {
 				Select coll_ded_veh = new Select(coll_ded);
-				coll_ded_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
+				coll_ded_veh.selectByVisibleText(prop.getProperty("coll_ded"));
+			}
+			if (!prop.getProperty("bus_use").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
-				bus_use_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
+				bus_use_veh.selectByVisibleText(prop.getProperty("bus_use"));
+			}
+			if (!prop.getProperty("dbl_ded").equals("Nil")) {
 				Select dbl_ded_veh = new Select(dbl_ded);
-				dbl_ded_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
+				dbl_ded_veh.selectByVisibleText(prop.getProperty("dbl_ded"));
+			}
+			if (!prop.getProperty("towing_labour").equals("Nil")) {
 				Select towing_labour_veh = new Select(towing_labour);
-				towing_labour_veh.selectByVisibleText( prop.getProperty("TGQPassword"));
-				MyWebElement.enterText(custom_equip, prop.getProperty("TGQPassword"));
-			
-				save.click();
-				get_quote.click();
+				towing_labour_veh.selectByVisibleText(prop.getProperty("towing_labour"));
+			}
+			// MyWebElement.enterText(custom_equip, prop.getProperty("custom_equip"));
+
+			//MyWebElement.clickOn(save);
+			MyWebElement.clickOn(get_quote);
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Login_to_" + applicationType + ".png");

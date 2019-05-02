@@ -22,7 +22,7 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 
 
 
-@CucumberOptions(features = "src/test/resources/features", glue = { "com.ePortal.stepDefinations" }, tags = {
+@CucumberOptions(features = "src/test/resources/features/C_TGQ_New_Quote.feature", glue = { "com.ePortal.stepDefinations" }, tags = {
 				"not @Ignore" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })

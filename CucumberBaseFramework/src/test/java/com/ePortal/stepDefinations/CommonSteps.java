@@ -51,10 +51,10 @@ public class CommonSteps extends BaseClass {
 	}
 
 	@When("user get the Test data \"([^\"]*)\" and \"([^\"]*)\" type")
-	public void readTestData(String appType, String testDataType)
+	public void readTestData(String appType, String testDataType,String testCaseId)
 			throws MyOwnException, InterruptedException, AWTException {
 
-		readTestDataFromExcel(appType, testDataType);
+		readTestDataFromExcel(appType, testDataType,testCaseId);
 
 	}
 

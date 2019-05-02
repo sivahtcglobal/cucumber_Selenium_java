@@ -50,7 +50,7 @@ public class MarsApplicationLoginPage extends EportalAllPages {
 
 				MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
 				MyWebElement.clickOnButton(signin_button);
-
+				MyWebElement.clickOnButton(new_Quote);
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Login_to_" + applicationType + ".png");

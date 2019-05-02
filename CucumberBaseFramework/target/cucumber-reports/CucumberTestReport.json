@@ -3,41 +3,19 @@
     "line": 2,
     "elements": [
       {
-        "line": 15,
-        "name": "Login to ePortal",
+        "line": 3,
+        "name": "TGQ New Quote  As Agent",
         "description": "",
-        "id": "login-to-eportal-application;login-to-eportal;;2",
+        "id": "new-quote-in-tgq-application;tgq-new-quote--as-agent",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 965011100,
+              "duration": 4597651601,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user get the Test data \"ePortal\" and \"Application 1\" type",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ePortal",
-                  "offset": 24
-                },
-                {
-                  "val": "Application 1",
-                  "offset": 38
-                }
-              ],
-              "location": "CommonSteps.readTestData(String,String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 6719292700,
-              "status": "passed"
-            },
-            "line": 8,
+            "line": 5,
             "name": "user launches \"ePortal\" URL",
             "match": {
               "arguments": [
@@ -52,10 +30,10 @@
           },
           {
             "result": {
-              "duration": 35867787901,
+              "duration": 26556492399,
               "status": "passed"
             },
-            "line": 9,
+            "line": 6,
             "name": "user login to \"ePortal\" application",
             "match": {
               "arguments": [
@@ -70,33 +48,55 @@
           },
           {
             "result": {
-              "error_message": "com.ePortal.utilities.MyOwnException: UNABLE TO Logout from  ePortal application \nUnable to find element with link text \u003d\u003d Logout\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NTISHTCD13\u0027, ip: \u002710.180.20.66\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.ie.InternetExplorerDriver\nCapabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}\nSession ID: 7ba44ab4-0c19-4eca-be6c-443c6ece9a0b\n*** Element info: {Using\u003dlink text, value\u003dLogout}\n\r\n\tat com.ePortal.utilities.BaseClass.throwException(BaseClass.java:330)\r\n\tat com.ePortal.global.pageObjects.GlobalCommonObjects.logOut_ePortal(GlobalCommonObjects.java:51)\r\n\tat com.ePortal.stepDefinations.CommonSteps.logout(CommonSteps.java:64)\r\n\tat ✽.user logout from \"ePortal\"(src/test/resources/features/ePortal_PoC.feature:10)\r\n",
-              "duration": 1044419701,
-              "status": "failed"
+              "duration": 18305716501,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "user logout from \"ePortal\"",
+            "line": 7,
+            "name": "Fill the mandatory fields in \"New Quote\" page",
             "match": {
               "arguments": [
                 {
-                  "val": "ePortal",
-                  "offset": 18
+                  "val": "New Quote",
+                  "offset": 30
                 }
               ],
-              "location": "CommonSteps.logout(String)"
+              "location": "NewQuoteSteps.newQuote(String)"
             },
             "keyword": "Then "
-          },
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Approved"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Fill the Mandatory fields in ratinginfo tab in TGQ  As Agent",
+        "description": "",
+        "id": "new-quote-in-tgq-application;fill-the-mandatory-fields-in-ratinginfo-tab-in-tgq--as-agent",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
           {
             "result": {
-              "status": "skipped"
+              "error_message": "org.openqa.selenium.NoSuchWindowException: Unable to get browser\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NTISHTCD13\u0027, ip: \u002710.180.20.66\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.ie.InternetExplorerDriver\nCapabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}\nSession ID: b06234e5-22ec-494b-8138-14a0452c68a1\r\n\tat sun.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)\r\n\tat com.ePortal.utilities.BaseClass.screenShot(BaseClass.java:379)\r\n\tat com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:289)\r\n\tat com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)\r\n\tat ✽.Fill the mandatory fields in \"Rating Info\" tab(src/test/resources/features/C_TGQ_New_Quote.feature:10)\r\n",
+              "duration": 230043208800,
+              "status": "failed"
             },
-            "line": 11,
-            "name": "user quits the browser",
+            "line": 10,
+            "name": "Fill the mandatory fields in \"Rating Info\" tab",
             "match": {
-              "location": "CommonSteps.closeBrowser()"
+              "arguments": [
+                {
+                  "val": "Rating Info",
+                  "offset": 30
+                }
+              ],
+              "location": "RatingInfoSteps.ratingInfo(String)"
             },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
@@ -106,11 +106,11 @@
         ]
       }
     ],
-    "name": "Login to ePortal application",
-    "description": "\tI want to log into ePortal as part of Cucumber PoC\t",
-    "id": "login-to-eportal-application",
+    "name": "New Quote in TGQ Application",
+    "description": "",
+    "id": "new-quote-in-tgq-application",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/ePortal_PoC.feature",
+    "uri": "src/test/resources/features/C_TGQ_New_Quote.feature",
     "tags": [
       {
         "name": "@Approved",

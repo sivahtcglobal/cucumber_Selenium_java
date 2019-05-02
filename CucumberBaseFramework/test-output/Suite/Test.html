@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu May 02 15:27:06 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>352 seconds (352347 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ePortal.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.ePortal.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fill the Mandatory fields in ratinginfo tab in TGQ  As Agent", "New Quote in TGQ Application"<br/>
+<a href="#Output-274827125" onClick='toggleBox("Output-274827125", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-274827125" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-274827125">
+<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 294s)</div><br/>
+</div>
+</td>
+<td><div><pre>com.ePortal.utilities.MyOwnException: Unable To login to the Rating Infoapplication 
+UNABLE TO CLICK ON SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator &apos;By.linkText: Get Quote&apos;)
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.linkText: Get Quote&apos; (tried for 100 second(s) with 500 milliseconds interval)
+
+
+
+	at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:384)
+	at com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:296)
+	at com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)
+	at ?.Fill the mandatory fields in &quot;Rating Info&quot; tab(src/test/resources/features/C_TGQ_New_Quote.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace274827125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace274827125'><pre>com.ePortal.utilities.MyOwnException: Unable To login to the Rating Infoapplication 
+UNABLE TO CLICK ON SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator &apos;By.linkText: Get Quote&apos;)
+UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.linkText: Get Quote&apos; (tried for 100 second(s) with 500 milliseconds interval)
+
+
+
+	at com.ePortal.utilities.BaseClass.throwException(BaseClass.java:384)
+	at com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:296)
+	at com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)
+	at ?.Fill the mandatory fields in &quot;Rating Info&quot; tab(src/test/resources/features/C_TGQ_New_Quote.feature:10)
+</pre></div></td>
+<td>294</td>
+<td>com.ePortal.TestRunner@3059cbc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ePortal.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.ePortal.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TGQ New Quote  As Agent", "New Quote in TGQ Application"<br/>
+<a href="#Output-2124731287" onClick='toggleBox("Output-2124731287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2124731287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2124731287">
+<div "result">user launches &quot;ePortal&quot; URL (PASSED : 5s)</div><br/>
+<div "result">user login to &quot;ePortal&quot; application (PASSED : 30s)</div><br/>
+<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 20s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>com.ePortal.TestRunner@3059cbc</td></tr>
+</table><p>
+</body>
+</html>
