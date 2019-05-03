@@ -54,12 +54,13 @@ public class TGQ_New_Quote_Page extends EportalAllPages {
 		          }
 		         ldriver.manage().window().maximize() ;
 				Select state = new Select(tgq_state);
-				state.selectByVisibleText( prop.getProperty("tgq_state"));
+				state.selectByVisibleText(currentHash.get("QuoteState"));
 				//MyWebElement.enterText(tgq_state, prop.getProperty("tgq_state"));
 				Select policy_type = new Select(tgq_policy_type);
-				policy_type.selectByVisibleText( prop.getProperty("tgq_policy_type"));
+				policy_type.selectByVisibleText(currentHash.get("PolicyType"));
 				//MyWebElement.enterText(tgq_policy_type, prop.getProperty("tgq_policy_type"));
-				MyWebElement.enterText(tgq_zip_code, prop.getProperty("tgq_zip_code"));
+				
+				MyWebElement.enterText(tgq_zip_code,currentHash.get("ZipCode"));
 				//MyWebElement.enterText(tgq_eff_mnth, prop.getProperty("tgq_eff_mnth"));
 				//MyWebElement.enterText(tgq_eff_date, prop.getProperty("TGQUserName"));
 				//MyWebElement.enterText(tgq_eff_year, prop.getProperty("TGQPassword"));
@@ -69,23 +70,23 @@ public class TGQ_New_Quote_Page extends EportalAllPages {
 
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_Created_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged into '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+							+ "1_Created_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_In_Creating_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_In_Creating_" + applicationType + ".png");
+			throwException("Unable To Create New Quote " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

@@ -1,29 +1,24 @@
 package com.ePortal;
 
-import java.io.File;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.cucumber.listener.Reporter;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.Report;
 
 import cucumber.api.CucumberOptions;
-
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import com.cucumber.listener.ExtentCucumberFormatter;
 
 //{"classpath:multicolumn.feature","classpath:outline.feature"},
 
 
 
-@CucumberOptions(features = "src/test/resources/features/C_TGQ_New_Quote.feature", glue = { "com.ePortal.stepDefinations" }, tags = {
-				"not @Ignore" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
+@CucumberOptions(features = "src/test/resources/features/C_TGQ_New_Quote.feature",monochrome=false,strict=true, glue = { "com.ePortal.stepDefinations" }, tags = {
+				"@Approved" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })
 public class TestRunner extends BaseClass {

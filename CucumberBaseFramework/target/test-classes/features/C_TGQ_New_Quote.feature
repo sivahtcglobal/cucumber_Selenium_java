@@ -1,17 +1,22 @@
 @Approved
 Feature: New Quote in TGQ Application
-  Scenario: TGQ New Quote  As Agent
-  #Given user get the Test data "ePortal" and "<Application Number>" type
-  When user launches "ePortal" URL	
-	Then user login to "ePortal" application	 
-    Then Fill the mandatory fields in "New Quote" page
+  Scenario Outline: TGQ New Quote  As Agent
+  Given user get the Test data "TGQ" and "<TestCaseId>" type
+ 		When user launches "TGQ" URL		
+ 		Then user login to "TGQ" application	 
+ 		Then Fill the mandatory fields in "New Quote" page
+   		Then Fill the mandatory fields in "Rating Info" tab
+  		And user quits the browser
+Examples:
+	|TestCaseId|
+	|TC001|
+	|TC002|
+	|TC003|
 
- Scenario: Fill the Mandatory fields in ratinginfo tab in TGQ  As Agent
-   Then Fill the mandatory fields in "Rating Info" tab
-#
-#  Scenario: Clicking on Get Quote button and editing the quote tab
-#   # When Clicking on Get Quote button on rating info tab
-#    Then Edit the required fields in the quote tab recalculate it and click on Next button
+
+# Scenario: Clicking on Get Quote button and editing the quote tab
+#   When Clicking on Get Quote button on rating info tab
+#   Then Edit the required fields in the quote tab recalculate it and click on Next button
 #
 #
 #    Scenario: Edit the drivers tab
