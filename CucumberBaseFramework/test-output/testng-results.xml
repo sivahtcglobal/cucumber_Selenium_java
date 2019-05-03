@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
     <line>
-      <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 4s)</div>]]>
+      <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC001&quot; type (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user login to &quot;ePortal&quot; application (PASSED : 26s)</div>]]>
+      <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC002&quot; type (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 18s)</div>]]>
-    </line>
-    <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 230s)</div>]]>
+      <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC003&quot; type (PASSED : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="280738" started-at="2019-05-02T10:42:50Z" finished-at="2019-05-02T10:47:31Z">
+  <suite name="Suite" duration-ms="1860" started-at="2019-05-02T15:07:08Z" finished-at="2019-05-02T15:07:10Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="runScenario" class="com.ePortal.TestRunner"/>
+        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" class="com.ePortal.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="280738" started-at="2019-05-02T10:42:50Z" finished-at="2019-05-02T10:47:31Z">
+    <test name="Test" duration-ms="1860" started-at="2019-05-02T15:07:08Z" finished-at="2019-05-02T15:07:10Z">
       <class name="com.ePortal.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="setUpClass" is-config="true" duration-ms="521" started-at="2019-05-02T10:42:50Z" finished-at="2019-05-02T10:42:51Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="642" started-at="2019-05-02T15:07:08Z" finished-at="2019-05-02T15:07:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="runScenario" duration-ms="49494" started-at="2019-05-02T10:42:51Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-02T10:43:40Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" duration-ms="836" started-at="2019-05-02T15:07:09Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-02T15:07:10Z">
           <params>
             <param index="0">
               <value>
@@ -41,21 +38,15 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<div "result">user launches &quot;ePortal&quot; URL (PASSED : 4s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">user login to &quot;ePortal&quot; application (PASSED : 26s)</div>]]>
-            </line>
-            <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 18s)</div>]]>
+              <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC001&quot; type (PASSED : 0s)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="runScenario" duration-ms="230054" started-at="2019-05-02T10:43:40Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-02T10:47:30Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" duration-ms="66" started-at="2019-05-02T15:07:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-02T15:07:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Fill the Mandatory fields in ratinginfo tab in TGQ  As Agent"]]>
+                <![CDATA["TGQ New Quote  As Agent"]]>
               </value>
             </param>
             <param index="1">
@@ -64,51 +55,36 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[Unable to get browser
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: b06234e5-22ec-494b-8138-14a0452c68a1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: b06234e5-22ec-494b-8138-14a0452c68a1
-at sun.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
-at com.ePortal.utilities.BaseClass.screenShot(BaseClass.java:379)
-at com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:289)
-at com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)
-at ✽.Fill the mandatory fields in "Rating Info" tab(src/test/resources/features/C_TGQ_New_Quote.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
             <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 230s)</div>]]>
+              <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC002&quot; type (PASSED : 0s)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@3e84448c]" name="tearDownClass" is-config="true" duration-ms="492" started-at="2019-05-02T10:47:30Z" finished-at="2019-05-02T10:47:31Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" duration-ms="44" started-at="2019-05-02T15:07:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-02T15:07:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TGQ New Quote  As Agent"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["New Quote in TGQ Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; and &quot;TC003&quot; type (PASSED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="79" started-at="2019-05-02T15:07:10Z" finished-at="2019-05-02T15:07:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.ePortal.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

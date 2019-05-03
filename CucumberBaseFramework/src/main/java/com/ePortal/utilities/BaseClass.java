@@ -1,47 +1,20 @@
 package com.ePortal.utilities;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.Session;
-import javax.mail.Store;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -84,12 +57,12 @@ public class BaseClass {
 	public static ExtentTest parentTestCase;
 	public static EportalAllPages ePortalAllPages;
 	private static final String Name_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	private static final String Addres_Number_STRING ="1234567890";
+	private static final String Addres_Number_STRING = "1234567890";
 	public static Row row;
 	public static Workbook wb;
 	public static Sheet sh;
 	public static Cell cell;
-
+	public static HashMap<String, String> currentHash = new HashMap<String, String>();
 	public static List<String> masterSheetList = new ArrayList<String>();
 	public static Map<String, String> ePortalTestDataMap = new HashMap<String, String>();
 
@@ -113,50 +86,56 @@ public class BaseClass {
 		}
 	}
 
-	public void readTestDataFromExcel(String appType, String testDataType) {
+	/*
+	 * public static List<HashMap<String,String>> readTestDataFromExcel(String
+	 * appType, String testCaseId) { List<HashMap<String,String>> data=null; try {
+	 * 
+	 * data=Excel.getData(System.getProperty("user.dir") +
+	 * "\\src\\test\\resources\\TestData\\" + prop.getProperty("TestDataFileName"),
+	 * prop.getProperty("InitAppSheetName"), testCaseId);
+	 * 
+	 * 
+	 * } catch (Exception e) { e.printStackTrace(); } return data;
+	 * 
+	 * }
+	 */
 
-        try {
-            
-                readSpecificTestData(
-                        System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\"
-                                + prop.getProperty("TestDataFileName"),
-                        prop.getProperty("InitAppSheetName"),testDataType);
-            
+	public static List<HashMap<String, String>> readSpecificTestData( String testCaseId)
+			throws IOException, MyOwnException {
+	    String fileName = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\" + prop.getProperty("TestDataFileName");
+	    String sheetName= prop.getProperty("InitAppSheetName");
+		File file = new File(fileName);
+		wb = new XSSFWorkbook(new FileInputStream(file));
+	
+		sh = wb.getSheet(sheetName);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		Row HeaderRow = sh.getRow(0);
 
-    }
-    
-    public static void readSpecificTestData(String fileName, String sheetName ,String testCaseId)
-            throws IOException, MyOwnException {        
-        File file = new File(fileName);
-        wb = new XSSFWorkbook(new FileInputStream(file));
-        sh = wb.getSheet(sheetName);
+		for (int i = 1; i < sh.getPhysicalNumberOfRows(); i++) {
+			Row currentRow = sh.getRow(i);
+			
+			if (testCaseId.equalsIgnoreCase(currentRow.getCell(0).getStringCellValue())) {
+				
+				for (int j = 0; j < currentRow.getPhysicalNumberOfCells(); j++) {
+					Cell currentCell = currentRow.getCell(j);
+					switch (currentCell.getCellType()) {
+					case Cell.CELL_TYPE_STRING:
+						currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
+						break;
+					case Cell.CELL_TYPE_NUMERIC:
+						currentHash.put(HeaderRow.getCell(j).getStringCellValue(),
+								String.valueOf(currentCell.getNumericCellValue()));
+						break;
+					}
 
-            Row HeaderRow = sh.getRow(0);
-            for (int i = 1; i < sh.getPhysicalNumberOfRows(); i++) {
-                Row currentRow = sh.getRow(i);
-                HashMap<String, String> currentHash = new HashMap<String, String>();
-                for (int j = 0; j < currentRow.getPhysicalNumberOfCells(); j++) {
-                    Cell currentCell = currentRow.getCell(j);
-                    switch (currentCell.getCellType()) {
-                        case Cell.CELL_TYPE_STRING:
-                            currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
-                            break;
-                        case Cell.CELL_TYPE_NUMERIC:
-                            currentHash.put(HeaderRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getNumericCellValue()));
-                            break;
-                    }
-            
-                }
-                mydata.add(currentHash);
-                System.out.println("Username"+currentHash.get("Username"));
-              
-                }
-            return ;
-}
+				}
+				mydata.add(currentHash);
+				System.out.println("Username" + currentHash.get("Username"));
+
+			}
+		}
+		return mydata;
+	}
 
 	public static String randomNameString(int count) {
 		StringBuilder builder = new StringBuilder();
@@ -166,6 +145,7 @@ public class BaseClass {
 		}
 		return builder.toString();
 	}
+
 	public static String randomAddressNumberString(int count) {
 		StringBuilder builder = new StringBuilder();
 		while (count-- != 0) {
@@ -174,6 +154,7 @@ public class BaseClass {
 		}
 		return builder.toString();
 	}
+
 	public static void initialization(String applicationType) throws MyOwnException {
 
 		log.info("METHOD(initialization) EXECUTION STARTED SUCCESSFULLY");
@@ -392,23 +373,16 @@ public class BaseClass {
 		throw new MyOwnException(message);
 	}
 
-	public void readTestDataFromExcel(String appType, String testDataType,String testCaseId) {
-
-		try {
-			if (appType.equals("ePortal")) {
-				readSpecificTestData(
-						System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\"
-								+ prop.getProperty("TestDataFileName"),
-						prop.getProperty("InitAppSheetName"), testDataType);
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-
-
+	/*
+	 * public void readTestDataFromExcel(String appType, String testDataType, String
+	 * testCaseId) {
+	 * 
+	 * try { if (appType.equals("ePortal")) { readSpecificTestData( testDataType); }
+	 * 
+	 * } catch (Exception e) { e.printStackTrace(); }
+	 * 
+	 * }
+	 */
 
 	public static Map<String, String> splitToMap(String data) throws MyOwnException {
 

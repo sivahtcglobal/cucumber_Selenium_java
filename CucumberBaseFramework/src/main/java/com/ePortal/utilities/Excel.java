@@ -1,6 +1,10 @@
 package com.ePortal.utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFFormulaEvaluator;
@@ -11,10 +15,9 @@ import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import com.ePortal.utilities.BaseClass;
 
 public class Excel extends BaseClass {
 
@@ -22,13 +25,72 @@ public class Excel extends BaseClass {
 
 	private static Workbook wb;
 	private static Sheet sh;
+	private static XSSFCell col = null; 
 	private static Row row;
 	private static Cell cell;
 	private static int rowCount;
 	private static int colCount;
 	private static DataFormatter objDefaultFormat;
 	private static FormulaEvaluator objFormulaEvaluator;
+    public static FileInputStream f = null;
+	  public static String getExceldata(String excelFileName,String sheetname, int colnum, int rownum) {
+	        try {
+	        	
+	            File file = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\"+excelFileName+".xlsx");
+	            f = new FileInputStream(file);
+	            wb = new XSSFWorkbook(f);
+	            sh = wb.getSheet(sheetname);
+	            row = sh.getRow(rownum);
+	            col = (XSSFCell) row.getCell(colnum);
+	            return col.toString();
+	            // System.out.println(col.get);
+	        } catch (Exception e) {
+	            return sh + "Not Exist";
+	        }
+	    } 
+		public static List<HashMap<String,String>> getData(String excelFileName,String SheetName, String tcname){
+	        int tcStartRowNum = 0;
+	       log.info(getExceldata(excelFileName,SheetName, 0, tcStartRowNum)+"--"+tcname);
+	        while (!getExceldata(excelFileName,SheetName, 0, tcStartRowNum).equals(tcname)) {
 
+	            tcStartRowNum++;
+	        }
+	        System.out.println(tcStartRowNum);
+	        int colStartRow = tcStartRowNum+1;
+	        int cols = 0;
+	        while (!getExceldata(excelFileName,SheetName, cols, colStartRow).equals("N")) {
+
+	            cols++;
+	        }
+	        System.out.println(cols);
+
+	        int dataStartRow = tcStartRowNum+2;
+	        int rows = 0;
+	        while (!getExceldata(excelFileName,SheetName, 0, dataStartRow+rows).equals("N")) {
+
+	            rows++;
+	        }
+	        System.out.println(rows);
+	        List<HashMap<String,String>> data = null ;
+	        int index = 0;
+	        HashMap<String,String> table=null;
+	        for(int rnum = dataStartRow; rnum<dataStartRow+rows; rnum++) {
+	        	table=new HashMap();
+	            for(int cnum = 0 ; cnum<cols;cnum++) {
+	            	
+	            //    System.out.print(xl.getCellData(SheetName, cnum, rnum)+"--");
+	            	String key=getExceldata(excelFileName, SheetName,cnum, colStartRow);
+	            	String value=getExceldata(excelFileName,SheetName, cnum, rnum);
+	            	table.put(key, value);
+	                  
+	            	}
+	            data.add(table);
+	            System.out.println();
+	        }
+	            
+	        return data;
+
+	    } 
 	public static Workbook getToFile(String filePath, String excelFileName) throws MyOwnException {
 
 		log.info("INTEND TO READ THE SPECIFIED EXCEL FILE");
@@ -150,6 +212,7 @@ public class Excel extends BaseClass {
 		log.info("SUCCESSFULLY READ THE CELL VALUE(" + cellValue + ")");
 		return cellValue;
 	}
+	
 
 	public static Object[][] getTestDataAsTwoDimesionalObjectArray(String filePath, String excelFileName,
 			String sheetName) throws MyOwnException {

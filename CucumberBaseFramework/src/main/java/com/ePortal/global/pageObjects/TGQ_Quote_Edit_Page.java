@@ -40,7 +40,7 @@ public class TGQ_Quote_Edit_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void quote(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
@@ -53,12 +53,12 @@ public class TGQ_Quote_Edit_Page extends EportalAllPages {
 			MyWebElement.clickOn(recalculate_button);
 			MyWebElement.clickOn(next_button);
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_Created_quote " + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged into '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+							+ "1_Created_quote" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

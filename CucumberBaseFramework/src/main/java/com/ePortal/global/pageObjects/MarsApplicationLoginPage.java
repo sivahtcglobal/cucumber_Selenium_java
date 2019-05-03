@@ -1,5 +1,8 @@
 package com.ePortal.global.pageObjects;
 
+import java.util.Iterator;
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -44,9 +47,21 @@ public class MarsApplicationLoginPage extends EportalAllPages {
 	public void login(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
+//			for(int i = 0; i < BaseClass.mydata.size(); i++)
+//		    {
+//
+//		         Iterator it = (Iterator)BaseClass.mydata.get(i).entrySet().iterator();
+//
+//		         while (it.hasNext()) {
+//		            Map.Entry pairs = (Map.Entry)it.next();
+//		            System.out.println(pairs.getKey() + " = " + pairs.getValue());
+//		            it.remove(); // avoids a ConcurrentModificationException
+//		        }
+//
+//		    }
 
-				MyWebElement.enterText(mars_agencyid, prop.getProperty("TGQUserName"));
-				MyWebElement.enterText(mars_password, prop.getProperty("TGQPassword"));
+				MyWebElement.enterText(mars_agencyid,currentHash.get("Username"));
+				MyWebElement.enterText(mars_password, currentHash.get("Password"));
 
 				MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
 				MyWebElement.clickOnButton(signin_button);

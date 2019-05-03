@@ -61,7 +61,7 @@ public class GlobalCommonObjects extends BaseClass {
 			String actual = dr.getTitle();
 			String expected;
 			if (screenName.equalsIgnoreCase("Homepage")) {
-				expected = prop.getProperty("ePortalHomeTitle");
+				expected = prop.getProperty("TGQHomeTitle");
 				assertEquals(actual, expected);
 			}
 
