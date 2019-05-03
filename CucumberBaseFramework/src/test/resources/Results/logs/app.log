@@ -5012,3 +5012,98 @@ Session ID: 76d71c26-ca89-4ba2-a64f-b9cdb0f31cb5
 12:56:30.588 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
 12:56:30.588 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
 12:56:30.588 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+12:58:11.124 ERROR wrapperClasses.MyWait -until -UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Currently focused window has been closed.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: e2dcffcd-c3e4-45b3-b8c7-f1c7c154cb4e
+*** Element info: {Using=link text, value=Get Quote}
+12:58:11.124 INFO  wrapperClasses.MyWebElement -clickOn -INTEND TO CLICK SPECIFIED WEBELEMENT
+12:58:12.128 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+12:58:12.128 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+12:58:12.128 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+12:58:12.128 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+12:59:52.164 ERROR wrapperClasses.MyWait -until -UNABLE TO WAIT FOR (100) SECONDS UNTIL EXPECTED CONDITION(ELEMENT_VISIBLE) 
+Currently focused window has been closed.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: e2dcffcd-c3e4-45b3-b8c7-f1c7c154cb4e
+*** Element info: {Using=link text, value=Get Quote}
+12:59:52.180 ERROR pageObjects.TGQ_RatingInfo_Page -ratinginfo -Currently focused window has been closed.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: e2dcffcd-c3e4-45b3-b8c7-f1c7c154cb4e
+*** Element info: {Using=link text, value=Get Quote}
+12:59:53.248 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION STARTED SUCCESSFULLY
+12:59:57.002 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION ENDED SUCCESSFULLY
+12:59:57.008 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+12:59:57.009 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+12:59:57.009 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+12:59:57.009 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+12:59:57.009 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(ePortal_PoC) IN EXTENT REPORT
+12:59:57.009 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+12:59:57.009 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(ePortal_PoC) TO A TEST CASE IN EXTENT REPORT
+12:59:57.009 INFO  pageObjects.MarsApplicationLoginPage -login -METHOD(login) STARTED SUCCESSFULLY
+12:59:57.009 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+12:59:58.009 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+12:59:58.009 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+12:59:58.009 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+12:59:58.009 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+12:59:58.650 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+12:59:58.650 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+12:59:59.463 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: agencyid]) IS DISPLAYED
+12:59:59.910 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: agencyid]) IS DISPLAYED OR NOT
+12:59:59.910 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+13:00:00.824 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: agencyid]) IS ENABLED
+13:00:01.058 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: agencyid]) IS ENABLED OR NOT
+13:00:01.058 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:01.058 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:01.058 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:03.131 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:03.131 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:03.131 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:03.131 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:03.506 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+13:00:04.559 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(NTVNDM31) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: agencyid])
+13:00:04.559 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+13:00:05.570 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:05.570 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:05.570 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:05.570 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:05.976 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+13:00:05.976 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+13:00:06.638 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: pwd]) IS DISPLAYED
+13:00:06.888 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: pwd]) IS DISPLAYED OR NOT
+13:00:06.888 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+13:00:07.534 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: pwd]) IS ENABLED
+13:00:07.752 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: pwd]) IS ENABLED OR NOT
+13:00:07.752 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:07.752 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:07.752 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:09.667 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:09.667 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:09.667 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:09.667 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:10.057 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+13:00:11.197 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(Angular123456) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (f49a0ab7-2f5c-44b1-9023-ad3a05033736)] -> name: pwd])
+13:00:11.197 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:11.197 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:11.197 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:11.197 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:11.968 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (30) SECONDS
+13:00:11.968 INFO  wrapperClasses.MyWebElement -clickOnButton -INTEND TO CLICK SPECIFIED WEBELEMENT
+13:00:12.977 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:12.977 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:12.977 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:12.977 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+13:00:13.384 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+13:00:13.384 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+13:00:13.384 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+13:00:13.384 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+13:00:13.384 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
