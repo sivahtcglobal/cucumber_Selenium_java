@@ -57,14 +57,10 @@ public class TGQ_New_Quote_Page extends EportalAllPages {
 				state.selectByVisibleText(currentHash.get("QuoteState"));
 				//MyWebElement.enterText(tgq_state, prop.getProperty("tgq_state"));
 				Select policy_type = new Select(tgq_policy_type);
-				policy_type.selectByVisibleText(currentHash.get("QuoteState"));
+				policy_type.selectByVisibleText(currentHash.get("PolicyType"));
 				//MyWebElement.enterText(tgq_policy_type, prop.getProperty("tgq_policy_type"));
-				String[] zipcode=currentHash.get("ZipCode").split(".");
-				String splitted_zip_code = null;
-				for (int i=0;i<zipcode.length;i++) {
-					splitted_zip_code=zipcode[i];
-				}
-				MyWebElement.enterText(tgq_zip_code,splitted_zip_code);
+				
+				MyWebElement.enterText(tgq_zip_code,currentHash.get("ZipCode"));
 				//MyWebElement.enterText(tgq_eff_mnth, prop.getProperty("tgq_eff_mnth"));
 				//MyWebElement.enterText(tgq_eff_date, prop.getProperty("TGQUserName"));
 				//MyWebElement.enterText(tgq_eff_year, prop.getProperty("TGQPassword"));

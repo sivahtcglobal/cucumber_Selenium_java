@@ -30,6 +30,14 @@ formatter.step({
   "name": "Fill the mandatory fields in \"New Quote\" page",
   "keyword": "Then "
 });
+formatter.step({
+  "name": "Fill the mandatory fields in \"Rating Info\" tab",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user quits the browser",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -93,4 +101,24 @@ formatter.step({
 });
 formatter.match({
   "location": "LoginPageSteps.login(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Fill the mandatory fields in \"New Quote\" page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "NewQuoteSteps.newQuote(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Fill the mandatory fields in \"Rating Info\" tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RatingInfoSteps.ratingInfo(String)"
 });
