@@ -179,7 +179,7 @@ public class BaseClass {
 
 			InternetExplorerOptions caps = new InternetExplorerOptions();
 			caps.requireWindowFocus();
-			caps.withInitialBrowserUrl("http://localhost");
+			//caps.withInitialBrowserUrl("http://localhost");
 			caps.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
 			caps.introduceFlakinessByIgnoringSecurityDomains();
 			caps.enablePersistentHovering();
@@ -193,11 +193,13 @@ public class BaseClass {
 		}
 
 		dr.manage().window().maximize();
+
 		dr.manage().deleteAllCookies();
 
 		//dr.navigate().to(prop.getProperty("TGQUrl"));
 		dr.navigate().to("https://"+prop.getProperty("TestEnvironment")+".pgactest.com/mars/");
 		ePortalAllPages = new TheGeneralAllPages(dr);
+
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
 	}
 
