@@ -1,9 +1,9 @@
-@thegeneral @searchquote
+@Approved
 Feature: Quote Search in TGQ Application
   Scenario: TGQ Quote Search As Agent
-    Given login with Valid username and password in Mars Application
-    And Click on the QuoteSearch button
-    Then The Quote number is provided in Quote Search page
-    #Then Click on the Quote number for details
-  Scenario: Capture Policy Number
-    Then Get the Policy Number
+  	Given user get the Test data "TGQ" 
+	When user launches "TGQ" URL 
+	Then user login to "TGQ" application using "QuoteSearch" button
+    Then The Quote number is provided in "TextField"
+    
+  

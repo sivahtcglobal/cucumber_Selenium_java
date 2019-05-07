@@ -1,0 +1,113 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "TGQ Quote Search As Agent",
+        "description": "",
+        "id": "quote-search-in-tgq-application;tgq-quote-search-as-agent",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 733691400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user get the Test data \"TGQ\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TGQ",
+                  "offset": 24
+                }
+              ],
+              "location": "CommonSteps.readTestData(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3702729200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user launches \"TGQ\" URL",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TGQ",
+                  "offset": 15
+                }
+              ],
+              "location": "CommonSteps.launchUrl(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29768160900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user login to \"TGQ\" application using \"QuoteSearch\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TGQ",
+                  "offset": 15
+                },
+                {
+                  "val": "QuoteSearch",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginPageSteps.login(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13616894000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The Quote number is provided in \"TextField\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TextField",
+                  "offset": 33
+                }
+              ],
+              "location": "QuoteSearchUsingQuoteNumber.enterQuote(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Approved"
+          }
+        ]
+      }
+    ],
+    "name": "Quote Search in TGQ Application",
+    "description": "",
+    "id": "quote-search-in-tgq-application",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/B2_TGQ_Quote_search_using_quoteno.feature",
+    "tags": [
+      {
+        "name": "@Approved",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

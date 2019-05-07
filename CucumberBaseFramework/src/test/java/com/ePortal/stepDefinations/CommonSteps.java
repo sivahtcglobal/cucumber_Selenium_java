@@ -2,17 +2,13 @@ package com.ePortal.stepDefinations;
 
 import java.awt.AWTException;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
 
 import com.ePortal.global.pageObjects.GlobalCommonObjects;
 import com.ePortal.utilities.BaseClass;
-import com.ePortal.utilities.Excel;
 import com.ePortal.utilities.MyOwnException;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
 public class CommonSteps extends BaseClass {
 
@@ -54,11 +50,11 @@ public class CommonSteps extends BaseClass {
 		initialization(applicationType);
 	}
 
-	@Given("user get the Test data \"([^\"]*)\" and \"([^\"]*)\" type")
-	public void readTestData(String appType, String testCaseId)
+	@Given("user get the Test data \"([^\"]*)\"$")
+	public void readTestData(String appType)
 			throws MyOwnException, InterruptedException, AWTException, IOException {
 
-		readSpecificTestData(testCaseId);
+		readSpecificTestData(prop.getProperty("TestCaseId"));
 
 	}
 

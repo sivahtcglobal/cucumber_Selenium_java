@@ -15,7 +15,7 @@ import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
 
-public class TGQ_RatingInfo_Page extends EportalAllPages {
+public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_RatingInfo_Page.class.getName());
 
@@ -130,7 +130,7 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 	public WebElement save;
 	@FindBy(how = How.LINK_TEXT, using = "Show Messages")
 	public WebElement show_messages;
-	@FindBy(how = How.LINK_TEXT, using = "Get Quote")
+	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[12]/table/tbody/tr/td[3]/a")
 	public WebElement get_quote;
 
 	WebDriver ldriver;
@@ -251,14 +251,14 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 			// model_veh.selectByVisibleText(prop.getProperty("model"));
 			// Select type_veh = new Select(type_vehicle);
 			// type_veh.selectByVisibleText(prop.getProperty("type_vehicle"));
-			if (!currentHash.get("CompDed").equals("Nil")) {
-				Select comp_ded_veh = new Select(comp_ded);
-				comp_ded_veh.selectByVisibleText(currentHash.get("CompDed"));
-			}
-			if (!currentHash.get("CollDed").equals("Nil")) {
-				Select coll_ded_veh = new Select(coll_ded);
-				coll_ded_veh.selectByVisibleText(currentHash.get("CollDed"));
-			}
+//			if (!currentHash.get("CompDed").equals("Nil")) {
+//				Select comp_ded_veh = new Select(comp_ded);
+//				comp_ded_veh.selectByVisibleText(currentHash.get("CompDed"));
+//			}
+//			if (!currentHash.get("CollDed").equals("Nil")) {
+//				Select coll_ded_veh = new Select(coll_ded);
+//				coll_ded_veh.selectByVisibleText(currentHash.get("CollDed"));
+//			}
 			if (!currentHash.get("BusUse").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
 				bus_use_veh.selectByVisibleText(currentHash.get("BusUse"));
@@ -267,33 +267,33 @@ public class TGQ_RatingInfo_Page extends EportalAllPages {
 				Select dbl_ded_veh = new Select(dbl_ded);
 				dbl_ded_veh.selectByVisibleText(currentHash.get("DblDed"));
 			}
-			if (!currentHash.get("Towing&Labour").equals("Nil")) {
-				Select towing_labour_veh = new Select(towing_labour);
-				towing_labour_veh.selectByVisibleText(currentHash.get("Towing&Labour"));
-			}
+//			if (!currentHash.get("Towing&Labour").equals("Nil")) {
+//				Select towing_labour_veh = new Select(towing_labour);
+//				towing_labour_veh.selectByVisibleText(currentHash.get("Towing&Labour"));
+//			}
 			// MyWebElement.enterText(custom_equip, prop.getProperty("custom_equip"));
 
 			//MyWebElement.clickOn(save);
-			MyWebElement.clickOn(get_quote);
+			get_quote.click();
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Created_ratinginfo_" + applicationType + ".png");
+					+ "\\" + "1_Created_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Created_ratinginfo_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_Logged into '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Created_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_ratinginfo_" + applicationType + ".png");
+					+ "\\" + "1_Error_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while Logging into '" + applicationType
+					"<font color=red><b>Error while '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_ratinginfo_" + applicationType + ".png");
-			throwException("Unable Create ratinginfo" + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_" + applicationType + ".png");
+			throwException("Unable Create " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

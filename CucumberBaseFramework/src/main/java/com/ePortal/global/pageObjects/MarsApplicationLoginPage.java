@@ -17,7 +17,7 @@ import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
 
-public class MarsApplicationLoginPage extends EportalAllPages {
+public class MarsApplicationLoginPage extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(MarsApplicationLoginPage.class.getName());
 
@@ -31,10 +31,10 @@ public class MarsApplicationLoginPage extends EportalAllPages {
 
 	@FindBy(how = How.NAME, using = "pwd")
 	public WebElement mars_password;
-	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"maincontent\"]/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input")
+
+	@FindBy(how = How.XPATH, using = "//*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input")
 	public WebElement new_Quote;
-	@FindBy(how = How.NAME, using = "//*[@id=\"maincontent\"]/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[5]/td/input")
+	@FindBy(how = How.XPATH, using = "//*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[5]/td/input")
 	public WebElement quote_Search;
 	WebDriver ldriver;
 
@@ -44,7 +44,7 @@ public class MarsApplicationLoginPage extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void login(String applicationType,String operation) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 //			for(int i = 0; i < BaseClass.mydata.size(); i++)
@@ -60,20 +60,24 @@ public class MarsApplicationLoginPage extends EportalAllPages {
 //
 //		    }
 
-				MyWebElement.enterText(mars_agencyid,currentHash.get("Username"));
-				MyWebElement.enterText(mars_password, currentHash.get("Password"));
+			MyWebElement.enterText(mars_agencyid, currentHash.get("Username"));
+			MyWebElement.enterText(mars_password, currentHash.get("Password"));
 
-				MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
-				MyWebElement.clickOnButton(signin_button);
+			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
+			MyWebElement.clickOnButton(signin_button);
+			if (operation.equals("New Quote")) {
 				MyWebElement.clickOnButton(new_Quote);
+			} else if (operation.equals("QuoteSearch")) {
+				MyWebElement.clickOnButton(quote_Search);
+			}
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Login_to_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_Logged into '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Login_to_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

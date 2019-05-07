@@ -2,6 +2,7 @@ package com.ePortal.wrapperClasses;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -394,5 +395,14 @@ public class MyWebElement extends Report {
 		log.info("SUCCESSFULLY SELECTED SPECIFIED DROP DOWN VALUE(" + value + ") USING : " + setMethodType
 				+ " METHOD TYPE");
 	}
+	public static boolean isElementPresent(By by) {
+		  try {
+		    dr.findElement(by);
+		    return true;
+		  }
+		catch (org.openqa.selenium.NoSuchElementException e) {
+		    return false;
+		  }
+		}
 
 }

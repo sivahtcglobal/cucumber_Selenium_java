@@ -34,7 +34,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.ePortal.global.pageObjects.EportalAllPages;
+import com.ePortal.global.pageObjects.TheGeneralAllPages;
 import com.google.common.base.Splitter;
 
 public class BaseClass {
@@ -55,7 +55,7 @@ public class BaseClass {
 	public static String screenShotFolderPath;
 	public static ExtentReports report;
 	public static ExtentTest parentTestCase;
-	public static EportalAllPages ePortalAllPages;
+	public static TheGeneralAllPages ePortalAllPages;
 	private static final String Name_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	private static final String Addres_Number_STRING = "1234567890";
 	public static Row row;
@@ -195,8 +195,9 @@ public class BaseClass {
 		dr.manage().window().maximize();
 		dr.manage().deleteAllCookies();
 
-		dr.navigate().to(prop.getProperty("TGQUrl"));
-		ePortalAllPages = new EportalAllPages(dr);
+		//dr.navigate().to(prop.getProperty("TGQUrl"));
+		dr.navigate().to("https://"+prop.getProperty("TestEnvironment")+".pgactest.com/mars/");
+		ePortalAllPages = new TheGeneralAllPages(dr);
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
 	}
 
@@ -208,7 +209,7 @@ public class BaseClass {
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
 				+ testRunTimeStamp;
 
-		report = Report.initialize("ePortal_PoC_Test_Execution_Report.html", false);
+		report = Report.initialize("TheGeneral_Test_Execution_Report.html", false);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");
 		Report.recordSystemInfo(report, "Selenium Version", "3.4");
@@ -373,36 +374,7 @@ public class BaseClass {
 		throw new MyOwnException(message);
 	}
 
-	/*
-	 * public void readTestDataFromExcel(String appType, String testDataType, String
-	 * testCaseId) {
-	 * 
-	 * try { if (appType.equals("ePortal")) { readSpecificTestData( testDataType); }
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); }
-	 * 
-	 * }
-	 */
 
-	public static Map<String, String> splitToMap(String data) throws MyOwnException {
-
-		log.info("METHOD(splitToMap) EXECUTION STARTED SUCCESSFULLY");
-
-		try {
-			ePortalTestDataMap = Splitter.on("\n").withKeyValueSeparator("~").split(data);
-
-		} catch (Exception exp) {
-			log.error(exp.getMessage());
-			throwException("UNABLE TO SPLIT THE GIVEN STRING INTO A MAP FROM THE METHOD splitToMap.\n"
-
-					+ exp.getMessage() + "\n");
-
-		}
-
-		log.info("METHOD(splitToMap) EXECUTED SUCCESSFULLY");
-
-		return ePortalTestDataMap;
-
-	}
+	
 
 }

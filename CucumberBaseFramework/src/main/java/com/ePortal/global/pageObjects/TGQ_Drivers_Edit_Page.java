@@ -15,7 +15,7 @@ import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
 
-public class TGQ_Drivers_Edit_Page extends EportalAllPages {
+public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_Drivers_Edit_Page.class.getName());
 
@@ -40,36 +40,34 @@ public class TGQ_Drivers_Edit_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void driversedit(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
 			Select state_lic_dr = new Select(state_lic);
-			state_lic_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-			Select ssn_dr = new Select(ssn);
-			ssn_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-			Select dl_dr = new Select(dl);
-			dl_dr.selectByVisibleText( prop.getProperty("TGQPassword"));
-			MyWebElement.clickOn(recalculate_button);
-			MyWebElement.clickOn(next_button);
+			state_lic_dr.selectByVisibleText(currentHash.get("QuoteState"));
+			MyWebElement.enterText(ssn,"666881265");
+			MyWebElement.enterText(dl,"487956891");
+			recalculate_button.click();;
+			next_button.click();;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_Drivers_are_edited_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_Logged_into_ '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Drivers_are_edited_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_in_Drivers_editing_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while Logging into '" + applicationType
+					"<font color=red><b>Error_in_Drivers_editing '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_in_Drivers_editing_" + applicationType + ".png");
+			throwException("Unable To Edit Driver/s " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 
