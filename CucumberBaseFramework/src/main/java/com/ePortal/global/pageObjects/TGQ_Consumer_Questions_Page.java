@@ -1,29 +1,24 @@
 package com.ePortal.global.pageObjects;
 
-
-
 import java.util.LinkedList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
 
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.core.sym.Name;
-
-public class TGQ_Consumer_Questions_Page extends EportalAllPages {
+public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_Consumer_Questions_Page.class.getName());
 
@@ -36,7 +31,7 @@ public class TGQ_Consumer_Questions_Page extends EportalAllPages {
 	@FindBy(how = How.LINK_TEXT, using = "I am sure the address is correct as entered")
 	public WebElement tgq_use_entered_address;
 	@SuppressWarnings("rawtypes")
-	@FindAll(value = { @FindBy (how= How.NAME,using= "orders.creditOrder.action.value") })
+	@FindAll(value = { @FindBy(how = How.NAME, using = "orders.creditOrder.action.value") })
 	public LinkedList tgq_action;
 	@FindBy(how = How.LINK_TEXT, using = "Order Credit")
 	public WebElement tgq_order_credit;
@@ -54,7 +49,6 @@ public class TGQ_Consumer_Questions_Page extends EportalAllPages {
 	public WebElement tgq_save;
 	@FindBy(how = How.LINK_TEXT, using = "Next")
 	public WebElement tgq_next_btn;
-
 	WebDriver ldriver;
 
 	public TGQ_Consumer_Questions_Page(WebDriver dr) {
@@ -63,40 +57,60 @@ public class TGQ_Consumer_Questions_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void consumerquestions(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			MyWebElement.clickOn(tgq_verify_address);
-			MyWebElement.clickOn(tgq_use_entered_address);
-			WebElement ele=(WebElement) tgq_action.getLast();
-			MyWebElement.clickOn(ele);
-			MyWebElement.clickOn(tgq_order_credit);
-			MyWebElement.clickOn(tgq_update_credit);
-			MyWebElement.clickOn(tgq_Order_Prior_Insurance);
-			MyWebElement.clickOn(tgq_order_mvr);
-			MyWebElement.clickOn(tgq_update_mvr);
-			MyWebElement.clickOn(tgq_order_clue);
-			MyWebElement.clickOn(tgq_save);
-			MyWebElement.clickOn(tgq_next_btn);
-			
+			if (tgq_verify_address.isDisplayed()) {
+				if (tqq_address_text.getText().equals("Address verification will be attempted now")) {
+					tgq_verify_address.click();;
+				}
+				MyWait.until(ldriver, "ELEMENT_VISIBLE", 10, tgq_use_entered_address);
+				if (tqq_address_text.getText().equals("Address verification")) {
+					tgq_use_entered_address.click();;
+				}
+			}
+			List<WebElement>list=dr.findElements(By.xpath("//*[@id='consRepSubmitButton']/a"));
+			if(list.size()>0 ) { {
+				WebElement ele = (WebElement) tgq_action.getLast();
+				ele.click();
+				tgq_order_credit.click();
+			}
+//			if (tgq_update_credit.isDisplayed()) {
+//				tgq_update_credit.click();;
+//			}
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				tgq_Order_Prior_Insurance.click();;
+			}
+			if (tgq_order_mvr.isEnabled()) {
+				tgq_order_mvr.click();;
+			}
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				tgq_update_mvr.click();;
+			}
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				tgq_order_clue.click();;
+			}
+			tgq_save.click();;
+			tgq_next_btn.click();;
+
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_consumerquestions_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
-
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_answered_consumerquestions '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//						+ "1_consumerquestions_" + applicationType + ".png");
+			}	
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_consumerquestions_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while Logging into '" + applicationType
+					"<font color=red><b>Error consumerquestions '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_consumerquestions_" + applicationType + ".png");
+			throwException("Unable answer consumerquestions " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

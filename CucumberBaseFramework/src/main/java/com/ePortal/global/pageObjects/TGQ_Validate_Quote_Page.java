@@ -23,7 +23,7 @@ import com.ePortal.wrapperClasses.MyWebElement;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.core.sym.Name;
 
-public class TGQ_Validate_Quote_Page extends EportalAllPages {
+public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_Validate_Quote_Page.class.getName());
 
@@ -65,42 +65,42 @@ public class TGQ_Validate_Quote_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void validatequote(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
 			Select signup_paperless_val = new Select(signup_paperless);
-			signup_paperless_val.selectByVisibleText( prop.getProperty("TGQPassword"));
-			MyWebElement.enterText(prim_num1, prop.getProperty("TGQUserName"));
-			MyWebElement.enterText(prim_num2, prop.getProperty("TGQUserName"));
-			MyWebElement.enterText(prim_num3, prop.getProperty("TGQUserName"));
+			signup_paperless_val.selectByVisibleText("No");
+			//MyWebElement.enterText(prim_num1, prop.getProperty("TGQUserName"));
+			//MyWebElement.enterText(prim_num2, prop.getProperty("TGQUserName"));
+			//MyWebElement.enterText(prim_num3, prop.getProperty("TGQUserName"));
 			Select account_alerts_val = new Select(account_alerts);
-			account_alerts_val.selectByVisibleText( prop.getProperty("TGQPassword"));
-			MyWebElement.enterText(alt_num1, prop.getProperty("TGQUserName"));
-			MyWebElement.enterText(alt_num2, prop.getProperty("TGQUserName"));
-			MyWebElement.enterText(alt_num3, prop.getProperty("TGQUserName"));
+			account_alerts_val.selectByVisibleText("Call");
+			//MyWebElement.enterText(alt_num1, prop.getProperty("TGQUserName"));
+			//MyWebElement.enterText(alt_num2, prop.getProperty("TGQUserName"));
+			//MyWebElement.enterText(alt_num3, prop.getProperty("TGQUserName"));
 			Select closing_method_val = new Select(closing_method);
-			closing_method_val.selectByVisibleText( prop.getProperty("TGQPassword"));
-			MyWebElement.clickOn(tgq_next_btn);
+			closing_method_val.selectByVisibleText("Fax");
+			tgq_next_btn.click();;
 			
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_validatequote_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_validated_quote '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Login_to_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_in_validating_quote_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while Logging into '" + applicationType
+					"<font color=red><b>Error Validating Quote '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_in_validating_quote_" + applicationType + ".png");
+			throwException("Unable To validate Quote " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

@@ -3,6 +3,7 @@ package com.ePortal.global.pageObjects;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,7 +16,7 @@ import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
 
-public class TGQ_Quote_Edit_Page extends EportalAllPages {
+public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_Quote_Edit_Page.class.getName());
 
@@ -27,9 +28,9 @@ public class TGQ_Quote_Edit_Page extends EportalAllPages {
 	public WebElement coll_ded;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].towingLimit.writableValue")
 	public WebElement towing;
-	@FindBy(how = How.LINK_TEXT, using = "Recalculate")
+	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[6]/table/tbody/tr/td[3]/a")
 	public WebElement recalculate_button;
-	@FindBy(how = How.LINK_TEXT, using = "Next")
+	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[6]/table/tbody/tr/td[5]/a")
 	public WebElement next_button;
 
 	WebDriver ldriver;
@@ -40,36 +41,44 @@ public class TGQ_Quote_Edit_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void quote(String applicationType) throws MyOwnException, InterruptedException {
+	public void quotedit(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
+		System.out.println("EGFIKEDBGKBGDSBGJDGBDKGBSKGSDBGKDS");
 		try {
-
-			Select comp_ded_q = new Select(comp_ded);
-			comp_ded_q.selectByVisibleText( prop.getProperty("TGQPassword"));
-			Select coll_ded_q = new Select(coll_ded);
-			coll_ded_q.selectByVisibleText( prop.getProperty("TGQPassword"));
-			Select towing_q = new Select(towing);
-			towing_q.selectByVisibleText( prop.getProperty("TGQPassword"));
-			MyWebElement.clickOn(recalculate_button);
-			MyWebElement.clickOn(next_button);
+			if (!currentHash.get("CompDed").equals("Nil")) {
+				Select comp_ded_q = new Select(comp_ded);
+				comp_ded_q.selectByVisibleText(currentHash.get("CompDed"));
+			}
+			if (!currentHash.get("CollDed").equals("Nil")) {
+				Select coll_ded_q = new Select(coll_ded);
+				coll_ded_q.selectByVisibleText(currentHash.get("CollDed"));
+			}
+			if (!currentHash.get("Towing&Labour").equals("Nil")) {
+				Select towing_q = new Select(towing);
+				towing_q.selectByVisibleText(currentHash.get("Towing&Labour"));
+			}
+			if (!currentHash.get("Towing&Labour").equals("Nil")) {
+				recalculate_button.click();;
+			}
+			next_button.click();;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Created_quote " + applicationType + ".png");
+					+ "\\" + "1_Created_quote_ " + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Created_quote" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_Logged_into_ '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Created_quote_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_Creating_quote_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_Creating_quote_" + applicationType + ".png");
+			throwException("Unable To create  " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

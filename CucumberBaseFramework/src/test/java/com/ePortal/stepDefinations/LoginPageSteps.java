@@ -16,13 +16,13 @@ public class LoginPageSteps extends BaseClass {
 		super();
 	}
 
-	@When("user login to \"([^\"]*)\" application$")
-	public void login(String applicationType) throws InterruptedException, MyOwnException {
+	@When("user login to \"([^\"]*)\" application using \"([^\"]*)\" button$")
+	public void login(String applicationType,String operation) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "ePortal_PoC");
-		Report.assignCategoryToTestCase(parentTestCase, "ePortal_PoC");
+		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
+		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
 
-		login.login(applicationType);
+		login.login(applicationType,operation);
 
 	}
 

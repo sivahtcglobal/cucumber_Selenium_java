@@ -21,8 +21,8 @@ public class NewQuoteSteps extends BaseClass {
 	@When("Fill the mandatory fields in \"([^\"]*)\" page$")
 	public void newQuote(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "ePortal_PoC");
-		Report.assignCategoryToTestCase(parentTestCase, "ePortal_PoC");
+		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
+		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
 
 		newQuote_page.newquote(applicationType);
 

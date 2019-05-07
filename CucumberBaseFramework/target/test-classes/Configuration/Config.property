@@ -2,7 +2,8 @@ browser=IE
 chromeDriver=webdriver.chrome.driver
 IEDriver=webdriver.ie.driver
 firefoxDriver=webdriver.gecko.driver
-TGQUrl=https://www1.pgactest.com/mars/login.jsp?logout=true&redirect=%2Fagency%2Fdefault.jsp
+TestEnvironment=www1
+TestCaseId=TC001
 TGQUserName=NTVNDM31
 TGQPassword=Angular123456
 tgq_state=TN

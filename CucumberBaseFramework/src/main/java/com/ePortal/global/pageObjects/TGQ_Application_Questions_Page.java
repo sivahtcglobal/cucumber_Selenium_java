@@ -15,7 +15,7 @@ import com.ePortal.utilities.Report;
 import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
 
-public class TGQ_Application_Questions_Page extends EportalAllPages {
+public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 
 	private static final Logger log = LogManager.getLogger(TGQ_Application_Questions_Page.class.getName());
 
@@ -44,42 +44,42 @@ public class TGQ_Application_Questions_Page extends EportalAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType) throws MyOwnException, InterruptedException {
+	public void applicationQuestions(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
 			Select appQue_1 = new Select(appQuestions_1);
-			appQue_1.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_1.selectByVisibleText("No");
 			Select appQue_2 = new Select(appQuestions_2);
-			appQue_2.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_2.selectByVisibleText("No");
 			Select appQue_3 = new Select(appQuestions_3);
-			appQue_3.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_3.selectByVisibleText("No");
 			Select appQue_4 = new Select(appQuestions_4);
-			appQue_4.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_4.selectByVisibleText("No");
 			Select appQue_5 = new Select(appQuestions_5);
-			appQue_5.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_5.selectByVisibleText("Yes");
 			Select appQue_6 = new Select(appQuestions_6);
-			appQue_6.selectByVisibleText( prop.getProperty("TGQPassword"));
+			appQue_6.selectByVisibleText("Yes");
 			
-			MyWebElement.clickOn(next_button);
+			next_button.click();;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Login_to_" + applicationType + ".png");
+					+ "\\" + "1_applicationQuestions_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Login_to_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_answered_applicationQuestions '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_applicationQuestions_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+					+ "\\" + "1_Error_in_applicationQuestions_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while Logging into '" + applicationType
+					"<font color=red><b>Error in answering Application Questions '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-							+ "1_Error_Logging_into_" + applicationType + ".png");
-			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
+							+ "1_Error_in_applicationQuestions_" + applicationType + ".png");
+			throwException("Unable answer Application Questions " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 
