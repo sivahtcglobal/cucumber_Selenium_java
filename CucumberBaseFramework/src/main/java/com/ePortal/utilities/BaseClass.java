@@ -179,7 +179,7 @@ public class BaseClass {
 
 			InternetExplorerOptions caps = new InternetExplorerOptions();
 			caps.requireWindowFocus();
-			caps.withInitialBrowserUrl("http://localhost");
+			//caps.withInitialBrowserUrl("http://localhost");
 			caps.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
 			caps.introduceFlakinessByIgnoringSecurityDomains();
 			caps.enablePersistentHovering();
@@ -193,9 +193,9 @@ public class BaseClass {
 		}
 
 		dr.manage().window().maximize();
-		dr.manage().deleteAllCookies();
-
+		dr.manage().deleteAllCookies();                 
 		dr.navigate().to(prop.getProperty("TGQUrl"));
+		log.trace("Initialize the URL");
 		ePortalAllPages = new EportalAllPages(dr);
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
 	}
