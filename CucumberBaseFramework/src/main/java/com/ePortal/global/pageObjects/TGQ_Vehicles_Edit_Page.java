@@ -31,7 +31,10 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 	public WebElement recalculate_button;
 	@FindBy(how = How.LINK_TEXT, using = "Next")
 	public WebElement next_button;
-
+	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].compDed.writableValue")
+	public WebElement comp_ded;
+	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].collDed.writableValue")
+	public WebElement coll_ded;
 	WebDriver ldriver;
 
 	public TGQ_Vehicles_Edit_Page(WebDriver dr) {
@@ -43,6 +46,14 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 	public void vehiclesedit(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
+			if (!currentHash.get("CompDed").equals("Nil")) {
+				Select comp_ded_veh = new Select(comp_ded);
+				comp_ded_veh.selectByVisibleText(currentHash.get("CompDed"));
+			}
+			if (!currentHash.get("CollDed").equals("Nil")) {
+				Select coll_ded_veh = new Select(coll_ded);
+				coll_ded_veh.selectByVisibleText(currentHash.get("CollDed"));
+			}
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit") ) {
 			Select ownership_type_veh = new Select(ownership_type);
 			ownership_type_veh.selectByVisibleText("Owned");

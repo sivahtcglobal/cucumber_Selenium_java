@@ -26,10 +26,13 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 	public WebElement quote_number;
 	@FindBy(how = How.LINK_TEXT, using = "Search")
 	public WebElement search;
-	@FindBy(how = How.LINK_TEXT, using = "11531304")
+	@FindBy(how = How.LINK_TEXT, using = "11530513")
 	public WebElement quote_number_intable;
 	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[12]/table/tbody/tr/td[3]/a")
 	public WebElement get_quote;
+	@FindBy(how = How.XPATH, using = "//*[@id=\"n6\"]/a")
+	public WebElement consumerTab;
+	
 	WebDriver ldriver;
 
 	public TGQ_Search_Quote_Page(WebDriver dr) {
@@ -45,10 +48,11 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 		          ldriver.switchTo().window(handle1);
 		          }
 		         ldriver.manage().window().maximize() ;
-			MyWebElement.enterText(quote_number, "11531304");
+			MyWebElement.enterText(quote_number, "11530513");
 			search.click();;
 			quote_number_intable.click();
 			get_quote.click();
+			consumerTab.click();
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_ " + applicationType + ".png");
 

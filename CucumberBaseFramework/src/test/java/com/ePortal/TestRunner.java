@@ -17,7 +17,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 
-@CucumberOptions(features = "src/test/resources/features/B2_TGQ_Quote_search_using_quoteno.feature",monochrome=false,strict=true, glue = { "com.ePortal.stepDefinations" }, tags = {
+@CucumberOptions(features = "src/test/resources/features/C_TGQ_New_Quote.feature",monochrome=false,strict=true, glue = { "com.ePortal.stepDefinations" }, tags = {
 				"@Approved" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })

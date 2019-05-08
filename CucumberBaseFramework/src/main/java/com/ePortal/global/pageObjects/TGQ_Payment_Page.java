@@ -1,16 +1,11 @@
 package com.ePortal.global.pageObjects;
 
-
-
-import java.util.LinkedList;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -18,10 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
 import com.ePortal.wrapperClasses.MyWebElement;
-
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.core.sym.Name;
 
 public class TGQ_Payment_Page extends TheGeneralAllPages {
 
@@ -35,7 +27,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 	public WebElement check_value;
 	@FindBy(how = How.ID, using = "checkPayment.checkNumber.value")
 	public WebElement check_number;
-	@FindBy(how= How.ID,using= "moneyOrderPayment.paymentAmount.value")
+	@FindBy(how = How.ID, using = "moneyOrderPayment.paymentAmount.value")
 	public WebElement money_order_value;
 	@FindBy(how = How.ID, using = "moneyOrderPayment.moneyOrderNumber.value")
 	public WebElement moneyorder_number;
@@ -66,7 +58,6 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 	@FindBy(how = How.LINK_TEXT, using = "Process Payment")
 	public WebElement process_payment_button;
 
-
 	WebDriver ldriver;
 
 	public TGQ_Payment_Page(WebDriver dr) {
@@ -78,15 +69,18 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 	public void paymentTab(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			 MyWebElement.enterText(ins_debit_credit,downpayment_value.getText());
-			 MyWebElement.enterText(card_number,"4012000033330026");
-			 MyWebElement.enterText(name_on_card,"Abcd Efgh");
-			 Select card_expiry_month_val = new Select(card_expiry_month);
-			 card_expiry_month_val.selectByVisibleText( "1");
-			  Select card_expiry_year_val = new Select(card_expiry_year);
-			  card_expiry_year_val.selectByVisibleText( "2028");
-			 process_payment_button.click();;
-		
+			if (MyWebElement.isAlertPresent("closeButton")) {
+				dr.findElement(By.className("closeButton")).click();
+			}
+			MyWebElement.enterText(ins_debit_credit, downpayment_value.getText());
+			MyWebElement.enterText(card_number, "4012000033330026");
+			MyWebElement.enterText(name_on_card, "Abcd Efgh");
+			Select card_expiry_month_val = new Select(card_expiry_month);
+			card_expiry_month_val.selectByVisibleText("1");
+			Select card_expiry_year_val = new Select(card_expiry_year);
+			card_expiry_year_val.selectByVisibleText("2028");
+			process_payment_button.click();
+
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_paymentTab_" + applicationType + ".png");
 
@@ -100,8 +94,8 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Error_in_paymentTab_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error in payment tab '" + applicationType
-							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
+					"<font color=red><b>Error in payment tab '" + applicationType + "' application: </b></font><br />"
+							+ exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Error_in_paymentTab_" + applicationType + ".png");
 			throwException("Unable To do payment " + applicationType + "application \n" + exp.getMessage() + "\n");

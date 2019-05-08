@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.ePortal.TestRunner" hash-for-method="runScenario(&quot;TGQ Quote Search As Agent&quot;, &quot;Quote Search in TGQ Application&quot;)">runScenario("TGQ Quote Search As Agent", "Quote Search in TGQ Application")</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.ePortal.TestRunner" hash-for-method="runScenario(&quot;TGQ New Quote  As Agent&quot;, &quot;New Quote in TGQ Application&quot;)">runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,24 +117,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.ePortal.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;TGQ Quote Search As Agent&quot;, &quot;Quote Search in TGQ Application&quot;)">
-                  </a> <!-- runScenario("TGQ Quote Search As Agent", "Quote Search in TGQ Application") -->
+                  <a name="runScenario(&quot;TGQ New Quote  As Agent&quot;, &quot;New Quote in TGQ Application&quot;)">
+                  </a> <!-- runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("TGQ Quote Search As Agent", "Quote Search in TGQ Application")</span>
+                  <span class="parameters">("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: Modal dialog present with text: Your browser session has timed out.
+Please close this browser window and enter iPub again.: Your browser session has timed out.
+Please close this browser window and enter iPub again.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 95b8dc35-7842-44ae-bbca-635a190b7eb6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.ePortal.utilities.BaseClass.screenShot(BaseClass.java:361)
+	at com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:273)
+	at com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)
+	at ✽.Fill the mandatory fields in &quot;Rating Info&quot; tab(src/test/resources/features/C_TGQ_New_Quote.feature:8)
+
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -199,12 +220,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.ePortal.TestRunner')
-data.setCell(0, 3, 47871);
+data.setCell(0, 3, 4697110);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 1 hours</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -216,12 +237,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">runScenario("TGQ Quote Search As Agent", "Quote Search in TGQ Application")</span>
+              <span class="reporter-method-name">runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div></span>
-                <span class="reporter-method-output"><div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div></span>
-                <span class="reporter-method-output"><div "result">user login to &quot;TGQ&quot; application using &quot;QuoteSearch&quot; button (PASSED : 29s)</div></span>
-                <span class="reporter-method-output"><div "result">The Quote number is provided in &quot;TextField&quot; (PASSED : 13s)</div></span>
+                <span class="reporter-method-output"><div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div></span>
+                <span class="reporter-method-output"><div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div></span>
+                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 18s)</div></span>
+                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 4645s)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Provide the mandatory fields and &quot;validate&quot; the quote (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">user quits the browser (SKIPPED)</div></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -245,12 +276,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("TGQ Quote Search As Agent", "Quote Search in TGQ Application")</span>
-                <span class="method-start">720 ms</span>
+                <span class="method-name">runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
+                <span class="method-start">728 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">48593 ms</span>
+                <span class="method-start">4697843 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

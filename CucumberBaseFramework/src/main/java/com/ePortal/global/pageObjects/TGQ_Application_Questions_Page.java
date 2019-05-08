@@ -51,17 +51,19 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 			Select appQue_1 = new Select(appQuestions_1);
 			appQue_1.selectByVisibleText("No");
 			Select appQue_2 = new Select(appQuestions_2);
-			appQue_2.selectByVisibleText("No");
+			appQue_2.selectByVisibleText("Yes");
 			Select appQue_3 = new Select(appQuestions_3);
 			appQue_3.selectByVisibleText("No");
-			Select appQue_4 = new Select(appQuestions_4);
-			appQue_4.selectByVisibleText("No");
-			Select appQue_5 = new Select(appQuestions_5);
-			appQue_5.selectByVisibleText("Yes");
-			Select appQue_6 = new Select(appQuestions_6);
-			appQue_6.selectByVisibleText("Yes");
-			
-			next_button.click();;
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				Select appQue_4 = new Select(appQuestions_4);
+				appQue_4.selectByVisibleText("No");
+				Select appQue_5 = new Select(appQuestions_5);
+				appQue_5.selectByVisibleText("Yes");
+				Select appQue_6 = new Select(appQuestions_6);
+				appQue_6.selectByVisibleText("Yes");
+			}
+			next_button.click();
+			;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_applicationQuestions_" + applicationType + ".png");
 
@@ -79,7 +81,8 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Error_in_applicationQuestions_" + applicationType + ".png");
-			throwException("Unable answer Application Questions " + applicationType + "application \n" + exp.getMessage() + "\n");
+			throwException("Unable answer Application Questions " + applicationType + "application \n"
+					+ exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

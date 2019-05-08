@@ -1,60 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
     <line>
       <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div>]]>
+      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;QuoteSearch&quot; button (PASSED : 29s)</div>]]>
+      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">The Quote number is provided in &quot;TextField&quot; (PASSED : 13s)</div>]]>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 18s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 4645s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="49074" started-at="2019-05-07T09:00:03Z" finished-at="2019-05-07T09:00:52Z">
+  <suite name="Suite" duration-ms="4698369" started-at="2019-05-08T10:39:50Z" finished-at="2019-05-08T11:58:09Z">
     <groups>
       <group name="cucumber">
         <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" class="com.ePortal.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="49074" started-at="2019-05-07T09:00:03Z" finished-at="2019-05-07T09:00:52Z">
+    <test name="Test" duration-ms="4698369" started-at="2019-05-08T10:39:50Z" finished-at="2019-05-08T11:58:09Z">
       <class name="com.ePortal.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="579" started-at="2019-05-07T09:00:03Z" finished-at="2019-05-07T09:00:04Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="577" started-at="2019-05-08T10:39:50Z" finished-at="2019-05-08T10:39:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" duration-ms="47871" started-at="2019-05-07T09:00:04Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-07T09:00:52Z">
+        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="runScenario" duration-ms="4697110" started-at="2019-05-08T10:39:51Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-08T11:58:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["TGQ Quote Search As Agent"]]>
+                <![CDATA["TGQ New Quote  As Agent"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Quote Search in TGQ Application"]]>
+                <![CDATA["New Quote in TGQ Application"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[Modal dialog present with text: Your browser session has timed out.
+Please close this browser window and enter iPub again.: Your browser session has timed out.
+Please close this browser window and enter iPub again.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 95b8dc35-7842-44ae-bbca-635a190b7eb6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: Modal dialog present with text: Your browser session has timed out.
+Please close this browser window and enter iPub again.: Your browser session has timed out.
+Please close this browser window and enter iPub again.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 95b8dc35-7842-44ae-bbca-635a190b7eb6
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+at com.ePortal.utilities.BaseClass.screenShot(BaseClass.java:361)
+at com.ePortal.global.pageObjects.TGQ_RatingInfo_Page.ratinginfo(TGQ_RatingInfo_Page.java:273)
+at com.ePortal.stepDefinations.RatingInfoSteps.ratingInfo(RatingInfoSteps.java:28)
+at ✽.Fill the mandatory fields in "Rating Info" tab(src/test/resources/features/C_TGQ_New_Quote.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
             <line>
               <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div>]]>
+              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;QuoteSearch&quot; button (PASSED : 29s)</div>]]>
+              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">The Quote number is provided in &quot;TextField&quot; (PASSED : 13s)</div>]]>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 18s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (FAILED : 4645s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="449" started-at="2019-05-07T09:00:52Z" finished-at="2019-05-07T09:00:52Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ePortal.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="511" started-at="2019-05-08T11:58:08Z" finished-at="2019-05-08T11:58:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -13,7 +13,7 @@ Scenario: TGQ New Quote  As Agent
 	Then Answer the mandatory fields in "ApplicationQuestions" tab 
 	Then Provide the mandatory fields and "validate" the quote 
 	Then Provide the mandatory fields and proceed for "payment" for the quote 
-	Then Get the Policy Number 
+	Then Get the "PolicyNumber" 
 	And user quits the browser 
 	
 	
