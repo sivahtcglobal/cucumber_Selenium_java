@@ -5,5 +5,11 @@ Feature: Quote Search in TGQ Application
 	When user launches "TGQ" URL 
 	Then user login to "TGQ" application using "QuoteSearch" button
     Then The Quote number is provided in "TextField"
+    Then Verify the mandatory fields in "CustomerQuestions" tab 
+	Then Answer the mandatory fields in "ApplicationQuestions" tab 
+	Then Provide the mandatory fields and "validate" the quote 
+	Then Provide the mandatory fields and proceed for "payment" for the quote 
+	Then Get the "PolicyNumber" 
+	And user quits the browser 
     
   

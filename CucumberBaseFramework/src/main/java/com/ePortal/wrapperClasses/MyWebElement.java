@@ -1,8 +1,11 @@
 package com.ePortal.wrapperClasses;
 
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -19,7 +22,7 @@ public class MyWebElement extends Report {
 	public static void clickOn(WebElement element) throws MyOwnException {
 
 		log.info("INTEND TO CLICK SPECIFIED WEBELEMENT");
-		
+
 		try {
 
 			Thread.sleep(1000);
@@ -31,8 +34,8 @@ public class MyWebElement extends Report {
 					if (isEnabledOrNot(element) == true) {
 						MyWait.until(dr, "ELEMENT_VISIBLE", 100, element);
 						MyWait.until(dr, "ELEMENT_CLICKABLE", 100, element);
-						
-							element.click();						
+
+						element.click();
 
 						if (!element.isSelected()) {
 							MyWebElement.clickOn(element);
@@ -122,7 +125,7 @@ public class MyWebElement extends Report {
 			if (count > 2) {
 				count = 0;
 				log.error("UNABLE TO CLICK ON SPECIFIED WEBELEMENT(" + element + ")\n" + e.getMessage());
-				throwException("UNABLE TO CLICK ON SPECIFIED WEBELEMENT(" + element + ")\n" + e.getMessage() + "\n");				
+				throwException("UNABLE TO CLICK ON SPECIFIED WEBELEMENT(" + element + ")\n" + e.getMessage() + "\n");
 			}
 			clickOnButton(element);
 		} catch (Exception e) {
@@ -174,16 +177,16 @@ public class MyWebElement extends Report {
 			count++;
 			if (count > 2) {
 				count = 0;
-				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element + ")\n"
-						+ e.getMessage() + "\n");
+				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element
+						+ ")\n" + e.getMessage() + "\n");
 			}
 			enterText(element, textToType);
 		} catch (NoSuchElementException ele) {
 			count++;
 			if (count > 2) {
 				count = 0;
-				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element + ")\n"
-						+ ele.getMessage() + "\n");
+				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element
+						+ ")\n" + ele.getMessage() + "\n");
 			}
 			enterText(element, textToType);
 		} catch (Exception e) {
@@ -192,10 +195,10 @@ public class MyWebElement extends Report {
 				count = 0;
 				log.error("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element + ")\n"
 						+ e.getMessage());
-				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element + ")\n"
-						+ e.getMessage() + "\n");
+				throwException("UNABLE TO ENTER THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element
+						+ ")\n" + e.getMessage() + "\n");
 			}
-			
+
 			enterText(element, textToType);
 		}
 		log.info("SUCCESSFULLY ENTERED THE TEXT(" + textToType + ") INSIDE SPECIFIED WEBELEMENT(" + element + ")");
@@ -395,14 +398,23 @@ public class MyWebElement extends Report {
 		log.info("SUCCESSFULLY SELECTED SPECIFIED DROP DOWN VALUE(" + value + ") USING : " + setMethodType
 				+ " METHOD TYPE");
 	}
-	public static boolean isElementPresent(By by) {
-		  try {
-		    dr.findElement(by);
-		    return true;
-		  }
-		catch (org.openqa.selenium.NoSuchElementException e) {
-		    return false;
-		  }
-		}
+
+	public static boolean isElementExist(String linkText) {
+
+		List<WebElement> ele = dr.findElements(By.linkText(linkText));
+		if (ele.size() > 0) {
+			return true;
+		} else
+			return false;
+	}
+	
+
+	public static boolean isAlertPresent(String className) {
+		List<WebElement> ele = dr.findElements(By.className(className));
+		if (ele.size() > 0) {
+			return true;
+		} else
+			return false;
+	}
 
 }

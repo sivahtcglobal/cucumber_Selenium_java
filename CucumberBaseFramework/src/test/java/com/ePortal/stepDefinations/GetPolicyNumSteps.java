@@ -16,7 +16,7 @@ public class GetPolicyNumSteps extends BaseClass {
 		super();
 	}
 
-	@When("Get the Policy Number$")
+	@When("Get the \"([^\"]*)\"$")
 	public void policy(String applicationType) throws InterruptedException, MyOwnException {
 
 		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");

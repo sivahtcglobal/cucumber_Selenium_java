@@ -114,10 +114,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement model;
 	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].type.writableValue")
 	public WebElement type_vehicle;
-	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].compDed.writableValue")
-	public WebElement comp_ded;
-	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].collDed.writableValue")
-	public WebElement coll_ded;
+
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].businessUse.writableValue")
 	public WebElement bus_use;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].doubleDed.writableValue")
@@ -147,7 +144,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
 			MyWebElement.enterText(tgq_first_name, randomNameString(7));
 			MyWebElement.enterText(tgq_last_name, randomNameString(5));
-			MyWebElement.enterText(tgq_street,randomAddressNumberString(3)+","+ prop.getProperty("tgq_street"));
+			MyWebElement.enterText(tgq_street, randomAddressNumberString(3) + "," + prop.getProperty("tgq_street"));
 			MyWebElement.enterText(tgq_city, prop.getProperty("tgq_city"));
 			MyWebElement.enterText(tgq_area, prop.getProperty("tgq_area"));
 			MyWebElement.enterText(tgq_exchange, prop.getProperty("tgq_exchange"));
@@ -178,8 +175,10 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			}
 			Select term_life_referral_cov = new Select(term_life_referral);
 			term_life_referral_cov.selectByVisibleText(currentHash.get("TimeLifeReferral"));
-			Select primary_insurance_cov = new Select(primary_insurance);
-			primary_insurance_cov.selectByVisibleText(currentHash.get("PrimaryInsurance"));
+			if (!currentHash.get("PrimaryInsurance").equals("Nil")) {
+				Select primary_insurance_cov = new Select(primary_insurance);
+				primary_insurance_cov.selectByVisibleText(currentHash.get("PrimaryInsurance"));
+			}
 			if (!currentHash.get("RoadSideAst").equals("Nil")) {
 				Select road_side_ast_cov = new Select(road_side_ast);
 				road_side_ast_cov.selectByVisibleText(currentHash.get("RoadSideAst"));
@@ -192,7 +191,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select homeOwner_disc_cov = new Select(homeOwner_disc);
 				homeOwner_disc_cov.selectByVisibleText(currentHash.get("HomeOwnerDisc"));
 			}
-		
+
 			if (!currentHash.get("LIBI").equals("Nil")) {
 				Select liability_bi_pd_ = new Select(liability_bi_pd_cov);
 				liability_bi_pd_.selectByVisibleText(currentHash.get("LIBI"));
@@ -240,25 +239,10 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			lic_status_dr.selectByVisibleText("Active");
 			Select sr_driver = new Select(sr_drvr);
 			sr_driver.selectByVisibleText("No");
-			if (!pol_type.getText().equals("Bond") ) {
-			MyWebElement.enterText(vin, "1FTSW21P97EB36008");
-			MyWebElement.clickOn(get_vehicle);
+			if (!pol_type.getText().equals("Bond")) {
+				MyWebElement.enterText(vin, "1FTSW21P97EB36008");
+				MyWebElement.clickOn(get_vehicle);
 			}
-			// MyWebElement.enterText(year, prop.getProperty("year"));
-			// Select make_veh = new Select(make);
-			// make_veh.selectByVisibleText(prop.getProperty("make"));
-			// Select model_veh = new Select(model);
-			// model_veh.selectByVisibleText(prop.getProperty("model"));
-			// Select type_veh = new Select(type_vehicle);
-			// type_veh.selectByVisibleText(prop.getProperty("type_vehicle"));
-//			if (!currentHash.get("CompDed").equals("Nil")) {
-//				Select comp_ded_veh = new Select(comp_ded);
-//				comp_ded_veh.selectByVisibleText(currentHash.get("CompDed"));
-//			}
-//			if (!currentHash.get("CollDed").equals("Nil")) {
-//				Select coll_ded_veh = new Select(coll_ded);
-//				coll_ded_veh.selectByVisibleText(currentHash.get("CollDed"));
-//			}
 			if (!currentHash.get("BusUse").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
 				bus_use_veh.selectByVisibleText(currentHash.get("BusUse"));
@@ -267,13 +251,13 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select dbl_ded_veh = new Select(dbl_ded);
 				dbl_ded_veh.selectByVisibleText(currentHash.get("DblDed"));
 			}
-//			if (!currentHash.get("Towing&Labour").equals("Nil")) {
-//				Select towing_labour_veh = new Select(towing_labour);
-//				towing_labour_veh.selectByVisibleText(currentHash.get("Towing&Labour"));
-//			}
+			if (!currentHash.get("Towing&Labour").equals("Nil")) {
+				Select towing_labour_veh = new Select(towing_labour);
+				towing_labour_veh.selectByVisibleText(currentHash.get("Towing&Labour"));
+			}
 			// MyWebElement.enterText(custom_equip, prop.getProperty("custom_equip"));
 
-			//MyWebElement.clickOn(save);
+			// MyWebElement.clickOn(save);
 			get_quote.click();
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
@@ -289,8 +273,8 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Error_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error while '" + applicationType
-							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
+					"<font color=red><b>Error while '" + applicationType + "' application: </b></font><br />"
+							+ exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Error_" + applicationType + ".png");
 			throwException("Unable Create " + applicationType + "application \n" + exp.getMessage() + "\n");
