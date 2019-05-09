@@ -64,11 +64,15 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 			MyWebElement.enterText(mars_password, currentHash.get("Password"));
 
 			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
-			MyWebElement.clickOnButton(signin_button);
+// 			MyWebElement.clickOnButton(signin_button);
+			signin_button.click();
+			MyWait.until(dr, "ELEMENT_VISIBLE", 15, new_Quote);
 			if (operation.equals("New Quote")) {
-				MyWebElement.clickOnButton(new_Quote);
+// 				MyWebElement.clickOnButton(new_Quote);
+				new_Quote.click();
 			} else if (operation.equals("QuoteSearch")) {
-				MyWebElement.clickOnButton(quote_Search);
+// 				MyWebElement.clickOnButton(quote_Search);
+				quote_Search.click();
 			}
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
