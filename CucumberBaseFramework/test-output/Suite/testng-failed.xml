@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.ePortal.TestRunner">
+      <class name="com.theGeneral.TestRunner">
         <methods>
-          <include name="setUpClass"/>
           <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.ePortal.TestRunner -->
+      </class> <!-- com.theGeneral.TestRunner -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

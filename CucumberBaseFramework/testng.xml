@@ -2,7 +2,7 @@
 <suite name="Suite">
   <test thread-count="10" name="Test">
    <classes>
-      <class name="com.ePortal.TestRunner"/>
+      <class name="com.theGeneral.TestRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
