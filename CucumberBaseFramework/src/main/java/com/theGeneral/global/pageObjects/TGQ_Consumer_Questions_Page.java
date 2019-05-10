@@ -1,4 +1,4 @@
-package com.ePortal.global.pageObjects;
+package com.theGeneral.global.pageObjects;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,9 +13,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ePortal.utilities.BaseClass;
-import com.ePortal.utilities.MyOwnException;
-import com.ePortal.utilities.Report;
+import com.theGeneral.utilities.BaseClass;
+import com.theGeneral.utilities.MyOwnException;
+import com.theGeneral.utilities.Report;
 import com.theGeneral.wrapperClasses.MyWait;
 import com.theGeneral.wrapperClasses.MyWebElement;
 

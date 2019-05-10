@@ -1,9 +1,9 @@
 package com.theGeneral.stepDefinations;
 
-import com.ePortal.global.pageObjects.TGQ_Application_Questions_Page;
-import com.ePortal.utilities.BaseClass;
-import com.ePortal.utilities.MyOwnException;
-import com.ePortal.utilities.Report;
+import com.theGeneral.global.pageObjects.TGQ_Application_Questions_Page;
+import com.theGeneral.utilities.BaseClass;
+import com.theGeneral.utilities.MyOwnException;
+import com.theGeneral.utilities.Report;
 
 import cucumber.api.java.en.When;
 

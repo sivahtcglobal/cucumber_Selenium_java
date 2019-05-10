@@ -11,8 +11,8 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.ePortal.utilities.MyOwnException;
-import com.ePortal.utilities.Report;
+import com.theGeneral.utilities.MyOwnException;
+import com.theGeneral.utilities.Report;
 
 public class MyWebElement extends Report {
 

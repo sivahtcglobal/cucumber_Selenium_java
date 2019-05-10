@@ -1,4 +1,4 @@
-package com.ePortal.utilities;
+package com.theGeneral.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;

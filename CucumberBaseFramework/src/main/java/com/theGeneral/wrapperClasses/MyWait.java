@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.ePortal.utilities.MyOwnException;
-import com.ePortal.utilities.Report;
+import com.theGeneral.utilities.MyOwnException;
+import com.theGeneral.utilities.Report;
 
 public class MyWait extends Report {
 

@@ -3,9 +3,9 @@ package com.theGeneral.stepDefinations;
 import java.awt.AWTException;
 import java.io.IOException;
 
-import com.ePortal.global.pageObjects.GlobalCommonObjects;
-import com.ePortal.utilities.BaseClass;
-import com.ePortal.utilities.MyOwnException;
+import com.theGeneral.global.pageObjects.GlobalCommonObjects;
+import com.theGeneral.utilities.BaseClass;
+import com.theGeneral.utilities.MyOwnException;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
