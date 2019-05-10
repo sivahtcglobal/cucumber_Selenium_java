@@ -1,4 +1,4 @@
-package com.theGeneral.global.pageObjects;
+package com.ePortal.global.pageObjects;
 
 import static org.testng.Assert.assertEquals;
 
@@ -19,9 +19,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.theGeneral.utilities.BaseClass;
-import com.theGeneral.utilities.MyOwnException;
-import com.theGeneral.utilities.Report;
+import com.ePortal.utilities.BaseClass;
+import com.ePortal.utilities.MyOwnException;
+import com.ePortal.utilities.Report;
 import com.theGeneral.wrapperClasses.MyWait;
 import com.theGeneral.wrapperClasses.MyWebElement;
 

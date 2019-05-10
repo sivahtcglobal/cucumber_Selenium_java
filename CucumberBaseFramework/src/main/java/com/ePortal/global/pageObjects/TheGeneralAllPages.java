@@ -1,9 +1,9 @@
-package com.theGeneral.global.pageObjects;
+package com.ePortal.global.pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.theGeneral.utilities.BaseClass;
+import com.ePortal.utilities.BaseClass;
 
 public class TheGeneralAllPages extends BaseClass {
 

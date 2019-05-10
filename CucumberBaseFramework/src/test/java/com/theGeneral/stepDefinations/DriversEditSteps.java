@@ -1,9 +1,9 @@
 package com.theGeneral.stepDefinations;
 
-import com.theGeneral.global.pageObjects.TGQ_Drivers_Edit_Page;
-import com.theGeneral.utilities.BaseClass;
-import com.theGeneral.utilities.MyOwnException;
-import com.theGeneral.utilities.Report;
+import com.ePortal.global.pageObjects.TGQ_Drivers_Edit_Page;
+import com.ePortal.utilities.BaseClass;
+import com.ePortal.utilities.MyOwnException;
+import com.ePortal.utilities.Report;
 
 import cucumber.api.java.en.When;
 

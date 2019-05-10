@@ -6,8 +6,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
-import com.theGeneral.utilities.MyOwnException;
-import com.theGeneral.utilities.Report;
+import com.ePortal.utilities.MyOwnException;
+import com.ePortal.utilities.Report;
 
 public class MyWebBrowser extends Report {
 
