@@ -1,4 +1,4 @@
-package com.ePortal.utilities;
+package com.theGeneral.utilities;
 
 @SuppressWarnings("serial")
 public class MyOwnException extends Exception {

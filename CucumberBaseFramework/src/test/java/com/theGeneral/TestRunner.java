@@ -5,8 +5,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.ePortal.utilities.BaseClass;
-import com.ePortal.utilities.Report;
+import com.theGeneral.utilities.BaseClass;
+import com.theGeneral.utilities.Report;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;

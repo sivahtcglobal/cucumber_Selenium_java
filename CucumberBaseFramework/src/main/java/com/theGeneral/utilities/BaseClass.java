@@ -1,4 +1,4 @@
-package com.ePortal.utilities;
+package com.theGeneral.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,8 +34,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.ePortal.global.pageObjects.TheGeneralAllPages;
 import com.google.common.base.Splitter;
+import com.theGeneral.global.pageObjects.TheGeneralAllPages;
 
 public class BaseClass {
 
