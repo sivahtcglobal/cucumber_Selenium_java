@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
@@ -76,8 +76,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement umpd_ded;
 	@FindBy(how = How.NAME, using = "quoteBean.medPayLimit.writableValue")
 	public WebElement medical_payments;
-	@FindBy(how = How.ID, using = "quoteBean.rentalLimit.writableValue")
-	public WebElement rental_reim;
+	
 	@FindBy(how = How.NAME, using = "quoteBean.userRatedCredit.writableValue")
 	public WebElement est_credit;
 	@FindBy(how = How.ID, using = "quoteBean.drivers[0].dateOfBirth.mo")
@@ -115,7 +114,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].type.writableValue")
 	public WebElement type_vehicle;
 
-	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].businessUse.writableValue")
+	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].businessUse.writableValue")
 	public WebElement bus_use;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].doubleDed.writableValue")
 	public WebElement dbl_ded;
@@ -127,7 +126,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement save;
 	@FindBy(how = How.LINK_TEXT, using = "Show Messages")
 	public WebElement show_messages;
-	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[12]/table/tbody/tr/td[3]/a")
+	@FindBy(how = How.LINK_TEXT, using = "Get Quote")
 	public WebElement get_quote;
 
 	WebDriver ldriver;
@@ -212,10 +211,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select medical_payments_cov = new Select(medical_payments);
 				medical_payments_cov.selectByVisibleText(currentHash.get("MedicalPay"));
 			}
-			if (!currentHash.get("RentalReim").equals("Nil")) {
-				Select rental_reim_cov = new Select(rental_reim);
-				rental_reim_cov.selectByVisibleText(currentHash.get("RentalReim"));
-			}
+			
 			if (!currentHash.get("EstimatedCredit").equals("Nil")) {
 				Select est_credit_cov = new Select(est_credit);
 				est_credit_cov.selectByVisibleText(currentHash.get("EstimatedCredit"));
@@ -241,8 +237,10 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			sr_driver.selectByVisibleText("No");
 			if (!pol_type.getText().equals("Bond")) {
 				MyWebElement.enterText(vin, "1FTSW21P97EB36008");
-				MyWebElement.clickOn(get_vehicle);
+				get_vehicle.click();
+				;
 			}
+			//Thread.sleep(1000);
 			if (!currentHash.get("BusUse").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
 				bus_use_veh.selectByVisibleText(currentHash.get("BusUse"));
@@ -251,22 +249,16 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select dbl_ded_veh = new Select(dbl_ded);
 				dbl_ded_veh.selectByVisibleText(currentHash.get("DblDed"));
 			}
-			if (!currentHash.get("Towing&Labour").equals("Nil")) {
-				Select towing_labour_veh = new Select(towing_labour);
-				towing_labour_veh.selectByVisibleText(currentHash.get("Towing&Labour"));
-			}
-			// MyWebElement.enterText(custom_equip, prop.getProperty("custom_equip"));
-
-			// MyWebElement.clickOn(save);
+			
 			get_quote.click();
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Created_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_Logged into '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Created_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_Logged into '" + applicationType + "' application",					
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"							
+					+ "1_Created_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

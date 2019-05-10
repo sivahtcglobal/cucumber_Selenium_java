@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Payment_Page extends TheGeneralAllPages {
 
@@ -69,8 +69,8 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 	public void paymentTab(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			if (MyWebElement.isAlertPresent("closeButton")) {
-				dr.findElement(By.className("closeButton")).click();
+			if (MyWebElement.isCloseButtonExist("//*[@src='images/popup_close.gif']")) {
+				dr.findElement(By.xpath("//*[@src='images/popup_close.gif']")).click();
 			}
 			MyWebElement.enterText(ins_debit_credit, downpayment_value.getText());
 			MyWebElement.enterText(card_number, "4012000033330026");
@@ -84,10 +84,10 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_paymentTab_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_filled in paymentTab '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Login_to_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_filled in paymentTab '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_paymentTab_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

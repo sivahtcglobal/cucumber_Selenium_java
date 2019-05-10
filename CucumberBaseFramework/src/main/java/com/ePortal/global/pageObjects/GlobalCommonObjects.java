@@ -22,8 +22,8 @@ import org.testng.Assert;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class GlobalCommonObjects extends BaseClass {
 
@@ -36,22 +36,6 @@ public class GlobalCommonObjects extends BaseClass {
 
 		this.ldriver = dr;
 		PageFactory.initElements(dr, this);
-	}
-
-	@FindBy(how = How.LINK_TEXT, using = "Logout")
-	public WebElement Logout_Link;
-
-	public void logOut_ePortal(String appType) throws MyOwnException, InterruptedException, AWTException {
-		try {
-			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, dr.findElement(By.linkText("Logout")));
-			dr.findElement(By.linkText("Logout")).click();
-
-		} catch (Exception exp) {
-			{
-				throwException("UNABLE TO Logout from  " + appType + " application \n" + exp.getMessage() + "\n");
-			}
-
-		}
 	}
 
 	public void verifyPageTitle(String screenName) throws MyOwnException, InterruptedException {

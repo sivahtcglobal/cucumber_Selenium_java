@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 8, 2019 04:09:51 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 9, 2019 06:27:41 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,7 +72,9 @@
 					<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li class='divider'></li>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
 			</div>
@@ -85,6 +87,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>TheGeneral</a></li>
+					<li><a href='#'>ePortal_PoC</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -132,14 +135,28 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='90.909%'><span class='strong'>10</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='9.091%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
 		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='90.909%'><span class='strong'>10</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='9.091%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
 		
 	</div>
 </div>
@@ -154,20 +171,41 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>TheGeneral</span>
-						<span class='test-time'>May 8, 2019 04:09:56 PM</span>
+						<span class='test-time'>May 9, 2019 06:27:48 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 8, 2019 04:09:56 PM</span>
-	<span class='label end-time'>May 8, 2019 04:09:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+	<span class='label start-time'>May 9, 2019 06:27:48 PM</span>
+	<span class='label end-time'>May 9, 2019 06:28:21 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+212ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>TheGeneral</span>
 			</div>
 	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:28:21 PM</td>
+					<td class='step-details'>Successfully_Logged into 'TGQ' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Login_to_TGQ.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Login_to_TGQ.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Login_to_TGQ.png'></li>
+							</ul>
 					</div>
 				</li>
 				
@@ -175,20 +213,41 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>TheGeneral</span>
-						<span class='test-time'>May 8, 2019 04:10:24 PM</span>
+						<span class='test-time'>May 9, 2019 06:28:21 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 8, 2019 04:10:24 PM</span>
-	<span class='label end-time'>May 8, 2019 04:10:24 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+	<span class='label start-time'>May 9, 2019 06:28:21 PM</span>
+	<span class='label end-time'>May 9, 2019 06:28:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+209ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>TheGeneral</span>
 			</div>
 	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:28:48 PM</td>
+					<td class='step-details'>Successfully_Logged into 'New Quote' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_New Quote.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_New Quote.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_New Quote.png'></li>
+							</ul>
 					</div>
 				</li>
 				
@@ -196,20 +255,384 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>TheGeneral</span>
-						<span class='test-time'>May 8, 2019 04:10:42 PM</span>
+						<span class='test-time'>May 9, 2019 06:28:48 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 8, 2019 04:10:42 PM</span>
-	<span class='label end-time'>May 8, 2019 04:10:42 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+	<span class='label start-time'>May 9, 2019 06:28:48 PM</span>
+	<span class='label end-time'>May 9, 2019 06:30:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 36s+967ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>TheGeneral</span>
 			</div>
 	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:30:25 PM</td>
+					<td class='step-details'>Successfully_Logged into 'Rating Info' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_Rating Info.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_Rating Info.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_Rating Info.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:30:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:30:25 PM</span>
+	<span class='label end-time'>May 9, 2019 06:30:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+66ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:30:29 PM</td>
+					<td class='step-details'>Successfully_Logged_into_ 'Quote Edit' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_quote_Quote Edit.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_quote_Quote Edit.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_quote_Quote Edit.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:30:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:30:29 PM</span>
+	<span class='label end-time'>May 9, 2019 06:30:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+86ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:30:53 PM</td>
+					<td class='step-details'>Successfully_Logged_into_ 'drivers Edit' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Drivers_are_edited_drivers Edit.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Drivers_are_edited_drivers Edit.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Drivers_are_edited_drivers Edit.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:30:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:30:53 PM</span>
+	<span class='label end-time'>May 9, 2019 06:31:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+185ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:31:02 PM</td>
+					<td class='step-details'>Successfully_vehiclesedit_ 'vehicles' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_vehiclesedit_vehicles.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_vehiclesedit_vehicles.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_vehiclesedit_vehicles.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:31:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:31:02 PM</span>
+	<span class='label end-time'>May 9, 2019 06:31:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+887ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:31:34 PM</td>
+					<td class='step-details'>Successfully_answered_consumerquestions 'CustomerQuestions' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_consumerquestions_CustomerQuestions.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_consumerquestions_CustomerQuestions.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_consumerquestions_CustomerQuestions.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>ePortal_PoC</span>
+						<span class='test-time'>May 9, 2019 06:31:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:31:34 PM</span>
+	<span class='label end-time'>May 9, 2019 06:31:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+619ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ePortal_PoC</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:31:45 PM</td>
+					<td class='step-details'>Successfully_answered_applicationQuestions 'ApplicationQuestions' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_applicationQuestions_ApplicationQuestions.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_applicationQuestions_ApplicationQuestions.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_applicationQuestions_ApplicationQuestions.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:31:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:31:45 PM</span>
+	<span class='label end-time'>May 9, 2019 06:31:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+757ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:31:59 PM</td>
+					<td class='step-details'>Successfully_validated_quote 'validate' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_validatequote_validate.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_validatequote_validate.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_validatequote_validate.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:31:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:31:59 PM</span>
+	<span class='label end-time'>May 9, 2019 06:32:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+211ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>6:32:31 PM</td>
+					<td class='step-details'>Successfully_filled in paymentTab 'payment' application</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_paymentTab_payment.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_paymentTab_payment.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_paymentTab_payment.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>TheGeneral</span>
+						<span class='test-time'>May 9, 2019 06:32:31 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2019 06:32:31 PM</span>
+	<span class='label end-time'>May 9, 2019 06:32:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+926ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>TheGeneral</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>6:32:33 PM</td>
+					<td class='step-details'><font color=red><b>Error_in_policyPage 'PolicyNumber' application: </b></font><br />Unable to find element with xpath == //*[@id='body']/form/table[3]/tbody/tr[3]/td[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
+*** Element info: {Using=xpath, value=//*[@id='body']/form/table[3]/tbody/tr[3]/td[2]}<br /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Error_in_policy_page_PolicyNumber.png' width='10%' src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Error_in_policy_page_PolicyNumber.png' data-src='C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Error_in_policy_page_PolicyNumber.png'></li>
+							</ul>
 					</div>
 				</li>
 			</ul>
@@ -266,12 +689,92 @@
 					<div class='category-heading'>
 						<span class='category-name'>TheGeneral</span>
 						<span class='category-status right'>
-							<span class='label pass'>3</span>
+							<span class='label pass'>9</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 3</span>
+							<span class='label green accent-4 white-text'>Passed: 9</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 9, 2019 06:27:48 PM</td>
+										<td class='linked' test-id='1'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:28:21 PM</td>
+										<td class='linked' test-id='2'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:28:48 PM</td>
+										<td class='linked' test-id='3'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:30:25 PM</td>
+										<td class='linked' test-id='4'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:30:29 PM</td>
+										<td class='linked' test-id='5'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:30:53 PM</td>
+										<td class='linked' test-id='6'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:31:02 PM</td>
+										<td class='linked' test-id='7'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:31:45 PM</td>
+										<td class='linked' test-id='9'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:31:59 PM</td>
+										<td class='linked' test-id='10'>TheGeneral</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 9, 2019 06:32:31 PM</td>
+										<td class='linked' test-id='11'>TheGeneral</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>ePortal_PoC</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -287,18 +790,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 8, 2019 04:09:56 PM</td>
-										<td class='linked' test-id='1'>TheGeneral</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>May 8, 2019 04:10:24 PM</td>
-										<td class='linked' test-id='2'>TheGeneral</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>May 8, 2019 04:10:42 PM</td>
-										<td class='linked' test-id='3'>TheGeneral</td>
+										<td>May 9, 2019 06:31:34 PM</td>
+										<td class='linked' test-id='8'>ePortal_PoC</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -327,31 +820,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>0</div>
+					<div class='panel-lead'>11</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 8, 2019 04:09:51 PM</div>
+					<div class='panel-lead'>May 9, 2019 06:27:41 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 8, 2019 05:28:08 PM</div>
+			 		<div class='panel-lead'>May 9, 2019 06:32:33 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>4,697,384ms</div>
+					<div class='panel-lead'>292,170ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -391,7 +884,13 @@
 						</tr>
 						<tr>
 							<td>TheGeneral</td>
-							<td>3</td>
+							<td>9</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>ePortal_PoC</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 						</tr>
@@ -408,22 +907,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 3,
-				failParent: 0,
+				passParent: 10,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 0,
-				failChild: 0,
+				passChild: 10,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

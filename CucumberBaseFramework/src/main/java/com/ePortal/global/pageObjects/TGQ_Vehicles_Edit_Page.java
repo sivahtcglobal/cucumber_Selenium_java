@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 
@@ -31,10 +31,6 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 	public WebElement recalculate_button;
 	@FindBy(how = How.LINK_TEXT, using = "Next")
 	public WebElement next_button;
-	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].compDed.writableValue")
-	public WebElement comp_ded;
-	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].collDed.writableValue")
-	public WebElement coll_ded;
 	WebDriver ldriver;
 
 	public TGQ_Vehicles_Edit_Page(WebDriver dr) {
@@ -46,14 +42,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 	public void vehiclesedit(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			if (!currentHash.get("CompDed").equals("Nil")) {
-				Select comp_ded_veh = new Select(comp_ded);
-				comp_ded_veh.selectByVisibleText(currentHash.get("CompDed"));
-			}
-			if (!currentHash.get("CollDed").equals("Nil")) {
-				Select coll_ded_veh = new Select(coll_ded);
-				coll_ded_veh.selectByVisibleText(currentHash.get("CollDed"));
-			}
+			
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit") ) {
 			Select ownership_type_veh = new Select(ownership_type);
 			ownership_type_veh.selectByVisibleText("Owned");
@@ -67,10 +56,10 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_vehiclesedit_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_vehiclesedit_ '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_vehiclesedit_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_vehiclesedit_ '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_vehiclesedit_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

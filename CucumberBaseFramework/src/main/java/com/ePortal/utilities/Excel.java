@@ -2,9 +2,6 @@ package com.ePortal.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.HashMap;
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFFormulaEvaluator;
@@ -48,49 +45,7 @@ public class Excel extends BaseClass {
 	            return sh + "Not Exist";
 	        }
 	    } 
-		public static List<HashMap<String,String>> getData(String excelFileName,String SheetName, String tcname){
-	        int tcStartRowNum = 0;
-	       log.info(getExceldata(excelFileName,SheetName, 0, tcStartRowNum)+"--"+tcname);
-	        while (!getExceldata(excelFileName,SheetName, 0, tcStartRowNum).equals(tcname)) {
-
-	            tcStartRowNum++;
-	        }
-	        System.out.println(tcStartRowNum);
-	        int colStartRow = tcStartRowNum+1;
-	        int cols = 0;
-	        while (!getExceldata(excelFileName,SheetName, cols, colStartRow).equals("N")) {
-
-	            cols++;
-	        }
-	        System.out.println(cols);
-
-	        int dataStartRow = tcStartRowNum+2;
-	        int rows = 0;
-	        while (!getExceldata(excelFileName,SheetName, 0, dataStartRow+rows).equals("N")) {
-
-	            rows++;
-	        }
-	        System.out.println(rows);
-	        List<HashMap<String,String>> data = null ;
-	        int index = 0;
-	        HashMap<String,String> table=null;
-	        for(int rnum = dataStartRow; rnum<dataStartRow+rows; rnum++) {
-	        	table=new HashMap();
-	            for(int cnum = 0 ; cnum<cols;cnum++) {
-	            	
-	            //    System.out.print(xl.getCellData(SheetName, cnum, rnum)+"--");
-	            	String key=getExceldata(excelFileName, SheetName,cnum, colStartRow);
-	            	String value=getExceldata(excelFileName,SheetName, cnum, rnum);
-	            	table.put(key, value);
-	                  
-	            	}
-	            data.add(table);
-	            System.out.println();
-	        }
-	            
-	        return data;
-
-	    } 
+	
 	public static Workbook getToFile(String filePath, String excelFileName) throws MyOwnException {
 
 		log.info("INTEND TO READ THE SPECIFIED EXCEL FILE");

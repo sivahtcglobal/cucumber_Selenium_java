@@ -16,8 +16,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 
@@ -32,8 +32,8 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 	@FindBy(how = How.LINK_TEXT, using = "I am sure the address is correct as entered")
 	public WebElement tgq_use_entered_address;
 	@SuppressWarnings("rawtypes")
-	@FindAll(value = { @FindBy(how = How.NAME, using = "orders.creditOrder.action.value") })
-	public LinkedList tgq_action;
+	@FindBy(how = How.XPATH, using = "//*[@id='credit']/table[1]/tbody/tr/td/input[2]")
+	public WebElement tgq_action;
 	@FindBy(how = How.LINK_TEXT, using = "Order Credit")
 	public WebElement tgq_order_credit;
 	@FindBy(how = How.LINK_TEXT, using = "Update Credit")
@@ -83,10 +83,9 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 					rdBtn_mvr.get(1).click();
 					tgq_update_mvr.click();
 				}
-				
 
 			} else {
-				if (tgq_verify_address.isDisplayed()) {
+				if (MyWebElement.isElementExist("Verify Address")) {
 					if (tqq_address_text.getText().equals("Address verification will be attempted now")) {
 						tgq_verify_address.click();
 						;
@@ -97,33 +96,35 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 						;
 					}
 				}
-				WebElement ele = (WebElement) tgq_action.getLast();
-				ele.click();
-				tgq_order_credit.click();
-				tgq_update_credit.click();
-
-				tgq_Order_Prior_Insurance.click();
-
-				tgq_order_mvr.click();
-
-				tgq_update_mvr.click();
-
+				if (MyWebElement.isElementExist("Order Credit")) {
+					tgq_action.click();
+					tgq_order_credit.click();
+				}
+				if (MyWebElement.isElementExist("Order Prior Insurance")) {
+					tgq_Order_Prior_Insurance.click();
+				}
+				if (MyWebElement.isElementExist("Order MVR")) {
+					tgq_order_mvr.click();
+					List<WebElement> rdBtn_mvr = dr.findElements(By.name("order[2].action.value"));
+					rdBtn_mvr.get(1).click();
+					tgq_update_mvr.click();
+				}
+				if (MyWebElement.isElementExist("Order CLUE")) {
 				tgq_order_clue.click();
-
+				}
 			}
 
 			tgq_save.click();
-			;
+			
 			tgq_next_btn.click();
-			;
+			
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_consumerquestions_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_answered_consumerquestions '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//						+ "1_consumerquestions_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",					
+					"Successfully_answered_consumerquestions '" + applicationType + "' application",					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+						+ "1_consumerquestions_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

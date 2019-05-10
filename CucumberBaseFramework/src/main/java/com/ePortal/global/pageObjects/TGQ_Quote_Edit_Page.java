@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 
@@ -30,9 +30,10 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 	public WebElement towing;
 	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[6]/table/tbody/tr/td[3]/a")
 	public WebElement recalculate_button;
-	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[6]/table/tbody/tr/td[5]/a")
+	@FindBy(how = How.LINK_TEXT, using = "Next")
 	public WebElement next_button;
-
+	@FindBy(how = How.ID, using = "quoteBean.rentalLimit.writableValue")
+	public WebElement rental_reim;
 	WebDriver ldriver;
 
 	public TGQ_Quote_Edit_Page(WebDriver dr) {
@@ -57,17 +58,21 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 				Select towing_q = new Select(towing);
 				towing_q.selectByVisibleText(currentHash.get("Towing&Labour"));
 			}
+			if (!currentHash.get("RentalReim").equals("Nil")) {
+				Select rental_reim_cov = new Select(rental_reim);
+				rental_reim_cov.selectByVisibleText(currentHash.get("RentalReim"));
+			}
 			if (!currentHash.get("Towing&Labour").equals("Nil")) {
 				recalculate_button.click();;
 			}
 			next_button.click();;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Created_quote_ " + applicationType + ".png");
+					+ "\\" + "1_Created_quote_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_Logged_into_ '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Created_quote_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_Logged_into_ '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_Created_quote_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

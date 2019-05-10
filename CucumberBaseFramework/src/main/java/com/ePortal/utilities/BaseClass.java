@@ -86,19 +86,6 @@ public class BaseClass {
 		}
 	}
 
-	/*
-	 * public static List<HashMap<String,String>> readTestDataFromExcel(String
-	 * appType, String testCaseId) { List<HashMap<String,String>> data=null; try {
-	 * 
-	 * data=Excel.getData(System.getProperty("user.dir") +
-	 * "\\src\\test\\resources\\TestData\\" + prop.getProperty("TestDataFileName"),
-	 * prop.getProperty("InitAppSheetName"), testCaseId);
-	 * 
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); } return data;
-	 * 
-	 * }
-	 */
 
 	public static List<HashMap<String, String>> readSpecificTestData( String testCaseId)
 			throws IOException, MyOwnException {
@@ -218,15 +205,6 @@ public class BaseClass {
 
 	}
 
-	/*
-	 * @AfterClass(alwaysRun = true) protected void tearDown() { dr.quit(); }
-	 */
-
-	/*
-	 * public static void quitBrowser() { dr.quit(); }
-	 * 
-	 * public static void closeBrowser() { dr.close(); }
-	 */
 
 	public String getChromePath() {
 		String path = prop.getProperty("chromePath");

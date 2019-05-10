@@ -18,8 +18,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.core.sym.Name;
 
@@ -86,10 +86,10 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_validatequote_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_validated_quote '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Login_to_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_validated_quote '" + applicationType + "' application",
+								System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_validatequote_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

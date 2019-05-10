@@ -14,8 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class MarsApplicationLoginPage extends TheGeneralAllPages {
 
@@ -44,7 +44,7 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType,String operation) throws MyOwnException, InterruptedException {
+	public void login(String applicationType, String operation) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 //			for(int i = 0; i < BaseClass.mydata.size(); i++)

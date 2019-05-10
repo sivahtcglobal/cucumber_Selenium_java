@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 
@@ -26,7 +26,7 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 	public WebElement quote_number;
 	@FindBy(how = How.LINK_TEXT, using = "Search")
 	public WebElement search;
-	@FindBy(how = How.LINK_TEXT, using = "11530513")
+	@FindBy(how = How.LINK_TEXT, using = "11536115")
 	public WebElement quote_number_intable;
 	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[12]/table/tbody/tr/td[3]/a")
 	public WebElement get_quote;
@@ -48,18 +48,18 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 		          ldriver.switchTo().window(handle1);
 		          }
 		         ldriver.manage().window().maximize() ;
-			MyWebElement.enterText(quote_number, "11530513");
+			MyWebElement.enterText(quote_number, "11536115");
 			search.click();;
 			quote_number_intable.click();
 			get_quote.click();
 			consumerTab.click();
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_ " + applicationType + ".png");
+					+ "\\" + "1_Searched_quote_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_Logged_into_ '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Created_quote_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_Logged_into_ '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_Searched_quote_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

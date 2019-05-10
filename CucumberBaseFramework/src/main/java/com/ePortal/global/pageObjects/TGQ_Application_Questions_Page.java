@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 
@@ -50,8 +50,13 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 
 			Select appQue_1 = new Select(appQuestions_1);
 			appQue_1.selectByVisibleText("No");
-			Select appQue_2 = new Select(appQuestions_2);
-			appQue_2.selectByVisibleText("Yes");
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				Select appQue_2 = new Select(appQuestions_2);
+				appQue_2.selectByVisibleText("No");
+			} else {
+				Select appQue_2 = new Select(appQuestions_2);
+				appQue_2.selectByVisibleText("Yes");
+			}
 			Select appQue_3 = new Select(appQuestions_3);
 			appQue_3.selectByVisibleText("No");
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
@@ -67,10 +72,10 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_applicationQuestions_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_answered_applicationQuestions '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_applicationQuestions_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_answered_applicationQuestions '" + applicationType + "' application",					
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_applicationQuestions_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

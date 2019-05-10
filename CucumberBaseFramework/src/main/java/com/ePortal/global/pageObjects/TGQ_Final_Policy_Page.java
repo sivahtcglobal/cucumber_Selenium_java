@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.ePortal.utilities.BaseClass;
 import com.ePortal.utilities.MyOwnException;
 import com.ePortal.utilities.Report;
-import com.ePortal.wrapperClasses.MyWait;
-import com.ePortal.wrapperClasses.MyWebElement;
+import com.theGeneral.wrapperClasses.MyWait;
+import com.theGeneral.wrapperClasses.MyWebElement;
 
 public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 
@@ -37,15 +37,16 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 	public void policy_page(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			System.out.println(quote_num+"quote_num");
-			System.out.println(policy_num+"policy_num");
+			System.out.println(quote_num.getText()+"quote_num");
+			System.out.println(policy_num.getText()+"policy_num");
+			Thread.sleep(10000);
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_policy_page_" + applicationType + ".png");
 
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_Created_Policy_ '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_policy_page_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_Created_Policy_ '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_policy_page_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
