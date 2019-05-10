@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 5s)</div>]]>
+      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 33s)</div>]]>
+      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 27s)</div>]]>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 21s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 96s)</div>]]>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 80s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 4s)</div>]]>
+      <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 24s)</div>]]>
+      <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 9s)</div>]]>
+      <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 8s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 31s)</div>]]>
+      <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 28s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 10s)</div>]]>
+      <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 9s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 13s)</div>]]>
+      <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 11s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 32s)</div>]]>
+      <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 38s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (FAILED : 1s)</div>]]>
+      <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (PASSED : 12s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
+      <![CDATA[<div "result">user quits the browser (PASSED : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="293528" started-at="2019-05-09T12:57:40Z" finished-at="2019-05-09T13:02:34Z">
+  <suite name="Suite" duration-ms="271172" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:37:29Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@3c46e67a]" name="runScenario" class="com.theGeneral.TestRunner"/>
+        <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="runScenario" class="com.theGeneral.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="293528" started-at="2019-05-09T12:57:40Z" finished-at="2019-05-09T13:02:34Z">
+    <test name="Test" duration-ms="271172" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:37:29Z">
       <class name="com.theGeneral.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.theGeneral.TestRunner@3c46e67a]" name="setUpClass" is-config="true" duration-ms="813" started-at="2019-05-09T12:57:40Z" finished-at="2019-05-09T12:57:41Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="703" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:32:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="SKIP" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@3c46e67a]" name="runScenario" duration-ms="291666" started-at="2019-05-09T12:57:41Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-09T13:02:33Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="runScenario" duration-ms="269076" started-at="2019-05-10T13:32:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-10T13:37:28Z">
           <params>
             <param index="0">
               <value>
@@ -69,87 +69,56 @@
               </value>
             </param>
           </params>
-          <exception class="com.theGeneral.utilities.MyOwnException">
-            <message>
-              <![CDATA[Unable To get Policy Number PolicyNumberapplication 
-Unable to find element with xpath == //*[@id='body']/form/table[3]/tbody/tr[3]/td[2]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
-*** Element info: {Using=xpath, value=//*[@id='body']/form/table[3]/tbody/tr[3]/td[2]}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.theGeneral.utilities.MyOwnException: Unable To get Policy Number PolicyNumberapplication 
-Unable to find element with xpath == //*[@id='body']/form/table[3]/tbody/tr[3]/td[2]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
-*** Element info: {Using=xpath, value=//*[@id='body']/form/table[3]/tbody/tr[3]/td[2]}
-
-at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)
-at com.theGeneral.global.pageObjects.TGQ_Final_Policy_Page.policy_page(TGQ_Final_Policy_Page.java:60)
-at com.theGeneral.stepDefinations.GetPolicyNumSteps.policy(GetPolicyNumSteps.java:25)
-at ✽.Get the "PolicyNumber"(src/test/resources/features/C_TGQ_New_Quote.feature:16)
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.theGeneral.utilities.MyOwnException -->
           <reporter-output>
             <line>
               <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 5s)</div>]]>
+              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 33s)</div>]]>
+              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 27s)</div>]]>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 21s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 96s)</div>]]>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 80s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 4s)</div>]]>
+              <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 24s)</div>]]>
+              <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 9s)</div>]]>
+              <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 8s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 31s)</div>]]>
+              <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 28s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 10s)</div>]]>
+              <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 9s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 13s)</div>]]>
+              <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 11s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 32s)</div>]]>
+              <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 38s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (FAILED : 1s)</div>]]>
+              <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (PASSED : 12s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user quits the browser (SKIPPED)</div>]]>
+              <![CDATA[<div "result">user quits the browser (PASSED : 0s)</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.theGeneral.TestRunner@3c46e67a]" name="tearDownClass" is-config="true" duration-ms="677" started-at="2019-05-09T13:02:33Z" finished-at="2019-05-09T13:02:34Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="1187" started-at="2019-05-10T13:37:28Z" finished-at="2019-05-10T13:37:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.theGeneral.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

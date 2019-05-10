@@ -58,11 +58,6 @@ public class CommonSteps extends BaseClass {
 
 	}
 
-	@Then("user logout from \"([^\"]*)\"")
-	public void logout(String appType) throws MyOwnException, InterruptedException, AWTException {
-
-		globalComPageObj.logOut_ePortal(appType);
-
-	}
+	
 
 }

@@ -38,5 +38,6 @@ bus_use=Nil
 dbl_ded=Nil
 towing_labour=Nil
 InitAppSheetName=Sheet1
+PolicyDetails=Sheet2
 TestDataFileName=Datadriven1.xlsx
 PositiveScreenshot=True
