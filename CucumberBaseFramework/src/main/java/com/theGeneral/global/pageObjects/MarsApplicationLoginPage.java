@@ -44,7 +44,7 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 		PageFactory.initElements(dr, this);
 	}
 
-	public void login(String applicationType,String operation) throws MyOwnException, InterruptedException {
+	public void login(String applicationType, String operation) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 //			for(int i = 0; i < BaseClass.mydata.size(); i++)
@@ -64,20 +64,22 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 			MyWebElement.enterText(mars_password, currentHash.get("Password"));
 
 			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
-			MyWebElement.clickOnButton(signin_button);
+			MyWebElement.clickOnButton(signin_button);		
+			
 			if (operation.equals("New Quote")) {
-				MyWebElement.clickOnButton(new_Quote);
+				MyWebElement.clickOnButton(new_Quote);				
 			} else if (operation.equals("QuoteSearch")) {
-				MyWebElement.clickOnButton(quote_Search);
+       		                MyWebElement.clickOnButton(quote_Search);
+				 
 			}
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Login_to_" + applicationType + ".png");
 
-		Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-						+ "1_Login_to_" + applicationType + ".png");
+//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+//					"Successfully_Logged into '" + applicationType + "' application",
+//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+//							+ "1_Login_to_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

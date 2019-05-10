@@ -15505,3 +15505,788 @@ Session ID: 45d8fd57-0785-4f67-8921-8bf476282fdd
 18:20:51.965 INFO  pageObjects.TGQ_Final_Policy_Page -policy_page -METHOD(login) EXECUTED SUCCESSFULLY
 18:20:52.709 INFO  utilities.Report -writeContents -INTEND TO WRITE ALL THE CONENTS INTO EXTENT REPORT
 18:20:53.358 INFO  utilities.Report -writeContents -SUCCESSFULY WROTE ALL THE CONENTS INTO EXTENT REPORT
+18:27:41.091 INFO  utilities.Report -initialize -INTEND TO CREATE AN INSTANCE OF EXTENT REPORT WITH NAME AND APPEND STATUS
+18:27:41.091 INFO  utilities.Report -initializeHTML -INTEND TO INITIALIZE AN HTML REPORT
+18:27:41.091 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:41.091 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:41.091 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:41.107 INFO  utilities.Report -formatGiven -INTENDED TO CHECK IF THE FILE NAME HAS THE FILE EXTENSION
+18:27:41.107 INFO  utilities.Report -formatGiven -FILE FORMAT IS PROVIDED WITH THE FILE NAME(TheGeneral_Test_Execution_Report.html)
+18:27:41.107 INFO  utilities.Report -formatGiven -SUCCESSFULLY CHECKED IF THE FILE NAME HAS THE FILE EXTENSION
+18:27:41.107 INFO  utilities.Report -getFileFormat -INTENDED TO RETRIEVE THE FORMAT OF THE FILE
+18:27:41.107 INFO  utilities.Report -getFileFormat -SUCCESSFULLY GOT THE FILE FORMAT(.html) FROM THE FILE NAME(TheGeneral_Test_Execution_Report.html)
+
+18:27:41.107 INFO  utilities.Report -getFileFormat -SUCCESSFULLY RETRIEVED THE FORMAT OF THE FILE
+18:27:41.107 INFO  utilities.Report -fileFormatIs -INTENDED TO CHECK IF THE FILE BELONGS TO THE GIVEN FORMAT
+18:27:41.107 INFO  utilities.Report -fileFormatIs -EXPECTED AND ACTUAL FILE FORMATS ARE THE SAME
+18:27:41.107 INFO  utilities.Report -fileFormatIs -SUCCESSFULLY CHECKED IF THE FILE BELONGS TO THE GIVEN FORMAT
+18:27:41.107 INFO  utilities.Report -createInstanceOfHTMLReport -INTEND TO CREATE AN INSTANCE OF HTML REPORT WITH NAME
+18:27:41.201 INFO  utilities.Report -createInstanceOfHTMLReport -SUCCESSFULLY CREATED AN INSTANCE OF HTML REPORT WITH NAME(TheGeneral_Test_Execution_Report.html)
+18:27:41.201 INFO  utilities.Report -appendToExistingReport -INTED TO ADD THE CONTENTS TO EXTENT REPORT BASED ON THE APPEND STATUS
+18:27:41.201 INFO  utilities.Report -appendToExistingReport -CONTENTS ARE ADDED TO EXTENT REPORT BASED ON THE APPEND STATUS(false)
+18:27:41.201 INFO  utilities.Report -setHTMLReportName -INTEND TO SET A NAME FOR THE HTML REPORT 
+18:27:41.201 INFO  utilities.Report -setHTMLReportName -HTML REPORT NAME(Test Case Summary) WAS SET SUCCESSFULLY
+18:27:41.201 INFO  utilities.Report -setChartVisibility -INTEND TO SET A Chart Visibility FOR THE HTML REPORT 
+18:27:41.201 INFO  utilities.Report -setChartVisibility -HTML REPORT CHART VISIBILITY(false) WAS SET SUCCESSFULLY
+18:27:41.201 INFO  utilities.Report -setHTMLReportTheme -INTEND TO SET A THEME FOR THE HTML REPORT 
+18:27:41.201 INFO  utilities.Report -setHTMLReportTheme -HTML REPORT THEME WAS SET SUCCESSFULLY
+18:27:41.201 INFO  utilities.Report -initializeHTML -SUCCESSFULLY INITIALIZED AN HTML REPORT(TheGeneral_Test_Execution_Report.html)
+18:27:41.201 INFO  utilities.Report -createInstanceOfExtentReport -INTEND TO CREATE AN INSTANCE OF EXTENT REPORT
+18:27:41.225 INFO  utilities.Report -createInstanceOfExtentReport -SUCCESSFULLY CREATED AN INSTANCE OF EXTENT REPORT
+18:27:41.226 INFO  utilities.Report -attachHTMLReport -INTEND TO ATTACH HTML REPORT TO EXTENT REPORT
+18:27:41.374 INFO  utilities.Report -attachHTMLReport -SUCCESSFULLY ATTACHED HTML REPORT TO EXTENT REPORT
+18:27:41.374 INFO  utilities.Report -initialize -SUCCESSFULLY CREATED AN INSTANCE OF EXTENT REPORT WITH NAME(TheGeneral_Test_Execution_Report.html) AND APPEND STATUS(false)
+18:27:41.374 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+18:27:41.389 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Operating System : WINDOWS OS) IN EXTENT REPORT
+18:27:41.389 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+18:27:41.389 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Java : 1.8) IN EXTENT REPORT
+18:27:41.389 INFO  utilities.Report -recordSystemInfo -INTEND TO ADD SYSTEM INFORMATION IN EXTENT REPORT
+18:27:41.389 INFO  utilities.Report -recordSystemInfo -SUCCESSFULLY ADDED SYSTEM INFORMATION(Selenium Version : 3.4) IN EXTENT REPORT
+18:27:42.779 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION STARTED SUCCESSFULLY
+18:27:48.070 INFO  utilities.BaseClass -initialization -METHOD(initialization) EXECUTION ENDED SUCCESSFULLY
+18:27:48.117 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:27:48.117 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:48.117 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:48.117 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:48.132 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:27:48.132 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:27:48.132 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:27:48.132 INFO  pageObjects.MarsApplicationLoginPage -login -METHOD(login) STARTED SUCCESSFULLY
+18:27:48.148 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:27:49.150 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:27:49.197 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:49.213 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:49.213 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:49.998 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:27:49.998 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:27:50.966 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: agencyid]) IS DISPLAYED
+18:27:51.307 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: agencyid]) IS DISPLAYED OR NOT
+18:27:51.307 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:27:52.201 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: agencyid]) IS ENABLED
+18:27:52.732 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: agencyid]) IS ENABLED OR NOT
+18:27:52.732 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:52.733 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:52.733 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:54.959 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:27:54.959 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:54.960 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:54.960 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:55.513 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:27:56.761 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(NTVNSV31) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: agencyid])
+18:27:56.761 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:27:57.762 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:27:57.762 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:27:57.762 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:27:57.762 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:27:58.295 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:27:58.295 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:27:59.091 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: pwd]) IS DISPLAYED
+18:27:59.373 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: pwd]) IS DISPLAYED OR NOT
+18:27:59.373 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:00.188 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: pwd]) IS ENABLED
+18:28:00.498 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: pwd]) IS ENABLED OR NOT
+18:28:00.498 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:00.498 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:00.498 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:02.467 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:02.467 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:02.467 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:02.467 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:02.945 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:04.186 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(welcome2019) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> name: pwd])
+18:28:04.186 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:04.186 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:04.186 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:04.186 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:05.186 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (30) SECONDS
+18:28:05.186 INFO  wrapperClasses.MyWebElement -clickOnButton -INTEND TO CLICK SPECIFIED WEBELEMENT
+18:28:06.186 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:06.186 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:06.186 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:06.186 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:06.749 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:06.749 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:06.749 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:06.749 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:06.749 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:07.671 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:07.671 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:08.405 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> class name: OrangeGradientButton]) IS DISPLAYED
+18:28:08.702 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> class name: OrangeGradientButton]) IS DISPLAYED OR NOT
+18:28:08.702 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:09.436 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> class name: OrangeGradientButton]) IS ENABLED
+18:28:09.720 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> class name: OrangeGradientButton]) IS ENABLED OR NOT
+18:28:09.720 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:09.720 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:09.720 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:09.720 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:10.188 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:10.188 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:10.188 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:10.188 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:10.188 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:11.078 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:12.749 INFO  wrapperClasses.MyWebElement -clickOnButton -SUCCESSFULLY CLICKED THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> class name: OrangeGradientButton])
+18:28:12.749 INFO  wrapperClasses.MyWebElement -clickOnButton -INTEND TO CLICK SPECIFIED WEBELEMENT
+18:28:13.765 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:13.765 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:13.765 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:13.765 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:14.609 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:14.609 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:14.609 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:14.609 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:14.609 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:15.328 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:15.328 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:15.875 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> xpath: //*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input]) IS DISPLAYED
+18:28:16.031 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> xpath: //*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input]) IS DISPLAYED OR NOT
+18:28:16.031 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:16.539 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> xpath: //*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input]) IS ENABLED
+18:28:16.687 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> xpath: //*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input]) IS ENABLED OR NOT
+18:28:16.687 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:16.687 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:16.687 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:16.687 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:17.060 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:17.061 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:17.061 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:17.061 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:17.061 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:17.748 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:20.156 INFO  wrapperClasses.MyWebElement -clickOnButton -SUCCESSFULLY CLICKED THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> xpath: //*[@id='maincontent']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/div[1]/div/div/div/div/div/div/div/div/div/table/tbody/tr[3]/td/input])
+18:28:21.344 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:28:21.344 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:21.344 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:21.344 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:28:21.344 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Login_to_TGQ.png) IS PRESENT
+18:28:21.344 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:28:21.359 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_Logged into 'TGQ' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Login_to_TGQ.png) IN EXTENT REPORT
+18:28:21.359 INFO  pageObjects.MarsApplicationLoginPage -login -METHOD(login) EXECUTED SUCCESSFULLY
+18:28:21.369 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:28:21.369 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:21.369 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:21.369 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:21.369 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:28:21.369 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:28:21.369 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:28:21.369 INFO  pageObjects.TGQ_New_Quote_Page -newquote -METHOD(login) STARTED SUCCESSFULLY
+18:28:26.495 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:28:27.499 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:27.499 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:27.499 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:27.499 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:27.983 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:27.983 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:28.718 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: referralLocationCodeInputField]) IS DISPLAYED
+18:28:29.015 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: referralLocationCodeInputField]) IS DISPLAYED OR NOT
+18:28:29.015 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:29.687 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: referralLocationCodeInputField]) IS ENABLED
+18:28:29.968 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: referralLocationCodeInputField]) IS ENABLED OR NOT
+18:28:29.968 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:29.968 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:29.968 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:31.827 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:31.827 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:31.827 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:31.827 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:32.311 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:33.515 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(37209) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: referralLocationCodeInputField])
+18:28:33.515 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:33.515 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:33.515 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:33.515 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:34.328 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (30) SECONDS
+18:28:34.328 INFO  wrapperClasses.MyWebElement -clickOnButton -INTEND TO CLICK SPECIFIED WEBELEMENT
+18:28:35.329 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:35.329 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:35.330 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:35.330 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:35.731 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:35.731 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:35.731 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:35.731 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:35.732 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:36.532 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:36.532 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:37.126 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> link text: Next]) IS DISPLAYED
+18:28:37.298 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> link text: Next]) IS DISPLAYED OR NOT
+18:28:37.298 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:37.782 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> link text: Next]) IS ENABLED
+18:28:37.984 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> link text: Next]) IS ENABLED OR NOT
+18:28:37.984 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:37.984 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:37.984 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:37.984 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:38.390 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:38.390 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:38.390 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:38.390 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:38.390 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:39.109 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_CLICKABLE) FOR (100) SECONDS
+18:28:47.375 INFO  wrapperClasses.MyWebElement -clickOnButton -SUCCESSFULLY CLICKED THE SPECIFIED WEBELEMENT(Proxy element for: DefaultElementLocator 'By.linkText: Next')
+18:28:48.563 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:28:48.563 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:48.563 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:48.578 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:48.578 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:28:48.578 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_New Quote.png) IS PRESENT
+18:28:48.578 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:28:48.578 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_Logged into 'New Quote' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_New Quote.png) IN EXTENT REPORT
+18:28:48.578 INFO  pageObjects.TGQ_New_Quote_Page -newquote -METHOD(login) EXECUTED SUCCESSFULLY
+18:28:48.586 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:28:48.586 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:48.586 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:48.586 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:48.586 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:28:48.586 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:28:48.586 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:28:48.586 INFO  pageObjects.TGQ_RatingInfo_Page -ratinginfo -METHOD(login) STARTED SUCCESSFULLY
+18:28:48.586 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:28:49.595 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:49.595 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:49.595 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:49.595 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:50.142 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:50.142 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:51.063 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insFirstName.value]) IS DISPLAYED
+18:28:51.344 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insFirstName.value]) IS DISPLAYED OR NOT
+18:28:51.344 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:52.116 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insFirstName.value]) IS ENABLED
+18:28:52.392 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insFirstName.value]) IS ENABLED OR NOT
+18:28:52.392 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:52.392 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:52.392 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:54.456 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:54.456 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:54.457 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:54.457 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:54.953 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:56.188 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(STENqiy) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insFirstName.value])
+18:28:56.188 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:28:57.203 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:28:57.203 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:57.203 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:57.203 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:28:57.721 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:28:57.721 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:28:58.508 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insLastName.value]) IS DISPLAYED
+18:28:58.790 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insLastName.value]) IS DISPLAYED OR NOT
+18:28:58.790 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:28:59.477 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insLastName.value]) IS ENABLED
+18:28:59.782 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insLastName.value]) IS ENABLED OR NOT
+18:28:59.782 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:28:59.782 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:28:59.782 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:01.767 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:01.767 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:01.767 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:01.767 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:02.245 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:03.485 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(jMOVB) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.insLastName.value])
+18:29:03.485 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:04.485 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:04.485 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:04.485 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:04.485 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:05.043 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:05.043 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:05.922 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.address.value]) IS DISPLAYED
+18:29:06.203 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.address.value]) IS DISPLAYED OR NOT
+18:29:06.203 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:07.000 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.address.value]) IS ENABLED
+18:29:07.266 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.address.value]) IS ENABLED OR NOT
+18:29:07.266 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:07.266 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:07.266 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:09.330 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:09.330 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:09.330 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:09.330 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:09.892 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:11.466 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(566,OAK SPRING) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.address.value])
+18:29:11.466 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:12.470 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:12.470 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:12.470 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:12.470 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:13.029 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:13.030 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:13.893 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.city.value]) IS DISPLAYED
+18:29:14.174 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.city.value]) IS DISPLAYED OR NOT
+18:29:14.174 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:15.018 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.city.value]) IS ENABLED
+18:29:15.315 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.city.value]) IS ENABLED OR NOT
+18:29:15.315 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:15.315 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:15.315 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:17.267 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:17.267 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:17.267 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:17.267 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:17.783 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:19.062 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(NASHVILLE) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.garagingAddress.city.value])
+18:29:19.062 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:20.064 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:20.064 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:20.064 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:20.064 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:20.692 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:20.692 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:21.596 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.area]) IS DISPLAYED
+18:29:21.970 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.area]) IS DISPLAYED OR NOT
+18:29:21.970 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:22.799 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.area]) IS ENABLED
+18:29:23.143 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.area]) IS ENABLED OR NOT
+18:29:23.143 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:23.143 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:23.143 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:25.236 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:25.236 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:25.236 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:25.236 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:25.817 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:27.234 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(456) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.area])
+18:29:27.234 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:28.236 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:28.236 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:28.237 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:28.237 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:28.720 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:28.720 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:29.530 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.exchange]) IS DISPLAYED
+18:29:29.838 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.exchange]) IS DISPLAYED OR NOT
+18:29:29.838 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:30.533 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.exchange]) IS ENABLED
+18:29:30.799 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.exchange]) IS ENABLED OR NOT
+18:29:30.799 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:30.799 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:30.799 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:32.768 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:32.768 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:32.768 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:32.768 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:33.268 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:34.517 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(564) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.exchange])
+18:29:34.517 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:35.518 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:35.518 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:35.518 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:35.518 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:36.049 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:36.049 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:36.848 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.station]) IS DISPLAYED
+18:29:37.114 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.station]) IS DISPLAYED OR NOT
+18:29:37.114 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:37.840 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.station]) IS ENABLED
+18:29:38.131 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.station]) IS ENABLED OR NOT
+18:29:38.131 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:38.132 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:38.132 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:40.097 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:40.097 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:40.097 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:40.097 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:40.624 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:41.774 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(7897) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.homePhone.station])
+18:29:48.580 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:49.596 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:49.596 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:49.596 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:49.596 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:50.143 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:50.143 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:51.126 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.mo]) IS DISPLAYED
+18:29:51.409 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.mo]) IS DISPLAYED OR NOT
+18:29:51.409 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:52.175 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.mo]) IS ENABLED
+18:29:52.440 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.mo]) IS ENABLED OR NOT
+18:29:52.440 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:52.440 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:52.440 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:54.487 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:54.487 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:54.487 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:54.487 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:54.987 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:56.206 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(01) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.mo])
+18:29:56.206 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:29:57.206 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:29:57.206 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:57.206 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:57.206 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:29:57.713 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:29:57.713 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:29:58.479 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.dy]) IS DISPLAYED
+18:29:58.744 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.dy]) IS DISPLAYED OR NOT
+18:29:58.744 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:29:59.521 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.dy]) IS ENABLED
+18:29:59.805 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.dy]) IS ENABLED OR NOT
+18:29:59.805 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:29:59.805 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:29:59.805 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:02.064 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:02.065 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:02.065 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:02.066 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:02.628 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:03.847 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(01) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.dy])
+18:30:03.847 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:30:04.847 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:04.847 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:04.848 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:04.848 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:05.393 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:05.393 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:30:06.143 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.yr]) IS DISPLAYED
+18:30:06.425 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.yr]) IS DISPLAYED OR NOT
+18:30:06.425 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:30:07.175 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.yr]) IS ENABLED
+18:30:07.488 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.yr]) IS ENABLED OR NOT
+18:30:07.488 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:07.488 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:07.488 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:09.551 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:09.551 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:09.551 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:09.551 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:10.117 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:11.285 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(1991) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: quoteBean.drivers[0].dateOfBirth.yr])
+18:30:25.553 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:30:25.553 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:25.553 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:25.553 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:30:25.553 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_Rating Info.png) IS PRESENT
+18:30:25.553 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:30:25.553 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_Logged into 'Rating Info' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_Rating Info.png) IN EXTENT REPORT
+18:30:25.553 INFO  pageObjects.TGQ_RatingInfo_Page -ratinginfo -METHOD(login) EXECUTED SUCCESSFULLY
+18:30:25.563 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:30:25.563 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:25.563 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:25.563 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:25.563 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:30:25.563 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:30:25.563 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:30:25.563 INFO  pageObjects.TGQ_Quote_Edit_Page -quotedit -METHOD(login) STARTED SUCCESSFULLY
+18:30:29.629 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:30:29.629 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:29.629 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:29.629 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:30:29.629 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_quote_Quote Edit.png) IS PRESENT
+18:30:29.629 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:30:29.629 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_Logged_into_ 'Quote Edit' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Created_quote_Quote Edit.png) IN EXTENT REPORT
+18:30:29.629 INFO  pageObjects.TGQ_Quote_Edit_Page -quotedit -METHOD(login) EXECUTED SUCCESSFULLY
+18:30:29.629 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:30:29.644 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:29.644 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:29.644 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:29.644 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:30:29.644 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:30:29.644 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:30:29.644 INFO  pageObjects.TGQ_Drivers_Edit_Page -driversedit -METHOD(login) STARTED SUCCESSFULLY
+18:30:31.533 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:30:32.536 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:32.536 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:32.536 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:32.536 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:33.044 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:33.044 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:30:33.754 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].socialSecurityNumber.value]) IS DISPLAYED
+18:30:34.022 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].socialSecurityNumber.value]) IS DISPLAYED OR NOT
+18:30:34.023 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:30:34.786 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].socialSecurityNumber.value]) IS ENABLED
+18:30:35.068 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].socialSecurityNumber.value]) IS ENABLED OR NOT
+18:30:35.068 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:35.068 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:35.068 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:36.929 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:36.930 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:36.930 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:36.930 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:37.430 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:38.677 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(666881265) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].socialSecurityNumber.value])
+18:30:38.677 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:30:39.692 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:39.692 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:39.692 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:39.692 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:40.240 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:40.240 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:30:41.006 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].driverLicenseNumber.value]) IS DISPLAYED
+18:30:41.287 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].driverLicenseNumber.value]) IS DISPLAYED OR NOT
+18:30:41.287 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:30:42.041 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].driverLicenseNumber.value]) IS ENABLED
+18:30:42.343 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].driverLicenseNumber.value]) IS ENABLED OR NOT
+18:30:42.344 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:42.344 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:42.344 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:44.317 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:30:44.317 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:44.317 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:44.317 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:44.819 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:30:46.036 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(487956891) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: drivers[0].driverLicenseNumber.value])
+18:30:53.730 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:30:53.730 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:53.730 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:53.730 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:30:53.730 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Drivers_are_edited_drivers Edit.png) IS PRESENT
+18:30:53.730 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:30:53.730 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_Logged_into_ 'drivers Edit' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Drivers_are_edited_drivers Edit.png) IN EXTENT REPORT
+18:30:53.730 INFO  pageObjects.TGQ_Drivers_Edit_Page -driversedit -METHOD(login) EXECUTED SUCCESSFULLY
+18:30:53.743 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:30:53.743 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:30:53.743 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:30:53.743 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:30:53.743 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:30:53.743 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:30:53.743 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:30:53.743 INFO  pageObjects.TGQ_Vehicles_Edit_Page -vehiclesedit -METHOD(login) STARTED SUCCESSFULLY
+18:31:02.912 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:31:02.912 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:02.912 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:02.928 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:02.928 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:31:02.928 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_vehiclesedit_vehicles.png) IS PRESENT
+18:31:02.928 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:31:02.928 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_vehiclesedit_ 'vehicles' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_vehiclesedit_vehicles.png) IN EXTENT REPORT
+18:31:02.928 INFO  pageObjects.TGQ_Vehicles_Edit_Page -vehiclesedit -METHOD(login) EXECUTED SUCCESSFULLY
+18:31:02.932 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:31:02.932 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:02.932 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:02.932 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:02.932 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:31:02.932 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:31:02.932 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:31:02.932 INFO  pageObjects.TGQ_Consumer_Questions_Page -consumerquestions -METHOD(login) STARTED SUCCESSFULLY
+18:31:07.725 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:31:07.725 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:07.725 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:07.725 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:09.209 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (10) SECONDS
+18:31:34.803 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:31:34.803 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:34.803 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:34.803 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:31:34.819 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_consumerquestions_CustomerQuestions.png) IS PRESENT
+18:31:34.819 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:31:34.819 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_answered_consumerquestions 'CustomerQuestions' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_consumerquestions_CustomerQuestions.png) IN EXTENT REPORT
+18:31:34.819 INFO  pageObjects.TGQ_Consumer_Questions_Page -consumerquestions -METHOD(login) EXECUTED SUCCESSFULLY
+18:31:34.826 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:31:34.826 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:34.826 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:34.826 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:34.826 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(ePortal_PoC) IN EXTENT REPORT
+18:31:34.826 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:31:34.826 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(ePortal_PoC) TO A TEST CASE IN EXTENT REPORT
+18:31:34.826 INFO  pageObjects.TGQ_Application_Questions_Page -applicationQuestions -METHOD(login) STARTED SUCCESSFULLY
+18:31:45.445 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:31:45.445 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:45.445 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:45.445 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:31:45.445 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_applicationQuestions_ApplicationQuestions.png) IS PRESENT
+18:31:45.445 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:31:45.445 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_answered_applicationQuestions 'ApplicationQuestions' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_applicationQuestions_ApplicationQuestions.png) IN EXTENT REPORT
+18:31:45.445 INFO  pageObjects.TGQ_Application_Questions_Page -applicationQuestions -METHOD(login) EXECUTED SUCCESSFULLY
+18:31:45.454 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:31:45.454 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:45.454 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:45.454 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:45.454 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:31:45.454 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:31:45.454 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:31:45.454 INFO  pageObjects.TGQ_Validate_Quote_Page -validatequote -METHOD(login) STARTED SUCCESSFULLY
+18:31:59.211 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:31:59.211 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:59.211 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:59.211 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:31:59.211 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_validatequote_validate.png) IS PRESENT
+18:31:59.211 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:31:59.211 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_validated_quote 'validate' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_validatequote_validate.png) IN EXTENT REPORT
+18:31:59.211 INFO  pageObjects.TGQ_Validate_Quote_Page -validatequote -METHOD(login) EXECUTED SUCCESSFULLY
+18:31:59.221 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:31:59.221 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:31:59.221 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:31:59.221 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:31:59.221 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:31:59.221 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:31:59.221 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:31:59.221 INFO  pageObjects.TGQ_Payment_Page -paymentTab -METHOD(login) STARTED SUCCESSFULLY
+18:32:01.070 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:32:02.070 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:02.070 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:02.070 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:02.070 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:02.617 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:02.617 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:32:03.493 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.paymentAmount.value]) IS DISPLAYED
+18:32:03.789 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.paymentAmount.value]) IS DISPLAYED OR NOT
+18:32:03.789 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:32:04.587 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.paymentAmount.value]) IS ENABLED
+18:32:04.883 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.paymentAmount.value]) IS ENABLED OR NOT
+18:32:04.883 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:04.883 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:04.883 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:06.962 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:06.962 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:06.962 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:06.962 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:07.447 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:08.696 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT($118.25) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.paymentAmount.value])
+18:32:08.696 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:32:09.697 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:09.697 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:09.697 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:09.697 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:10.234 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:10.235 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:32:11.105 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.accountNumber.value]) IS DISPLAYED
+18:32:11.396 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.accountNumber.value]) IS DISPLAYED OR NOT
+18:32:11.396 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:32:12.181 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.accountNumber.value]) IS ENABLED
+18:32:12.487 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.accountNumber.value]) IS ENABLED OR NOT
+18:32:12.487 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:12.487 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:12.487 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:14.915 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:14.915 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:14.915 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:14.915 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:15.493 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:16.856 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(4012000033330026) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.accountNumber.value])
+18:32:16.856 INFO  wrapperClasses.MyWebElement -enterText -INTEND TO ENTER TEXT INSIDE SPECIFIED WEBELEMENT
+18:32:17.868 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:17.868 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:17.868 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:17.868 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:18.375 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:18.375 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS DISPLAYED OR NOT
+18:32:19.234 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.cardholderName.value]) IS DISPLAYED
+18:32:19.573 INFO  wrapperClasses.MyWebElement -isDisplayedOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.cardholderName.value]) IS DISPLAYED OR NOT
+18:32:19.573 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -INTEND TO VERIFY WHETHER SPECIFIED WEBELEMENT IS ENABLED OR NOT
+18:32:20.353 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.cardholderName.value]) IS ENABLED
+18:32:20.665 INFO  wrapperClasses.MyWebElement -isEnabledOrNot -SUCCESSFULLY VERIFIED WETHER THE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.cardholderName.value]) IS ENABLED OR NOT
+18:32:20.665 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:20.665 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:20.665 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:22.775 INFO  wrapperClasses.MyWait -until -INTEND TO PAUSE THE EXECUTION EXPLICITLY
+18:32:22.775 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:22.775 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:22.775 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:23.307 INFO  wrapperClasses.MyWait -until -PAUSED THE EXECUTION EXPLICITLY UNTIL (ELEMENT_VISIBLE) FOR (100) SECONDS
+18:32:24.682 INFO  wrapperClasses.MyWebElement -enterText -SUCCESSFULLY ENTERED THE TEXT(Abcd Efgh) INSIDE SPECIFIED WEBELEMENT([[InternetExplorerDriver: internet explorer on WINDOWS (2e5cba1e-3d16-48de-acad-5d259501b6e2)] -> id: creditCardPayment.cardholderName.value])
+18:32:31.432 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:32:31.432 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:31.432 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:31.432 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:32:31.432 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_paymentTab_payment.png) IS PRESENT
+18:32:31.432 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:32:31.432 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(PASS) WITH DESCRIPTION(Successfully_filled in paymentTab 'payment' application) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_paymentTab_payment.png) IN EXTENT REPORT
+18:32:31.432 INFO  pageObjects.TGQ_Payment_Page -paymentTab -METHOD(login) EXECUTED SUCCESSFULLY
+18:32:31.443 INFO  utilities.Report -makeTestCaseEntry -INTEND TO CREATE AN INSTANCE OF TEST CASE WITH NAME IN EXTENT REPORT
+18:32:31.443 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:31.443 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:31.443 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:31.443 INFO  utilities.Report -makeTestCaseEntry -SUCCESSFULY CREATED AN INSTANCE OF TEST CASE WITH NAME(TheGeneral) IN EXTENT REPORT
+18:32:31.443 INFO  utilities.Report -assignCategoryToTestCase -INTEND TO ASSIGN CATAGORY TO A TEST CASE IN EXTENT REPORT
+18:32:31.443 INFO  utilities.Report -assignCategoryToTestCase -SUCCESSFULY ASSIGNED THE CATAGORY(TheGeneral) TO A TEST CASE IN EXTENT REPORT
+18:32:31.443 INFO  pageObjects.TGQ_Final_Policy_Page -policy_page -METHOD(login) STARTED SUCCESSFULLY
+18:32:32.243 ERROR pageObjects.TGQ_Final_Policy_Page -policy_page -Unable to find element with xpath == //*[@id='body']/form/table[3]/tbody/tr[3]/td[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
+*** Element info: {Using=xpath, value=//*[@id='body']/form/table[3]/tbody/tr[3]/td[2]}
+18:32:33.369 INFO  utilities.Report -logTestCaseStatusWithSnapShot -INTEND TO LOG TEST CASE STATUS WITH DESCRIPTION AND SNAPSHOT IN EXTENT REPORT
+18:32:33.369 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -INTENDED TO CHECK IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -STRING IS NOT EMPTY
+18:32:33.369 INFO  utilities.Report -notEmpty -SUCCESSFULLY CHECKED IF THE STRING IS EMPTY
+18:32:33.369 INFO  utilities.Report -filePresent -INTENDED TO CHECK IF THE SNAPSHOT FILE IS PRESENT
+18:32:33.369 INFO  utilities.Report -filePresent -FILE(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Error_in_policy_page_PolicyNumber.png) IS PRESENT
+18:32:33.369 INFO  utilities.Report -filePresent -SUCCESSFULLY CHECKED IF THE SNAPSHOT FILE IS PRESENT
+18:32:33.385 INFO  utilities.Report -logTestCaseStatusWithSnapShot -SUCCESSFULY LOGED THE STATUS(FAIL) WITH DESCRIPTION(<font color=red><b>Error_in_policyPage 'PolicyNumber' application: </b></font><br />Unable to find element with xpath == //*[@id='body']/form/table[3]/tbody/tr[3]/td[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NTISHTCD13', ip: '10.180.20.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
+*** Element info: {Using=xpath, value=//*[@id='body']/form/table[3]/tbody/tr[3]/td[2]}<br />) AND SNAPSHOT(C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\Results\Screenshots_2019-05-09_18_27_41_076\1_Error_in_policy_page_PolicyNumber.png) IN EXTENT REPORT
+18:32:33.395 INFO  utilities.Report -writeContents -INTEND TO WRITE ALL THE CONENTS INTO EXTENT REPORT
+18:32:33.994 INFO  utilities.Report -writeContents -SUCCESSFULY WROTE ALL THE CONENTS INTO EXTENT REPORT
