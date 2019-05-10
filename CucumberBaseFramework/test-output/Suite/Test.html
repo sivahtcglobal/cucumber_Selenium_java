@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 09 18:01:29 IST 2019</td>
+<td>Started on:</td><td>Fri May 10 19:02:58 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>132 seconds (132353 ms)</td>
+<tr><td>Total time:</td><td>271 seconds (271172 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,80 +67,37 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.theGeneral.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.theGeneral.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TGQ Quote Search As Agent", "Quote Search in TGQ Application"<br/>
-<a href="#Output-1032568028" onClick='toggleBox("Output-1032568028", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.theGeneral.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.theGeneral.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TGQ New Quote  As Agent", "New Quote in TGQ Application"<br/>
+<a href="#Output-673672784" onClick='toggleBox("Output-673672784", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1032568028" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1032568028">
-<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 1s)</div><br/>
+<a href="#Output-673672784" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-673672784">
+<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div><br/>
 <div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div><br/>
-<div "result">user login to &quot;TGQ&quot; application using &quot;QuoteSearch&quot; button (PASSED : 33s)</div><br/>
-<div "result">The Quote number is provided in &quot;TextField&quot; (PASSED : 25s)</div><br/>
-<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 9s)</div><br/>
-<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 14s)</div><br/>
-<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 10s)</div><br/>
-<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (FAILED : 30s)</div><br/>
-<div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div><br/>
-<div "result">user quits the browser (SKIPPED)</div><br/>
+<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div><br/>
+<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 21s)</div><br/>
+<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 80s)</div><br/>
+<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div><br/>
+<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div><br/>
+<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 8s)</div><br/>
+<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 28s)</div><br/>
+<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 9s)</div><br/>
+<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 11s)</div><br/>
+<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 38s)</div><br/>
+<div "result">Get the &quot;PolicyNumber&quot; (PASSED : 12s)</div><br/>
+<div "result">user quits the browser (PASSED : 0s)</div><br/>
 </div>
 </td>
-<td><div><pre>com.theGeneral.utilities.MyOwnException: Unable To do payment paymentapplication 
-Element not clickable at point (1109,417). Other element would receive the click: &lt;div class=&quot;msgBlk&quot;&gt;
-
-	&lt;b&gt;Soft Rating Messages&lt;/b&gt; &lt;br&gt;&lt;br&gt;
-	&lt;div class=&quot;msgRating&quot;&gt;
-		&lt;ul&gt;
-				&lt;li&gt;
-					We were unable to obtain the  motor vehicle report for Driver 1.  Please submit a copy of the drivers license so that we can obtain  this report.  (VIO0006)
-				&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;br&gt;&lt;br&gt;
-&lt;/div&gt;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:13499/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 570ee034-2ff7-46ec-96db-68cac59f92b8
-
-	at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:376)
-	at com.theGeneral.global.pageObjects.TGQ_Payment_Page.paymentTab(TGQ_Payment_Page.java:101)
-	at com.theGeneral.stepDefinations.PaymentPageSteps.payment(PaymentPageSteps.java:26)
-	at ?.Provide the mandatory fields and proceed for &quot;payment&quot; for the quote(src/test/resources/features/B2_TGQ_Quote_search_using_quoteno.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1032568028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1032568028'><pre>com.theGeneral.utilities.MyOwnException: Unable To do payment paymentapplication 
-Element not clickable at point (1109,417). Other element would receive the click: &lt;div class=&quot;msgBlk&quot;&gt;
-
-	&lt;b&gt;Soft Rating Messages&lt;/b&gt; &lt;br&gt;&lt;br&gt;
-	&lt;div class=&quot;msgRating&quot;&gt;
-		&lt;ul&gt;
-				&lt;li&gt;
-					We were unable to obtain the  motor vehicle report for Driver 1.  Please submit a copy of the drivers license so that we can obtain  this report.  (VIO0006)
-				&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;br&gt;&lt;br&gt;
-&lt;/div&gt;
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:13499/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 570ee034-2ff7-46ec-96db-68cac59f92b8
-
-	at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:376)
-	at com.theGeneral.global.pageObjects.TGQ_Payment_Page.paymentTab(TGQ_Payment_Page.java:101)
-	at com.theGeneral.stepDefinations.PaymentPageSteps.payment(PaymentPageSteps.java:26)
-	at ?.Provide the mandatory fields and proceed for &quot;payment&quot; for the quote(src/test/resources/features/B2_TGQ_Quote_search_using_quoteno.feature:11)
-</pre></div></td>
-<td>130</td>
+<td></td>
+<td>269</td>
 <td>com.theGeneral.TestRunner@6c6cb480</td></tr>
 </table><p>
 </body>

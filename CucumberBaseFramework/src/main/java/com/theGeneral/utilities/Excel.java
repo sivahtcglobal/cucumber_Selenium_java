@@ -2,9 +2,14 @@ package com.theGeneral.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFFormulaEvaluator;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -22,30 +27,63 @@ public class Excel extends BaseClass {
 
 	private static Workbook wb;
 	private static Sheet sh;
-	private static XSSFCell col = null; 
+	private static XSSFCell col = null;
 	private static Row row;
 	private static Cell cell;
 	private static int rowCount;
 	private static int colCount;
 	private static DataFormatter objDefaultFormat;
 	private static FormulaEvaluator objFormulaEvaluator;
-    public static FileInputStream f = null;
-	  public static String getExceldata(String excelFileName,String sheetname, int colnum, int rownum) {
-	        try {
-	        	
-	            File file = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\"+excelFileName+".xlsx");
-	            f = new FileInputStream(file);
-	            wb = new XSSFWorkbook(f);
-	            sh = wb.getSheet(sheetname);
-	            row = sh.getRow(rownum);
-	            col = (XSSFCell) row.getCell(colnum);
-	            return col.toString();
-	            // System.out.println(col.get);
-	        } catch (Exception e) {
-	            return sh + "Not Exist";
-	        }
-	    } 
-	
+	public static FileInputStream f = null;
+
+	public static String getExceldata(String excelFileName, String sheetname, int colnum, int rownum) {
+		try {
+
+			File file = new File(System.getProperty("user.dir") + "\\src\\test\\resources\\" + excelFileName + ".xlsx");
+			f = new FileInputStream(file);
+			wb = new XSSFWorkbook(f);
+			sh = wb.getSheet(sheetname);
+			row = sh.getRow(rownum);
+			col = (XSSFCell) row.getCell(colnum);
+			return col.toString();
+			// System.out.println(col.get);
+		} catch (Exception e) {
+			return sh + "Not Exist";
+		}
+	}
+
+	public static boolean writeToExcelSheet(String policyNumber, String quoteNUmber)
+			throws FileNotFoundException, IOException {
+		String fileName = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\"
+				+ prop.getProperty("TestDataFileName");
+		String sheetName = prop.getProperty("PolicyDetails");
+		FileInputStream file = new FileInputStream(fileName);
+		wb = new XSSFWorkbook(file);
+		// HSSFWorkbook workbook = new HSSFWorkbook(file);
+		sh = wb.getSheet(sheetName);
+
+		int rowCount = sh.getLastRowNum() + 1;
+		Row empRow = sh.createRow(rowCount);
+
+		Cell c1 = empRow.createCell(0);
+		c1.setCellValue(policyNumber);
+		Cell c2 = empRow.createCell(1);
+		c2.setCellValue(quoteNUmber);
+		Cell c3 = empRow.createCell(2);
+		c3.setCellValue(currentHash.get("PolicyType"));
+		Cell c4 = empRow.createCell(3);
+		c4.setCellValue(currentHash.get("Type"));
+		Cell c5 = empRow.createCell(4);
+		c5.setCellValue(currentHash.get("Testcaseid"));
+		file.close();
+
+		FileOutputStream outFile = new FileOutputStream(fileName);
+		wb.write(outFile);
+		outFile.close();
+		return true;
+
+	}
+
 	public static Workbook getToFile(String filePath, String excelFileName) throws MyOwnException {
 
 		log.info("INTEND TO READ THE SPECIFIED EXCEL FILE");
@@ -167,7 +205,6 @@ public class Excel extends BaseClass {
 		log.info("SUCCESSFULLY READ THE CELL VALUE(" + cellValue + ")");
 		return cellValue;
 	}
-	
 
 	public static Object[][] getTestDataAsTwoDimesionalObjectArray(String filePath, String excelFileName,
 			String sheetName) throws MyOwnException {
@@ -215,7 +252,5 @@ public class Excel extends BaseClass {
 				+ ") IN THE EXCEL FILE(" + excelFileName + ") UNDER THE LOCATION(" + filePath + ")");
 		return excelObjectArray;
 	}
-
-	
 
 }
