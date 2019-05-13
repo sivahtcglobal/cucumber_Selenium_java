@@ -20,8 +20,8 @@ public class PaymentPageSteps extends BaseClass {
 	@When("Provide the mandatory fields and proceed for \"([^\"]*)\" for the quote$")
 	public void payment(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "PaymentPage");
+		Report.assignCategoryToTestCase(parentTestCase, "PaymentPage");
 
 		payment_page.paymentTab(applicationType);
 

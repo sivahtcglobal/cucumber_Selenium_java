@@ -19,8 +19,8 @@ public class LoginPageSteps extends BaseClass {
 	@When("user login to \"([^\"]*)\" application using \"([^\"]*)\" button$")
 	public void login(String applicationType,String operation) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "LoginPage");
+		Report.assignCategoryToTestCase(parentTestCase, "LoginPage");
 
 		login.login(applicationType,operation);
 

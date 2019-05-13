@@ -19,8 +19,8 @@ public class ApplicationQuestionsSteps extends BaseClass {
 	@When("Answer the mandatory fields in \"([^\"]*)\" tab$")
 	public void applicationQue(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "ePortal_PoC");
-		Report.assignCategoryToTestCase(parentTestCase, "ePortal_PoC");
+		parentTestCase = Report.makeTestCaseEntry(report, "ApplicationQuestions");
+		Report.assignCategoryToTestCase(parentTestCase, "ApplicationQuestions");
 
 		applicationQue_page.applicationQuestions(applicationType);
 

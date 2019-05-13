@@ -20,8 +20,8 @@ public class CustomerQuestionsSteps extends BaseClass {
 	@When("Verify the mandatory fields in \"([^\"]*)\" tab$")
 	public void consumerQuestions(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "CustomerQuestions");
+		Report.assignCategoryToTestCase(parentTestCase, "CustomerQuestions");
 
 		consumerQuestions_page.consumerquestions(applicationType);
 

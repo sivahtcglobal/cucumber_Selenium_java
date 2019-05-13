@@ -22,8 +22,8 @@ public class RatingInfoSteps extends BaseClass {
 	@When("Fill the mandatory fields in \"([^\"]*)\" tab$")
 	public void ratingInfo(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "RatingInfo");
+		Report.assignCategoryToTestCase(parentTestCase, "RatingInfo");
 
 		ratingInfo_Page.ratinginfo(applicationType);
 

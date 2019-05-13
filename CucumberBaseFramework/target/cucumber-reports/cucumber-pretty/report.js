@@ -97,7 +97,8 @@ formatter.match({
   "location": "VehiclesEditSteps.vehiclesEdit(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "com.theGeneral.utilities.MyOwnException: Unable To Edit in Vehicles tab vehiclesapplication \nCannot locate an element using link text\u003dNext\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NTISHTCD13\u0027, ip: \u002710.180.20.66\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: RemoteWebDriver\n\r\n\tat com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)\r\n\tat com.theGeneral.global.pageObjects.TGQ_Vehicles_Edit_Page.vehiclesedit(TGQ_Vehicles_Edit_Page.java:73)\r\n\tat com.theGeneral.stepDefinations.VehiclesEditSteps.vehiclesEdit(VehiclesEditSteps.java:26)\r\n\tat ✽.Edit the required fields in the \"vehicles\" tab recalculate in the Vehicles Edit tab and click on Next button(src/test/resources/features/C_TGQ_New_Quote.feature:11)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Verify the mandatory fields in \"CustomerQuestions\" tab",
@@ -107,7 +108,7 @@ formatter.match({
   "location": "CustomerQuestionsSteps.consumerQuestions(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Answer the mandatory fields in \"ApplicationQuestions\" tab",
@@ -117,7 +118,7 @@ formatter.match({
   "location": "ApplicationQuestionsSteps.applicationQue(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Provide the mandatory fields and \"validate\" the quote",
@@ -127,7 +128,7 @@ formatter.match({
   "location": "ValidateQuoteSteps.validateQuote(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Provide the mandatory fields and proceed for \"payment\" for the quote",
@@ -137,7 +138,7 @@ formatter.match({
   "location": "PaymentPageSteps.payment(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Get the \"PolicyNumber\"",
@@ -147,7 +148,7 @@ formatter.match({
   "location": "GetPolicyNumSteps.policy(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user quits the browser",
@@ -157,6 +158,6 @@ formatter.match({
   "location": "CommonSteps.closeBrowser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 });

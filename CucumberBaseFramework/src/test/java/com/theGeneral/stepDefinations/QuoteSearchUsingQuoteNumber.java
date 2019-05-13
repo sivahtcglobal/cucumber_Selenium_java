@@ -23,8 +23,8 @@ public class QuoteSearchUsingQuoteNumber extends BaseClass {
 	@When("Click on the \"([^\"]*)\" button$")
 	public void quoteSearch(String applicationType,String operation) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "QuoteSearchUsingQuoteNumber");
+		Report.assignCategoryToTestCase(parentTestCase, "QuoteSearchUsingQuoteNumber");
 
 		quoteSearch_page.login(applicationType,operation);
 
@@ -32,8 +32,8 @@ public class QuoteSearchUsingQuoteNumber extends BaseClass {
 	@Then("The Quote number is provided in \"([^\"]*)\"$")
 	public void enterQuote(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "QuoteSearchUsingQuoteNumber");
+		Report.assignCategoryToTestCase(parentTestCase, "QuoteSearchUsingQuoteNumber");
 
 		search_page.enterquote(applicationType);
 

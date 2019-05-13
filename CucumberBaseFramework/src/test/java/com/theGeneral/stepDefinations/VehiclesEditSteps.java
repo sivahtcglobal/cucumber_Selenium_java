@@ -20,8 +20,8 @@ public class VehiclesEditSteps extends BaseClass {
 	@When("Edit the required fields in the \"([^\"]*)\" tab recalculate in the Vehicles Edit tab and click on Next button$")
 	public void vehiclesEdit(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "VehiclesEdit");
+		Report.assignCategoryToTestCase(parentTestCase, "VehiclesEdit");
 
 		vehiclesEdit_page.vehiclesedit(applicationType);
 

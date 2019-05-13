@@ -19,8 +19,8 @@ public class GetPolicyNumSteps extends BaseClass {
 	@When("Get the \"([^\"]*)\"$")
 	public void policy(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "GetPolicyNum");
+		Report.assignCategoryToTestCase(parentTestCase, "GetPolicyNum");
 
 		policy_page.policy_page(applicationType);
 

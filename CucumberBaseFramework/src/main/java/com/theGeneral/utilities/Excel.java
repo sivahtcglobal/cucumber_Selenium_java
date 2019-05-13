@@ -55,7 +55,7 @@ public class Excel extends BaseClass {
 	public static boolean writeToExcelSheet(String policyNumber, String quoteNUmber)
 			throws FileNotFoundException, IOException {
 		String fileName = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\"
-				+ prop.getProperty("TestDataFileName");
+				+ prop.getProperty("TestCaseFileName");
 		String sheetName = prop.getProperty("PolicyDetails");
 		FileInputStream file = new FileInputStream(fileName);
 		wb = new XSSFWorkbook(file);

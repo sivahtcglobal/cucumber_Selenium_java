@@ -75,11 +75,10 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Login_to_" + applicationType + ".png");
-
-//			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-//					"Successfully_Logged into '" + applicationType + "' application",
-//					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-//							+ "1_Login_to_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_Logged into '" + applicationType + "' application",
+				System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_Login_to_" + applicationType + ".png");
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

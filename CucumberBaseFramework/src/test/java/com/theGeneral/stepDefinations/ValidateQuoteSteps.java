@@ -20,8 +20,8 @@ public class ValidateQuoteSteps extends BaseClass {
 	@When("Provide the mandatory fields and \"([^\"]*)\" the quote$")
 	public void validateQuote(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "ValidateQuote");
+		Report.assignCategoryToTestCase(parentTestCase, "ValidateQuote");
 
 		validateQuote_page.validatequote(applicationType);
 

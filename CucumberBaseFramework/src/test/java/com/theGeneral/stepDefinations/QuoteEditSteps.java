@@ -20,8 +20,8 @@ public class QuoteEditSteps extends BaseClass {
 	@When("Edit the required fields in the \"([^\"]*)\" tab recalculate it and click on Next button$")
 	public void quoteEdit(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "QuoteEdit");
+		Report.assignCategoryToTestCase(parentTestCase, "QuoteEdit");
 System.out.println("IN THE QUOTE EDIT STEP");
 		quoteEdit_page.quotedit(applicationType);
 

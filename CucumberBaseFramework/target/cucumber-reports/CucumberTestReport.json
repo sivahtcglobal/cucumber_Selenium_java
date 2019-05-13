@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 859711400,
+              "duration": 1092354000,
               "status": "passed"
             },
             "line": 4,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 4016394300,
+              "duration": 5550638000,
               "status": "passed"
             },
             "line": 5,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 28006421900,
+              "duration": 41034115800,
               "status": "passed"
             },
             "line": 6,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 21099052700,
+              "duration": 29797958700,
               "status": "passed"
             },
             "line": 7,
@@ -88,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 80413176200,
+              "duration": 216393008900,
               "status": "passed"
             },
             "line": 8,
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 3918169100,
+              "duration": 19978638000,
               "status": "passed"
             },
             "line": 9,
@@ -124,7 +124,7 @@
           },
           {
             "result": {
-              "duration": 22050758000,
+              "duration": 30076478400,
               "status": "passed"
             },
             "line": 10,
@@ -142,8 +142,9 @@
           },
           {
             "result": {
-              "duration": 8277379500,
-              "status": "passed"
+              "error_message": "com.theGeneral.utilities.MyOwnException: Unable To Edit in Vehicles tab vehiclesapplication \nCannot locate an element using link text\u003dNext\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027NTISHTCD13\u0027, ip: \u002710.180.20.66\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: driver.version: RemoteWebDriver\n\r\n\tat com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)\r\n\tat com.theGeneral.global.pageObjects.TGQ_Vehicles_Edit_Page.vehiclesedit(TGQ_Vehicles_Edit_Page.java:73)\r\n\tat com.theGeneral.stepDefinations.VehiclesEditSteps.vehiclesEdit(VehiclesEditSteps.java:26)\r\n\tat ✽.Edit the required fields in the \"vehicles\" tab recalculate in the Vehicles Edit tab and click on Next button(src/test/resources/features/C_TGQ_New_Quote.feature:11)\r\n",
+              "duration": 11684172000,
+              "status": "failed"
             },
             "line": 11,
             "name": "Edit the required fields in the \"vehicles\" tab recalculate in the Vehicles Edit tab and click on Next button",
@@ -160,8 +161,7 @@
           },
           {
             "result": {
-              "duration": 28182099200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "Verify the mandatory fields in \"CustomerQuestions\" tab",
@@ -178,8 +178,7 @@
           },
           {
             "result": {
-              "duration": 9232366700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "Answer the mandatory fields in \"ApplicationQuestions\" tab",
@@ -196,8 +195,7 @@
           },
           {
             "result": {
-              "duration": 11231787100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "Provide the mandatory fields and \"validate\" the quote",
@@ -214,8 +212,7 @@
           },
           {
             "result": {
-              "duration": 38314425300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 15,
             "name": "Provide the mandatory fields and proceed for \"payment\" for the quote",
@@ -232,8 +229,7 @@
           },
           {
             "result": {
-              "duration": 12624350700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 16,
             "name": "Get the \"PolicyNumber\"",
@@ -250,8 +246,7 @@
           },
           {
             "result": {
-              "duration": 783621600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 17,
             "name": "user quits the browser",

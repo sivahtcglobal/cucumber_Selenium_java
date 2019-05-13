@@ -19,8 +19,8 @@ public class DriversEditSteps extends BaseClass {
 	@When("Edit the required fields in the \"([^\"]*)\" tab recalculate in drivers Edit tab and click on Next button$")
 	public void driversEdit(String applicationType) throws InterruptedException, MyOwnException {
 
-		parentTestCase = Report.makeTestCaseEntry(report, "TheGeneral");
-		Report.assignCategoryToTestCase(parentTestCase, "TheGeneral");
+		parentTestCase = Report.makeTestCaseEntry(report, "DriversEdit");
+		Report.assignCategoryToTestCase(parentTestCase, "DriversEdit");
 
 		driversEdit_page.driversedit(applicationType);
 
