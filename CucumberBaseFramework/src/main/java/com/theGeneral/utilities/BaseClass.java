@@ -198,7 +198,7 @@ public class BaseClass {
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
 				+ testRunTimeStamp;
 
-		report = Report.initialize("TheGeneral_Test_Execution_Report_Base.html", true);
+		report = Report.initialize("TheGeneral_Test_Execution_Report_Business_Restricted_Policy.html", false);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");
 		Report.recordSystemInfo(report, "Selenium Version", "3.4");

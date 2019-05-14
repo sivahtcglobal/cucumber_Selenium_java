@@ -423,5 +423,12 @@ public class MyWebElement extends Report {
 		} else
 			return false;
 	}
+	public static boolean isDropdownExist(String name) {
+		List<WebElement> ele = dr.findElements(By.name(name));
+		if (ele.size() > 0) {
+			return true;
+		} else
+			return false;
+	}
 
 }
