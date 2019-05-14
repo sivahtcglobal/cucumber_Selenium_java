@@ -110,21 +110,20 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 					tgq_update_mvr.click();
 				}
 				if (MyWebElement.isElementExist("Order CLUE")) {
-				tgq_order_clue.click();
+					tgq_order_clue.click();
 				}
 			}
 
 			tgq_save.click();
-			
-			tgq_next_btn.click();
-			
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_consumerquestions_" + applicationType + ".png");
 
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",					
-					"Successfully_answered_consumerquestions '" + applicationType + "' application",					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
-						+ "1_consumerquestions_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
+					"Successfully_answered_consumerquestions '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_consumerquestions_" + applicationType + ".png");
+			tgq_next_btn.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

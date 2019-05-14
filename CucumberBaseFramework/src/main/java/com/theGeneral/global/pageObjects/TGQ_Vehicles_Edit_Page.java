@@ -42,17 +42,16 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 	public void vehiclesedit(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			
-			if (!currentHash.get("PolicyType").equals("Bond - No Credit") ) {
-			Select ownership_type_veh = new Select(ownership_type);
-			ownership_type_veh.selectByVisibleText("Owned");
-			Select prior_damage_veh = new Select(prior_damage);
-			prior_damage_veh.selectByVisibleText("No");
+
+			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
+				Select ownership_type_veh = new Select(ownership_type);
+				ownership_type_veh.selectByVisibleText("Owned");
+				Select prior_damage_veh = new Select(prior_damage);
+				prior_damage_veh.selectByVisibleText("No");
 			}
 			Select veh_reg_state_veh = new Select(veh_reg_state);
 			veh_reg_state_veh.selectByVisibleText(currentHash.get("QuoteState"));
 			recalculate_button.click();
-			next_button.click();
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_vehiclesedit_" + applicationType + ".png");
 
@@ -60,17 +59,19 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 					"Successfully_vehiclesedit_ '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_vehiclesedit_" + applicationType + ".png");
+			next_button.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Error_in_vehiclesedit_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error_in_vehiclesedit '" + applicationType
-							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
+					"<font color=red><b>Error_in_vehiclesedit '" + applicationType + "' application: </b></font><br />"
+							+ exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Error_in_vehiclesedit_" + applicationType + ".png");
-			throwException("Unable To Edit in Vehicles tab " + applicationType + "application \n" + exp.getMessage() + "\n");
+			throwException(
+					"Unable To Edit in Vehicles tab " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
 		log.info("METHOD(login) EXECUTED SUCCESSFULLY");
 

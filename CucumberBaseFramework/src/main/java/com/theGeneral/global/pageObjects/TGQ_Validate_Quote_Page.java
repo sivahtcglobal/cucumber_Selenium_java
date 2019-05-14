@@ -1,7 +1,5 @@
 package com.theGeneral.global.pageObjects;
 
-
-
 import java.util.LinkedList;
 
 import org.apache.logging.log4j.LogManager;
@@ -35,7 +33,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 	public WebElement signup_paperless;
 	@FindBy(how = How.ID, using = "quoteBean.homePhone.area")
 	public WebElement prim_num1;
-	@FindBy(how= How.ID,using= "quoteBean.homePhone.exchange")
+	@FindBy(how = How.ID, using = "quoteBean.homePhone.exchange")
 	public WebElement prim_num2;
 	@FindBy(how = How.ID, using = "quoteBean.homePhone.station")
 	public WebElement prim_num3;
@@ -56,7 +54,6 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 	@FindBy(how = How.LINK_TEXT, using = "Next")
 	public WebElement tgq_next_btn;
 
-
 	WebDriver ldriver;
 
 	public TGQ_Validate_Quote_Page(WebDriver dr) {
@@ -71,33 +68,32 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 
 			Select signup_paperless_val = new Select(signup_paperless);
 			signup_paperless_val.selectByVisibleText("No");
-			//MyWebElement.enterText(prim_num1, prop.getProperty("TGQUserName"));
-			//MyWebElement.enterText(prim_num2, prop.getProperty("TGQUserName"));
-			//MyWebElement.enterText(prim_num3, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(prim_num1, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(prim_num2, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(prim_num3, prop.getProperty("TGQUserName"));
 			Select account_alerts_val = new Select(account_alerts);
 			account_alerts_val.selectByVisibleText("Call");
-			//MyWebElement.enterText(alt_num1, prop.getProperty("TGQUserName"));
-			//MyWebElement.enterText(alt_num2, prop.getProperty("TGQUserName"));
-			//MyWebElement.enterText(alt_num3, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(alt_num1, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(alt_num2, prop.getProperty("TGQUserName"));
+			// MyWebElement.enterText(alt_num3, prop.getProperty("TGQUserName"));
 			Select closing_method_val = new Select(closing_method);
 			closing_method_val.selectByVisibleText("Fax");
-			tgq_next_btn.click();;
-			
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_validatequote_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_validated_quote '" + applicationType + "' application",
-								System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_validatequote_" + applicationType + ".png");
+			tgq_next_btn.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Error_in_validating_quote_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
-					"<font color=red><b>Error Validating Quote '" + applicationType
-							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
+					"<font color=red><b>Error Validating Quote '" + applicationType + "' application: </b></font><br />"
+							+ exp.getMessage() + "<br />",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Error_in_validating_quote_" + applicationType + ".png");
 			throwException("Unable To validate Quote " + applicationType + "application \n" + exp.getMessage() + "\n");

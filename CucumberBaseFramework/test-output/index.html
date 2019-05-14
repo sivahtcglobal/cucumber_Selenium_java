@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\testng.xml</span>
+                    <span>C:\Automation\CucumberBaseFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,17 +129,20 @@
                   </a> <!-- runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
-                  <div class="stack-trace">com.theGeneral.utilities.MyOwnException: Unable To Edit in Vehicles tab vehiclesapplication 
-Cannot locate an element using link text=Next
+                  <div class="stack-trace">com.theGeneral.utilities.MyOwnException: Unable To get Policy Number PolicyNumberapplication 
+Unable to find element with xpath == //*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: driver.version: RemoteWebDriver
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:41688/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 3932b84b-f328-405a-b9b3-bd49bd05d1ca
+*** Element info: {Using=xpath, value=//*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]}
 
 	at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)
-	at com.theGeneral.global.pageObjects.TGQ_Vehicles_Edit_Page.vehiclesedit(TGQ_Vehicles_Edit_Page.java:73)
-	at com.theGeneral.stepDefinations.VehiclesEditSteps.vehiclesEdit(VehiclesEditSteps.java:26)
-	at ✽.Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button(src/test/resources/features/C_TGQ_New_Quote.feature:11)
+	at com.theGeneral.global.pageObjects.TGQ_Final_Policy_Page.policy_page(TGQ_Final_Policy_Page.java:63)
+	at com.theGeneral.stepDefinations.GetPolicyNumSteps.policy(GetPolicyNumSteps.java:25)
+	at ✽.Get the &quot;PolicyNumber&quot;(src/test/resources/features/C_TGQ_New_Quote.feature:16)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -151,7 +154,7 @@ Driver info: driver.version: RemoteWebDriver
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\TheGeneral\GitHub\cucumber_Selenium_java\CucumberBaseFramework\testng.xml</span>
+            <span class="header-content">C:\Automation\CucumberBaseFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,12 +215,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.theGeneral.TestRunner')
-data.setCell(0, 3, 355684);
+data.setCell(0, 3, 369050);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -231,19 +234,19 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><div "result">user get the Test data &quot;TGQ&quot; (PASSED : 1s)</div></span>
-                <span class="reporter-method-output"><div "result">user launches &quot;TGQ&quot; URL (PASSED : 5s)</div></span>
-                <span class="reporter-method-output"><div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 41s)</div></span>
-                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 29s)</div></span>
-                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 216s)</div></span>
-                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 19s)</div></span>
-                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 30s)</div></span>
-                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (FAILED : 11s)</div></span>
-                <span class="reporter-method-output"><div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (SKIPPED)</div></span>
-                <span class="reporter-method-output"><div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (SKIPPED)</div></span>
-                <span class="reporter-method-output"><div "result">Provide the mandatory fields and &quot;validate&quot; the quote (SKIPPED)</div></span>
-                <span class="reporter-method-output"><div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (SKIPPED)</div></span>
-                <span class="reporter-method-output"><div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div></span>
+                <span class="reporter-method-output"><div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div></span>
+                <span class="reporter-method-output"><div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div></span>
+                <span class="reporter-method-output"><div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 32s)</div></span>
+                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 24s)</div></span>
+                <span class="reporter-method-output"><div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 151s)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 14s)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div></span>
+                <span class="reporter-method-output"><div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 11s)</div></span>
+                <span class="reporter-method-output"><div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 51s)</div></span>
+                <span class="reporter-method-output"><div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 14s)</div></span>
+                <span class="reporter-method-output"><div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 12s)</div></span>
+                <span class="reporter-method-output"><div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 28s)</div></span>
+                <span class="reporter-method-output"><div "result">Get the &quot;PolicyNumber&quot; (FAILED : 1s)</div></span>
                 <span class="reporter-method-output"><div "result">user quits the browser (SKIPPED)</div></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -269,11 +272,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("TGQ New Quote  As Agent", "New Quote in TGQ Application")</span>
-                <span class="method-start">1066 ms</span>
+                <span class="method-start">750 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">356755 ms</span>
+                <span class="method-start">369800 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
