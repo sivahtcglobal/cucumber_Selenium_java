@@ -54,7 +54,7 @@ public class CommonSteps extends BaseClass {
 	public void readTestData(String appType)
 			throws MyOwnException, InterruptedException, AWTException, IOException {
 
-		readSpecificTestData(prop.getProperty("TestCaseId"));
+		readSpecificTestData(System.getProperty("TestCaseId"));
 
 	}
 

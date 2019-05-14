@@ -32,7 +32,7 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 	public WebElement get_quote;
 	@FindBy(how = How.XPATH, using = "//*[@id=\"n6\"]/a")
 	public WebElement consumerTab;
-	
+
 	WebDriver ldriver;
 
 	public TGQ_Search_Quote_Page(WebDriver dr) {
@@ -42,17 +42,15 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 	}
 
 	public void enterquote(String applicationType) throws MyOwnException, InterruptedException {
-		
+
 		try {
-			 for (String handle1 : ldriver.getWindowHandles()) {
-		          ldriver.switchTo().window(handle1);
-		          }
-		         ldriver.manage().window().maximize() ;
+			for (String handle1 : ldriver.getWindowHandles()) {
+				ldriver.switchTo().window(handle1);
+			}
+			ldriver.manage().window().maximize();
 			MyWebElement.enterText(quote_number, "11536115");
-			search.click();;
-			quote_number_intable.click();
-			get_quote.click();
-			consumerTab.click();
+			search.click();
+			
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Searched_quote_" + applicationType + ".png");
 
@@ -60,6 +58,9 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 					"Successfully_Logged_into_ '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Searched_quote_" + applicationType + ".png");
+			quote_number_intable.click();
+			get_quote.click();
+			consumerTab.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

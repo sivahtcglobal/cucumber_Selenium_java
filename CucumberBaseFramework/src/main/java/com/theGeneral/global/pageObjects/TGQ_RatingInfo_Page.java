@@ -76,7 +76,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement umpd_ded;
 	@FindBy(how = How.NAME, using = "quoteBean.medPayLimit.writableValue")
 	public WebElement medical_payments;
-	
+
 	@FindBy(how = How.NAME, using = "quoteBean.userRatedCredit.writableValue")
 	public WebElement est_credit;
 	@FindBy(how = How.ID, using = "quoteBean.drivers[0].dateOfBirth.mo")
@@ -211,7 +211,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select medical_payments_cov = new Select(medical_payments);
 				medical_payments_cov.selectByVisibleText(currentHash.get("MedicalPay"));
 			}
-			
+
 			if (!currentHash.get("EstimatedCredit").equals("Nil")) {
 				Select est_credit_cov = new Select(est_credit);
 				est_credit_cov.selectByVisibleText(currentHash.get("EstimatedCredit"));
@@ -240,7 +240,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				get_vehicle.click();
 				;
 			}
-			//Thread.sleep(1000);
+			// Thread.sleep(1000);
 			if (!currentHash.get("BusUse").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
 				bus_use_veh.selectByVisibleText(currentHash.get("BusUse"));
@@ -249,16 +249,14 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select dbl_ded_veh = new Select(dbl_ded);
 				dbl_ded_veh.selectByVisibleText(currentHash.get("DblDed"));
 			}
-			
-			get_quote.click();
-
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Created_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_Logged into '" + applicationType + "' application",					
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"							
-					+ "1_Created_" + applicationType + ".png");
+					"Successfully_Logged into '" + applicationType + "' application",
+					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							+ "1_Created_" + applicationType + ".png");
+			get_quote.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

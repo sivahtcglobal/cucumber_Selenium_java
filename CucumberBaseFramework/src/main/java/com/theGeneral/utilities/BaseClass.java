@@ -145,7 +145,7 @@ public class BaseClass {
 	public static void initialization(String applicationType) throws MyOwnException {
 
 		log.info("METHOD(initialization) EXECUTION STARTED SUCCESSFULLY");
-		browserName = prop.getProperty("browser");
+		browserName = System.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
@@ -184,7 +184,7 @@ public class BaseClass {
 		dr.manage().deleteAllCookies();
 
 		//dr.navigate().to(prop.getProperty("TGQUrl"));
-		dr.navigate().to("https://"+prop.getProperty("TestEnvironment")+".pgactest.com/mars/");
+		dr.navigate().to("https://"+System.getProperty("TestEnvironment")+".pgactest.com/mars/");
 		ePortalAllPages = new TheGeneralAllPages(dr);
 
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
@@ -198,7 +198,7 @@ public class BaseClass {
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
 				+ testRunTimeStamp;
 
-		report = Report.initialize("TheGeneral_Test_Execution_Report.html", false);
+		report = Report.initialize("TheGeneral_Test_Execution_Report_Base.html", true);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");
 		Report.recordSystemInfo(report, "Selenium Version", "3.4");

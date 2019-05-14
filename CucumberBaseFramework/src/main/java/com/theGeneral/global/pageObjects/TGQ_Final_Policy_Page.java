@@ -38,11 +38,11 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 	public void policy_page(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			
+			MyWait.until(ldriver, "ELEMENT_VISIBLE", 15, policy_num);
 			System.out.println(quote_num.getText()+"quote_num");
 			System.out.println(policy_num.getText()+"policy_num");
 			Excel.writeToExcelSheet(policy_num.getText(), quote_num.getText());
-			Thread.sleep(10000);
+			
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_policy_page_" + applicationType + ".png");
 

@@ -47,7 +47,6 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 	public void applicationQuestions(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-
 			Select appQue_1 = new Select(appQuestions_1);
 			appQue_1.selectByVisibleText("No");
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
@@ -67,15 +66,14 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 				Select appQue_6 = new Select(appQuestions_6);
 				appQue_6.selectByVisibleText("Yes");
 			}
-			next_button.click();
-			;
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_applicationQuestions_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
-					"Successfully_answered_applicationQuestions '" + applicationType + "' application",					
+					"Successfully_answered_applicationQuestions '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_applicationQuestions_" + applicationType + ".png");
+			next_button.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());

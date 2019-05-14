@@ -63,9 +63,9 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 				rental_reim_cov.selectByVisibleText(currentHash.get("RentalReim"));
 			}
 			if (!currentHash.get("Towing&Labour").equals("Nil")) {
-				recalculate_button.click();;
+				recalculate_button.click();
 			}
-			next_button.click();;
+
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Created_quote_" + applicationType + ".png");
 
@@ -73,6 +73,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 					"Successfully_Logged_into_ '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Created_quote_" + applicationType + ".png");
+			next_button.click();
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
