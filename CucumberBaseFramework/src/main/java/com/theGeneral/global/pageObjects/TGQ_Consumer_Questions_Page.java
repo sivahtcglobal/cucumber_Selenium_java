@@ -77,7 +77,7 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 						;
 					}
 				}
-				if (MyWebElement.isElementExist("Order MVR")) {
+				if (MyWebElement.isCloseButtonExist("//a[contains(text(),'Order MVR')]")) {
 					tgq_order_mvr.click();
 					List<WebElement> rdBtn_mvr = dr.findElements(By.name("order[2].action.value"));
 					rdBtn_mvr.get(1).click();

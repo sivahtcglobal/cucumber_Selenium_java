@@ -1,5 +1,7 @@
 package com.theGeneral.global.pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +32,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 	public WebElement towing;
 	@FindBy(how = How.XPATH, using = "//*[@id='body']/form/div[6]/table/tbody/tr/td[3]/a")
 	public WebElement recalculate_button;
-	@FindBy(how = How.LINK_TEXT, using = "Next")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Next')]")
 	public WebElement next_button;
 	@FindBy(how = How.ID, using = "quoteBean.rentalLimit.writableValue")
 	public WebElement rental_reim;
@@ -43,8 +45,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 	}
 
 	public void quotedit(String applicationType) throws MyOwnException, InterruptedException {
-		log.info("METHOD(login) STARTED SUCCESSFULLY");
-		System.out.println("EGFIKEDBGKBGDSBGJDGBDKGBSKGSDBGKDS");
+		//dr.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS); 
 		try {
 			if (!currentHash.get("CompDed").equals("Nil")) {
 				Select comp_ded_q = new Select(comp_ded);
@@ -65,7 +66,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 			if (!currentHash.get("Towing&Labour").equals("Nil")) {
 				recalculate_button.click();;
 			}
-			next_button.click();;
+			next_button.click();
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_Created_quote_" + applicationType + ".png");
 

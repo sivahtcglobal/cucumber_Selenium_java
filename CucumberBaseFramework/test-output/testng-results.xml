@@ -5,37 +5,37 @@
       <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
+      <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
+      <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 23s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 21s)</div>]]>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 15s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 80s)</div>]]>
+      <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 57s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div>]]>
+      <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 16s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 8s)</div>]]>
+      <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 6s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 28s)</div>]]>
+      <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 23s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 9s)</div>]]>
+      <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 7s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 11s)</div>]]>
+      <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 10s)</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 38s)</div>]]>
+      <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 27s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (PASSED : 12s)</div>]]>
@@ -44,19 +44,19 @@
       <![CDATA[<div "result">user quits the browser (PASSED : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="271172" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:37:29Z">
+  <suite name="Suite" duration-ms="211953" started-at="2019-05-13T12:17:13Z" finished-at="2019-05-13T12:20:45Z">
     <groups>
       <group name="cucumber">
         <method signature="TestRunner.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="runScenario" class="com.theGeneral.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="271172" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:37:29Z">
+    <test name="Test" duration-ms="211953" started-at="2019-05-13T12:17:13Z" finished-at="2019-05-13T12:20:45Z">
       <class name="com.theGeneral.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="703" started-at="2019-05-10T13:32:58Z" finished-at="2019-05-10T13:32:59Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="setUpClass" is-config="true" duration-ms="671" started-at="2019-05-13T12:17:13Z" finished-at="2019-05-13T12:17:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="runScenario" duration-ms="269076" started-at="2019-05-10T13:32:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-10T13:37:28Z">
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="runScenario" duration-ms="210179" started-at="2019-05-13T12:17:14Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-05-13T12:20:44Z">
           <params>
             <param index="0">
               <value>
@@ -74,37 +74,37 @@
               <![CDATA[<div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div>]]>
+              <![CDATA[<div "result">user launches &quot;TGQ&quot; URL (PASSED : 3s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 28s)</div>]]>
+              <![CDATA[<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 23s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 21s)</div>]]>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 15s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 80s)</div>]]>
+              <![CDATA[<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 57s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 22s)</div>]]>
+              <![CDATA[<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 16s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 8s)</div>]]>
+              <![CDATA[<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 6s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 28s)</div>]]>
+              <![CDATA[<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 23s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 9s)</div>]]>
+              <![CDATA[<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 7s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 11s)</div>]]>
+              <![CDATA[<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 10s)</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 38s)</div>]]>
+              <![CDATA[<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 27s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">Get the &quot;PolicyNumber&quot; (PASSED : 12s)</div>]]>
@@ -114,7 +114,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="1187" started-at="2019-05-10T13:37:28Z" finished-at="2019-05-10T13:37:29Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.theGeneral.TestRunner@6c6cb480]" name="tearDownClass" is-config="true" duration-ms="894" started-at="2019-05-13T12:20:44Z" finished-at="2019-05-13T12:20:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

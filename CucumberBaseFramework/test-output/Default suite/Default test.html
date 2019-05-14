@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 09 18:27:40 IST 2019</td>
+<td>Started on:</td><td>Mon May 13 17:36:22 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>293 seconds (293528 ms)</td>
+<tr><td>Total time:</td><td>156 seconds (156423 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,57 +76,57 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.theGeneral.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.theGeneral.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TGQ New Quote  As Agent", "New Quote in TGQ Application"<br/>
-<a href="#Output-1659309731" onClick='toggleBox("Output-1659309731", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-830863979" onClick='toggleBox("Output-830863979", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1659309731" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1659309731">
+<a href="#Output-830863979" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-830863979">
 <div "result">user get the Test data &quot;TGQ&quot; (PASSED : 0s)</div><br/>
-<div "result">user launches &quot;TGQ&quot; URL (PASSED : 5s)</div><br/>
-<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 33s)</div><br/>
-<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 27s)</div><br/>
-<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 96s)</div><br/>
-<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 4s)</div><br/>
-<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 24s)</div><br/>
-<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 9s)</div><br/>
-<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 31s)</div><br/>
-<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (PASSED : 10s)</div><br/>
-<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (PASSED : 13s)</div><br/>
-<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (PASSED : 32s)</div><br/>
-<div "result">Get the &quot;PolicyNumber&quot; (FAILED : 1s)</div><br/>
+<div "result">user launches &quot;TGQ&quot; URL (PASSED : 4s)</div><br/>
+<div "result">user login to &quot;TGQ&quot; application using &quot;New Quote&quot; button (PASSED : 22s)</div><br/>
+<div "result">Fill the mandatory fields in &quot;New Quote&quot; page (PASSED : 15s)</div><br/>
+<div "result">Fill the mandatory fields in &quot;Rating Info&quot; tab (PASSED : 62s)</div><br/>
+<div "result">Edit the required fields in the &quot;Quote Edit&quot; tab recalculate it and click on Next button (PASSED : 3s)</div><br/>
+<div "result">Edit the required fields in the &quot;drivers Edit&quot; tab recalculate in drivers Edit tab and click on Next button (PASSED : 18s)</div><br/>
+<div "result">Edit the required fields in the &quot;vehicles&quot; tab recalculate in the Vehicles Edit tab and click on Next button (PASSED : 7s)</div><br/>
+<div "result">Verify the mandatory fields in &quot;CustomerQuestions&quot; tab (PASSED : 15s)</div><br/>
+<div "result">Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab (FAILED : 2s)</div><br/>
+<div "result">Provide the mandatory fields and &quot;validate&quot; the quote (SKIPPED)</div><br/>
+<div "result">Provide the mandatory fields and proceed for &quot;payment&quot; for the quote (SKIPPED)</div><br/>
+<div "result">Get the &quot;PolicyNumber&quot; (SKIPPED)</div><br/>
 <div "result">user quits the browser (SKIPPED)</div><br/>
 </div>
 </td>
-<td><div><pre>com.theGeneral.utilities.MyOwnException: Unable To get Policy Number PolicyNumberapplication 
-Unable to find element with xpath == //*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]
+<td><div><pre>com.theGeneral.utilities.MyOwnException: Unable answer Application Questions ApplicationQuestionsapplication 
+Unable to find element with css selector == *[name=&apos;quoteBean.appQuestions[1].writableValue&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
-*** Element info: {Using=xpath, value=//*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]}
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:35948/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: d219194b-04a8-443a-86ab-49a0a8ed9f77
+*** Element info: {Using=name, value=quoteBean.appQuestions[1].writableValue}
 
 	at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)
-	at com.theGeneral.global.pageObjects.TGQ_Final_Policy_Page.policy_page(TGQ_Final_Policy_Page.java:60)
-	at com.theGeneral.stepDefinations.GetPolicyNumSteps.policy(GetPolicyNumSteps.java:25)
-	at ?.Get the &quot;PolicyNumber&quot;(src/test/resources/features/C_TGQ_New_Quote.feature:16)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1659309731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1659309731'><pre>com.theGeneral.utilities.MyOwnException: Unable To get Policy Number PolicyNumberapplication 
-Unable to find element with xpath == //*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]
+	at com.theGeneral.global.pageObjects.TGQ_Application_Questions_Page.applicationQuestions(TGQ_Application_Questions_Page.java:89)
+	at com.theGeneral.stepDefinations.ApplicationQuestionsSteps.applicationQue(ApplicationQuestionsSteps.java:25)
+	at ?.Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab(src/test/resources/features/C_TGQ_New_Quote.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace830863979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace830863979'><pre>com.theGeneral.utilities.MyOwnException: Unable answer Application Questions ApplicationQuestionsapplication 
+Unable to find element with css selector == *[name=&apos;quoteBean.appQuestions[1].writableValue&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NTISHTCD13&apos;, ip: &apos;10.180.20.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:36227/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
-Session ID: 2e5cba1e-3d16-48de-acad-5d259501b6e2
-*** Element info: {Using=xpath, value=//*[@id=&apos;body&apos;]/form/table[3]/tbody/tr[3]/td[2]}
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: false, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:35948/, nativeEvents: true, requireWindowFocus: true}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: d219194b-04a8-443a-86ab-49a0a8ed9f77
+*** Element info: {Using=name, value=quoteBean.appQuestions[1].writableValue}
 
 	at com.theGeneral.utilities.BaseClass.throwException(BaseClass.java:354)
-	at com.theGeneral.global.pageObjects.TGQ_Final_Policy_Page.policy_page(TGQ_Final_Policy_Page.java:60)
-	at com.theGeneral.stepDefinations.GetPolicyNumSteps.policy(GetPolicyNumSteps.java:25)
-	at ?.Get the &quot;PolicyNumber&quot;(src/test/resources/features/C_TGQ_New_Quote.feature:16)
+	at com.theGeneral.global.pageObjects.TGQ_Application_Questions_Page.applicationQuestions(TGQ_Application_Questions_Page.java:89)
+	at com.theGeneral.stepDefinations.ApplicationQuestionsSteps.applicationQue(ApplicationQuestionsSteps.java:25)
+	at ?.Answer the mandatory fields in &quot;ApplicationQuestions&quot; tab(src/test/resources/features/C_TGQ_New_Quote.feature:13)
 </pre></div></td>
-<td>291</td>
+<td>154</td>
 <td>com.theGeneral.TestRunner@3c46e67a</td></tr>
 </table><p>
 </body>
