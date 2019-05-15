@@ -79,6 +79,24 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
 	@FindBy(how = How.NAME, using = "quoteBean.userRatedCredit.writableValue")
 	public WebElement est_credit;
+	@FindBy(how = How.NAME, using = "quoteBean.drivers[1].firstName.value")
+	public WebElement driver1firstName;
+	@FindBy(how = How.NAME, using = "quoteBean.drivers[1].lastName.value")
+	public WebElement driver1lastName;
+	@FindBy(how = How.ID, using = "quoteBean.drivers[1].relationship.writableValue")
+	public WebElement driver1relationShip;
+	@FindBy(how = How.ID, using = "quoteBean.drivers[1].ratingStatus.writableValue")
+	public WebElement driver1ratingStatus;
+	@FindBy(how = How.ID, using = "quoteBean.drivers[1].dateOfBirth.mo")
+	public WebElement dr1_dob_mo;
+	@FindBy(how = How.ID, using = "quoteBean.drivers[1].dateOfBirth.dy")
+	public WebElement dr1_dob_dy;
+	@FindBy(how = How.ID, using = "quoteBean.drivers[1].dateOfBirth.yr")
+	public WebElement dr1_dob_yr;
+	@FindBy(how = How.NAME, using = "quoteBean.drivers[1].gender.writableValue")
+	public WebElement dr1_gender;
+	@FindBy(how = How.NAME, using = "quoteBean.drivers[1].maritalStatus.writableValue")
+	public WebElement dr1_marital_status;
 	@FindBy(how = How.ID, using = "quoteBean.drivers[0].dateOfBirth.mo")
 	public WebElement dob_mo;
 	@FindBy(how = How.ID, using = "quoteBean.drivers[0].dateOfBirth.dy")
@@ -101,6 +119,8 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement lic_status;
 	@FindBy(how = How.NAME, using = "quoteBean.drivers[0].seniorDriver.writableValue")
 	public WebElement sr_drvr;
+	@FindBy(how = How.NAME, using = "quoteBean.drivers[1].seniorDriver.writableValue")
+	public WebElement sr_drvr1;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].vin.value")
 	public WebElement vin;
 	@FindBy(how = How.XPATH, using = "//*[@id='vlink0']")
@@ -113,7 +133,8 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement model;
 	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].type.writableValue")
 	public WebElement type_vehicle;
-
+	@FindBy(how = How.LINK_TEXT, using = "Add Driver")
+	public WebElement addDriver;
 	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].businessUse.writableValue")
 	public WebElement bus_use;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].doubleDed.writableValue")
@@ -216,6 +237,11 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				Select est_credit_cov = new Select(est_credit);
 				est_credit_cov.selectByVisibleText(currentHash.get("EstimatedCredit"));
 			}
+			if (currentHash.get("AdditionalDriver").equals("Yes")) {
+				if(MyWebElement.isElementExist("Add Driver")) {
+					addDriver.click();
+				}
+			}
 			MyWebElement.enterText(dob_mo, "01");
 			MyWebElement.enterText(dob_dy, "01");
 			MyWebElement.enterText(dob_yr, "1991");
@@ -235,6 +261,21 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			lic_status_dr.selectByVisibleText("Active");
 			Select sr_driver = new Select(sr_drvr);
 			sr_driver.selectByVisibleText("No");
+			if(MyWebElement.isDropdownExist("quoteBean.drivers[1].firstName.value")) {
+				MyWebElement.enterText(driver1firstName, randomNameString(7));
+				MyWebElement.enterText(driver1lastName, randomNameString(5));
+				Select drvr_relation = new Select(driver1relationShip);
+				drvr_relation.selectByVisibleText("Sibling");
+				Select ratingstatus = new Select(driver1ratingStatus);
+				ratingstatus.selectByVisibleText("Excluded");
+				MyWebElement.enterText(dr1_dob_mo, "01");
+				MyWebElement.enterText(dr1_dob_dy, "01");
+				MyWebElement.enterText(dr1_dob_yr, "1992");
+				Select gender_dr1 = new Select(dr1_gender);
+				gender_dr1.selectByVisibleText("Female");
+				Select marital_status_dr1 = new Select(dr1_marital_status);
+				marital_status_dr1.selectByVisibleText("Single");
+			}
 			if (!pol_type.getText().equals("Bond")) {
 				MyWebElement.enterText(vin, "1FTSW21P97EB36008");
 				get_vehicle.click();

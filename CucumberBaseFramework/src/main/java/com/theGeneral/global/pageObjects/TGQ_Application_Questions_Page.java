@@ -70,13 +70,19 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 				}
 			} else {
 				if (MyWebElement.isDropdownExist("quoteBean.appQuestions[2].writableValue")) {
+
 					Select appQue_2 = new Select(appQuestions_2);
 					appQue_2.selectByVisibleText("Yes");
 				}
-			}
 
-			Select appQue_3 = new Select(appQuestions_3);
-			appQue_3.selectByVisibleText("No");
+			}
+			if (currentHash.get("BusUse").equals("Yes")) {
+				Select appQue_3 = new Select(appQuestions_3);
+				appQue_3.selectByVisibleText("Yes");
+			} else {
+				Select appQue_3 = new Select(appQuestions_3);
+				appQue_3.selectByVisibleText("No");
+			}
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
 				Select appQue_4 = new Select(appQuestions_4);
 				appQue_4.selectByVisibleText("No");
