@@ -1,14 +1,8 @@
-@Approved
-Feature: Login to ePortal application 
-	I want to log into ePortal as part of Cucumber PoC	
+@Login
+Feature: Quote Search in TGQ Application
+  Scenario: TGQ Quote Search As Agent
+  	#Given user get the Test data "TGQ" 
+	When user launches "TGQ" URL 
+	Then login to "TGQ" application 
+	And user quits the browser 
 	
-	
-Scenario Outline: Login to ePortal
-	Given user get the Test data "ePortal" and "<Application Number>" type
-	#When user launches "ePortal" URL	
-	#Then user login to "ePortal" application	 
-	And user quits the browser
-		
-Examples:	
-	|Application Number|
-	|Application 1|

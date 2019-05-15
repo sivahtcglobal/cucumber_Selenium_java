@@ -1,6 +1,5 @@
 package com.theGeneral.stepDefinations;
 
-
 import com.theGeneral.global.pageObjects.MarsApplicationLoginPage;
 import com.theGeneral.global.pageObjects.TGQ_Search_Quote_Page;
 import com.theGeneral.utilities.BaseClass;
@@ -18,17 +17,9 @@ public class QuoteSearchUsingQuoteNumber extends BaseClass {
 
 	public QuoteSearchUsingQuoteNumber() {
 		super();
-	}
-
-	@When("Click on the \"([^\"]*)\" button$")
-	public void quoteSearch(String applicationType,String operation) throws InterruptedException, MyOwnException {
-
-		parentTestCase = Report.makeTestCaseEntry(report, "QuoteSearchUsingQuoteNumber");
-		Report.assignCategoryToTestCase(parentTestCase, "QuoteSearchUsingQuoteNumber");
-
-		quoteSearch_page.login(applicationType,operation);
 
 	}
+
 	@Then("The Quote number is provided in \"([^\"]*)\"$")
 	public void enterQuote(String applicationType) throws InterruptedException, MyOwnException {
 

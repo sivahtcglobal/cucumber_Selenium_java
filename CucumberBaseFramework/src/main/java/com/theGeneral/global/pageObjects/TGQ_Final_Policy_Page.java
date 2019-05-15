@@ -38,7 +38,7 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 	public void policy_page(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			MyWait.until(ldriver, "ELEMENT_VISIBLE", 15, policy_num);
+			MyWait.until(ldriver, "ELEMENT_VISIBLE", 30, policy_num);
 			System.out.println(quote_num.getText()+"quote_num");
 			System.out.println(policy_num.getText()+"policy_num");
 			Excel.writeToExcelSheet(policy_num.getText(), quote_num.getText());
