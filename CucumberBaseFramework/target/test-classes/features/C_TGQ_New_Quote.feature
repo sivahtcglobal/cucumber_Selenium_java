@@ -1,7 +1,7 @@
 @Approved 
 Feature: New Quote in TGQ Application 
 Scenario: TGQ New Quote  As Agent 
-	Given user get the Test data "TGQ" 
+	#Given user get the Test data "TGQ" 
 	When user launches "TGQ" URL 
 	Then user login to "TGQ" application using "New Quote" button 
 	Then Fill the mandatory fields in "New Quote" page 

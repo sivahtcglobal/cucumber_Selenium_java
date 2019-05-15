@@ -28,6 +28,7 @@ public class TestRunner extends BaseClass {
 	@BeforeClass(alwaysRun = true)
 	public void setUpClass() throws Exception {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+		readSpecificTestData(System.getProperty("TestCaseId"));
 		initiateReport();
 	}
 

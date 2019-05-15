@@ -164,13 +164,13 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
 			MyWebElement.enterText(tgq_first_name, randomNameString(7));
 			MyWebElement.enterText(tgq_last_name, randomNameString(5));
-			MyWebElement.enterText(tgq_street, randomAddressNumberString(3) + "," + prop.getProperty("tgq_street"));
-			MyWebElement.enterText(tgq_city, prop.getProperty("tgq_city"));
-			MyWebElement.enterText(tgq_area, prop.getProperty("tgq_area"));
-			MyWebElement.enterText(tgq_exchange, prop.getProperty("tgq_exchange"));
-			MyWebElement.enterText(tgq_station, prop.getProperty("tgq_station"));
+			MyWebElement.enterText(tgq_street, randomAddressNumberString(3) + "," + "OAK SPRING");
+			MyWebElement.enterText(tgq_city, "NASHVILLE");
+			MyWebElement.enterText(tgq_area, "487");
+			MyWebElement.enterText(tgq_exchange, "748");
+			MyWebElement.enterText(tgq_station, "7812");
 			Select mailing_address = new Select(mailing_address_yes_no);
-			mailing_address.selectByVisibleText(prop.getProperty("mailing_address_yes_no"));
+			mailing_address.selectByVisibleText("No");
 			if (!currentHash.get("Term").equals("Nil")) {
 				Select term_cov = new Select(term);
 				term_cov.selectByVisibleText(currentHash.get("Term"));
@@ -238,7 +238,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				est_credit_cov.selectByVisibleText(currentHash.get("EstimatedCredit"));
 			}
 			if (currentHash.get("AdditionalDriver").equals("Yes")) {
-				if(MyWebElement.isElementExist("Add Driver")) {
+				if (MyWebElement.isElementExist("Add Driver")) {
 					addDriver.click();
 				}
 			}
@@ -261,7 +261,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			lic_status_dr.selectByVisibleText("Active");
 			Select sr_driver = new Select(sr_drvr);
 			sr_driver.selectByVisibleText("No");
-			if(MyWebElement.isDropdownExist("quoteBean.drivers[1].firstName.value")) {
+			if (MyWebElement.isDropdownExist("quoteBean.drivers[1].firstName.value")) {
 				MyWebElement.enterText(driver1firstName, randomNameString(7));
 				MyWebElement.enterText(driver1lastName, randomNameString(5));
 				Select drvr_relation = new Select(driver1relationShip);
