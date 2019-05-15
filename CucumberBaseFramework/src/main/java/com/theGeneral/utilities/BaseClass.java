@@ -157,7 +157,7 @@ public class BaseClass {
 
 			dr = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.getProperty(prop.getProperty("firefoxDriver", "firefoxpath"));
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\Drivers\\geckodriver.exe");
 			dr = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("IE")) {
 
