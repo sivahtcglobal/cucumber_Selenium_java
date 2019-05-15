@@ -1,9 +1,10 @@
-@Approved
+@SearchQuote
 Feature: Quote Search in TGQ Application
   Scenario: TGQ Quote Search As Agent
-  	Given user get the Test data "TGQ" 
+  	#Given user get the Test data "TGQ" 
 	When user launches "TGQ" URL 
-	Then user login to "TGQ" application using "QuoteSearch" button
+	Then login to "TGQ" application
+	Then click on "QuoteSearch" button
     Then The Quote number is provided in "TextField"
     Then Verify the mandatory fields in "CustomerQuestions" tab 
 	Then Answer the mandatory fields in "ApplicationQuestions" tab 
