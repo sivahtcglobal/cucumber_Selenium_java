@@ -6,7 +6,6 @@ import com.theGeneral.utilities.MyOwnException;
 import com.theGeneral.utilities.Report;
 
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 
 public class LoginPageSteps extends BaseClass {
 

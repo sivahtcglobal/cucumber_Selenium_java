@@ -2,10 +2,8 @@ package com.theGeneral.stepDefinations;
 
 import com.theGeneral.global.pageObjects.GlobalCommonObjects;
 import com.theGeneral.utilities.BaseClass;
-import com.theGeneral.utilities.MyOwnException;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
 
 public class CommonSteps extends BaseClass {
 
@@ -16,7 +14,7 @@ public class CommonSteps extends BaseClass {
 
 	GlobalCommonObjects globalComPageObj = new GlobalCommonObjects(dr);
 
-	@Then("^user quits the browser$")
+	@And("^user quits the browser$")
 	public void closeBrowser() throws Exception {
 
 		if (dr == null) {
