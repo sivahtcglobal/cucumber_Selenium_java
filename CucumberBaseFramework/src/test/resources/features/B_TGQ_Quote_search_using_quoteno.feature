@@ -4,7 +4,7 @@ Feature: Quote Search in TGQ Application
   Scenario: TGQ Quote Search As Agent
     Given login to "TGQ" application
     Then click on "QuoteSearch" button
-    Then The Quote number is provided in "TextField"
+    Then Provide the Quote number in "Quotesearch"
     Then Verify the mandatory fields in "CustomerQuestions" tab
     Then Answer the mandatory fields in "ApplicationQuestions" tab
     Then Provide the mandatory fields and "validate" the quote
