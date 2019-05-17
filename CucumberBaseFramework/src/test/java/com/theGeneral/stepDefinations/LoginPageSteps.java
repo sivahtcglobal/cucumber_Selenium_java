@@ -5,6 +5,7 @@ import com.theGeneral.utilities.BaseClass;
 import com.theGeneral.utilities.MyOwnException;
 import com.theGeneral.utilities.Report;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
 public class LoginPageSteps extends BaseClass {
@@ -16,7 +17,7 @@ public class LoginPageSteps extends BaseClass {
 		super();
 	}
 
-	@When("login to \"([^\"]*)\" application$")
+	@Given("login to \"([^\"]*)\" application$")
 	public void login(String applicationType) throws InterruptedException, MyOwnException {
 
 		parentTestCase = Report.makeTestCaseEntry(report, "LoginPage");

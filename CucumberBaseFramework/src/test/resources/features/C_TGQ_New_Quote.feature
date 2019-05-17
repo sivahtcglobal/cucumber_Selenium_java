@@ -1,9 +1,7 @@
 @NewQuote
 Feature: New Quote in TGQ Application 
-Scenario: TGQ New Quote  As Agent 
-	#Given user get the Test data "TGQ" 
-	When user launches "TGQ" URL 
-	Then login to "TGQ" application
+Scenario: TGQ New Quote  As Agent 	
+	Given login to "TGQ" application
 	Then click on "New Quote" button 
 	Then Fill the mandatory fields in "New Quote" page 
 	Then Fill the mandatory fields in "Rating Info" tab 

@@ -18,7 +18,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(features = "src/test/resources/features",monochrome=false,strict=true, glue = { "com.theGeneral.stepDefinations" }, tags = {
-				"@NewQuote" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
+				"@Login" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })
 public class TestRunner extends BaseClass {
@@ -29,6 +29,7 @@ public class TestRunner extends BaseClass {
 	public void setUpClass() throws Exception {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 		readSpecificTestData(System.getProperty("TestCaseId"));
+		initialization();
 		initiateReport();
 	}
 

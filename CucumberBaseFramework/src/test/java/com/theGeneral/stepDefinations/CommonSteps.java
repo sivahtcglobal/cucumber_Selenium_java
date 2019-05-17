@@ -25,10 +25,6 @@ public class CommonSteps extends BaseClass {
 		dr.quit();
 		dr = null;
 	}
-
-	@Given("user launches \"([^\"]*)\" URL$")
-	public void launchUrl(String applicationType) throws InterruptedException, MyOwnException {
-		initialization(applicationType);
-	}
+	
 
 }
