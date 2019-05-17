@@ -1,5 +1,5 @@
 @Login
-Feature: Quote Search in TGQ Application
+Feature: Login to TGQ Application
 
   Scenario: TGQ Quote Search As Agent
     Given login to "TGQ" application
