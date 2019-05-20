@@ -86,7 +86,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_validatequote_" + applicationType + ".png");
 			tgq_next_btn.click();
-
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

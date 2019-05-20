@@ -64,12 +64,12 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 			Select appQue_1 = new Select(appQuestions_1);
 			appQue_1.selectByVisibleText("No");
 			if (!currentHash.get("PolicyType").equals("Bond - No Credit")) {
-				if (MyWebElement.isDropdownExist("quoteBean.appQuestions[1].writableValue")) {
+				if (MyWebElement.isElementExistwithid("quoteBean.appQuestions[1].writableValue")) {
 					Select appQue_2 = new Select(appQuestions_2);
 					appQue_2.selectByVisibleText("No");
 				}
 			} else {
-				if (MyWebElement.isDropdownExist("quoteBean.appQuestions[2].writableValue")) {
+				if (MyWebElement.isElementExistwithid("quoteBean.appQuestions[2].writableValue")) {
 
 					Select appQue_2 = new Select(appQuestions_2);
 					appQue_2.selectByVisibleText("Yes");
@@ -115,7 +115,7 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_applicationQuestions_" + applicationType + ".png");
 			next_button.click();
-
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

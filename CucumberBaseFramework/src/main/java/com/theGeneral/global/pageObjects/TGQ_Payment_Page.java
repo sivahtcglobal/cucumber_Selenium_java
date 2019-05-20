@@ -87,7 +87,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_paymentTab_" + applicationType + ".png");
 			process_payment_button.click();
-
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

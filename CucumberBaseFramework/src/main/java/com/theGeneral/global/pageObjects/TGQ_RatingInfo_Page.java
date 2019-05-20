@@ -299,9 +299,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Created_" + applicationType + ".png");
 			get_quote.click();
-			WebDriverWait wait = new WebDriverWait(dr, 30);
-			System.out.println(waitForPageLoaded()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-			wait.until(waitForPageLoaded());
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

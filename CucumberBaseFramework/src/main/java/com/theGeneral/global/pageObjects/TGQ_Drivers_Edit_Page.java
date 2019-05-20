@@ -46,8 +46,8 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 
 			Select state_lic_dr = new Select(state_lic);
 			state_lic_dr.selectByVisibleText(currentHash.get("QuoteState"));
-			MyWebElement.enterText(ssn, "666881265");
-			MyWebElement.enterText(dl, "487956891");
+			MyWebElement.enterText(ssn, currentHash.get("SSN"));
+			MyWebElement.enterText(dl, currentHash.get("DL"));
 			recalculate_button.click();
 
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
@@ -58,7 +58,7 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Drivers_are_edited_" + applicationType + ".png");
 			next_button.click();
-
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
