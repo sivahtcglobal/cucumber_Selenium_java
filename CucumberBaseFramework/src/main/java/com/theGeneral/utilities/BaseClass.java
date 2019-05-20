@@ -154,7 +154,7 @@ public class BaseClass {
 		return builder.toString();
 	}
 
-	public static void initialization(String applicationType) throws MyOwnException {
+	public static void initialization() throws MyOwnException {
 
 		log.info("METHOD(initialization) EXECUTION STARTED SUCCESSFULLY");
 		browserName = System.getProperty("browser");
@@ -169,7 +169,7 @@ public class BaseClass {
 
 			dr = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			System.getProperty(prop.getProperty("firefoxDriver", "firefoxpath"));
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\Drivers\\geckodriver.exe");
 			dr = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("IE")) {
 
@@ -177,12 +177,10 @@ public class BaseClass {
 					System.getProperty("user.dir") + "\\src\\main\\resources\\Drivers\\IEDriverServer.exe");
 
 			InternetExplorerOptions caps = new InternetExplorerOptions();
-			caps.requireWindowFocus();
-			//caps.withInitialBrowserUrl("http://localhost");
+			caps.requireWindowFocus();			
 			caps.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
 			caps.introduceFlakinessByIgnoringSecurityDomains();
 			caps.enablePersistentHovering();
-
 			dr = new InternetExplorerDriver(caps);
 		} else if (browserName.equalsIgnoreCase("gecko")) {
 			FirefoxOptions options = new FirefoxOptions();
@@ -192,13 +190,9 @@ public class BaseClass {
 		}
 
 		dr.manage().window().maximize();
-
-		dr.manage().deleteAllCookies();
-
-		//dr.navigate().to(prop.getProperty("TGQUrl"));
+		dr.manage().deleteAllCookies();		
 		dr.navigate().to("https://"+System.getProperty("TestEnvironment")+".pgactest.com/mars/");
 		ePortalAllPages = new TheGeneralAllPages(dr);
-
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
 	}
 
@@ -208,8 +202,7 @@ public class BaseClass {
 		testRunTimeStamp = new java.sql.Timestamp(today.getTime()).toString();
 		testRunTimeStamp = testRunTimeStamp.replace(" ", "_").replace(":", "_").replace(".", "_");
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
-				+ testRunTimeStamp;
-		//System.out.println("PolicyType" + currentHash.get("PolicyType"));
+				+ testRunTimeStamp;		
 		report = Report.initialize("TG_Report_for_" + currentHash.get("PolicyType") + "_" + currentHash.get("Type") +".html", false);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");

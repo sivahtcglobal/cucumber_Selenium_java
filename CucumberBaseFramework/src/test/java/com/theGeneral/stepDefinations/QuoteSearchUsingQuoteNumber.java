@@ -20,7 +20,7 @@ public class QuoteSearchUsingQuoteNumber extends BaseClass {
 
 	}
 
-	@Then("The Quote number is provided in \"([^\"]*)\"$")
+	@Then("Provide the Quote number in \"([^\"]*)\"$")
 	public void enterQuote(String applicationType) throws InterruptedException, MyOwnException {
 
 		parentTestCase = Report.makeTestCaseEntry(report, "QuoteSearchUsingQuoteNumber");

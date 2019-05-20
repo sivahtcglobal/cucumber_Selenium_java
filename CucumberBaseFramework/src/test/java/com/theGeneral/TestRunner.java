@@ -30,6 +30,7 @@ public class TestRunner extends BaseClass {
 	public void setUpClass() throws Exception {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 		readSpecificTestData(System.getProperty("TestCaseId"));
+		initialization();
 		initiateReport();
 	}
 
@@ -72,8 +73,12 @@ public class TestRunner extends BaseClass {
 		testNGCucumberRunner.finish();
 
 	}
+
 	@AfterMethod
 	public void cleanup(){
 	dr.quit();
 	}
 }
+
+
+
