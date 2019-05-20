@@ -51,7 +51,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 			}
 			Select veh_reg_state_veh = new Select(veh_reg_state);
 			veh_reg_state_veh.selectByVisibleText(currentHash.get("QuoteState"));
-			recalculate_button.click();
+			//recalculate_button.click();
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
 					+ "\\" + "1_vehiclesedit_" + applicationType + ".png");
 
@@ -60,7 +60,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_vehiclesedit_" + applicationType + ".png");
 			next_button.click();
-
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

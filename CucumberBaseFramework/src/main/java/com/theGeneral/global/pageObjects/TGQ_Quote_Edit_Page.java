@@ -76,8 +76,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 							+ "1_Created_quote_" + applicationType + ".png");
 			
 			next_button.click();
-			WebDriverWait wait = new WebDriverWait(dr, 30);
-			wait.until(waitForPageLoaded());
+			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

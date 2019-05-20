@@ -398,7 +398,14 @@ public class MyWebElement extends Report {
 		log.info("SUCCESSFULLY SELECTED SPECIFIED DROP DOWN VALUE(" + value + ") USING : " + setMethodType
 				+ " METHOD TYPE");
 	}
+	public static boolean isElementExistwithid(String id) {
 
+		List<WebElement> ele = dr.findElements(By.id(id));
+		if (ele.size() > 0) {
+			return true;
+		} else
+			return false;
+	}
 	public static boolean isElementExist(String linkText) {
 
 		List<WebElement> ele = dr.findElements(By.linkText(linkText));

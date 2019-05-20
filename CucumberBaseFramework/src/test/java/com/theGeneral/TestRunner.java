@@ -61,11 +61,11 @@ public class TestRunner extends BaseClass {
 		Report.writeContents(report);
 		// sendEmail();
 
-		// if (dr == null) {
-		// return;
-		// }
-		// dr.quit();
-		// dr = null;
+		 if (dr == null) {
+		 return;
+		 }
+	 dr.quit();
+		 dr = null;
 
 		if (testNGCucumberRunner == null) {
 			return;
@@ -74,10 +74,7 @@ public class TestRunner extends BaseClass {
 
 	}
 
-	@AfterMethod
-	public void cleanup(){
-	dr.quit();
-	}
+	
 }
 
 

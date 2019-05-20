@@ -10,4 +10,4 @@ Feature: Quote Search in TGQ Application
     Then Provide the mandatory fields and "validate" the quote
     Then Provide the mandatory fields and proceed for "payment" for the quote
     Then Get the "PolicyNumber"
-    And user quits the browser
+   
