@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.theGeneral.utilities.BaseClass;
 import com.theGeneral.utilities.MyOwnException;
@@ -73,8 +74,10 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 					"Successfully_Logged_into_ '" + applicationType + "' application",
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Created_quote_" + applicationType + ".png");
+			
 			next_button.click();
-
+			WebDriverWait wait = new WebDriverWait(dr, 30);
+			wait.until(waitForPageLoaded());
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp

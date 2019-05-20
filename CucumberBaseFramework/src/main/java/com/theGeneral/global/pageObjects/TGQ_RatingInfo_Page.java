@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.theGeneral.utilities.BaseClass;
 import com.theGeneral.utilities.MyOwnException;
@@ -135,7 +136,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 	public WebElement type_vehicle;
 	@FindBy(how = How.LINK_TEXT, using = "Add Driver")
 	public WebElement addDriver;
-	@FindBy(how = How.NAME, using = "quoteBean.vehicles[0].businessUse.writableValue")
+	@FindBy(how = How.XPATH, using = "//select[@id='quoteBean.vehicles[0].businessUse.writableValue']")
 	public WebElement bus_use;
 	@FindBy(how = How.ID, using = "quoteBean.vehicles[0].doubleDed.writableValue")
 	public WebElement dbl_ded;
@@ -277,11 +278,11 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 				marital_status_dr1.selectByVisibleText("Single");
 			}
 			if (!pol_type.getText().equals("Bond")) {
-				MyWebElement.enterText(vin, "1FTSW21P97EB36008");
+				MyWebElement.enterText(vin, currentHash.get("VIN"));
 				get_vehicle.click();
 				;
 			}
-			// Thread.sleep(1000);
+			 Thread.sleep(1000);
 			if (!currentHash.get("BusUse").equals("Nil")) {
 				Select bus_use_veh = new Select(bus_use);
 				bus_use_veh.selectByVisibleText(currentHash.get("BusUse"));
@@ -298,7 +299,9 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
 							+ "1_Created_" + applicationType + ".png");
 			get_quote.click();
-
+			WebDriverWait wait = new WebDriverWait(dr, 30);
+			System.out.println(waitForPageLoaded()+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+			wait.until(waitForPageLoaded());
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
