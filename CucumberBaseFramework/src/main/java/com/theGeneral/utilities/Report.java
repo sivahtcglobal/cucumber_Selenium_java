@@ -45,7 +45,7 @@ public class Report extends BaseClass{
 						createInstanceOfHTMLReport(reportName);
 						appendToExistingReport(status);
 						setHTMLReportName("Test Case Summary");
-						setChartVisibility(false);
+						setChartVisibility(true);
 						setHTMLReportTheme(Theme.DARK);
 					} else {
 						log.error("REPORT FORMAT IS INCORRECT, IT SHOULD BE .HTML");
