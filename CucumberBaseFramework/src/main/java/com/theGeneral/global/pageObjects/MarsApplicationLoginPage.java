@@ -46,8 +46,8 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 
 			MyWebElement.enterText(mars_agencyid, currentHash.get("Username"));
 			MyWebElement.enterText(mars_password, currentHash.get("Password"));
-			BaseClass.screenShot("../ws/CucumberBaseFramework/Results/Screenshots_" + testRunTimeStamp + "/" + "1_Login_to_" + applicationType + ".png");
-			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS","Successfully_Logged into '" + applicationType + "' application","../ws/CucumberBaseFramework/Results/Screenshots_" + testRunTimeStamp + "/"	+ "1_Login_to_" + applicationType + ".png");
+			BaseClass.screenShot("../CucumberBaseFramework/Results/Screenshots_" + testRunTimeStamp + "/" + "1_Login_to_" + applicationType + ".png");
+			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS","Successfully_Logged into '" + applicationType + "' application","../CucumberBaseFramework/Results/Screenshots_" + testRunTimeStamp + "/"	+ "1_Login_to_" + applicationType + ".png");
 			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, signin_button);
 			MyWebElement.clickOnButton(signin_button);
 
