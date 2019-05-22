@@ -43,11 +43,13 @@ public class MarsHomePage extends TheGeneralAllPages {
 					+ "\\" + "1_HomePage_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_HomePage_" + applicationType + ".png");
 			if (applicationType.equals("New Quote")) {
+				Thread.sleep(10);
 				MyWebElement.clickOnButton(new_Quote);
 			} else if (applicationType.equals("QuoteSearch")) {
+				Thread.sleep(10);
 				MyWebElement.clickOnButton(quote_Search);
 
 			}
@@ -58,7 +60,7 @@ public class MarsHomePage extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while  '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_" + applicationType + ".png");
 			throwException("Unable To  " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

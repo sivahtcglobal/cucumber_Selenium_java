@@ -128,7 +128,7 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_answered_consumerquestions '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_consumerquestions_" + applicationType + ".png");
 			tgq_next_btn.click();
 			 Thread.sleep(10000);
@@ -138,7 +138,7 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error consumerquestions '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_consumerquestions_" + applicationType + ".png");
 			throwException(
 					"Unable answer consumerquestions " + applicationType + "application \n" + exp.getMessage() + "\n");

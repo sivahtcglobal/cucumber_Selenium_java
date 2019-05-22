@@ -82,7 +82,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_validated_quote '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_validatequote_" + applicationType + ".png");
 			tgq_next_btn.click();
 			 Thread.sleep(10000);
@@ -92,7 +92,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error Validating Quote '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_validating_quote_" + applicationType + ".png");
 			throwException("Unable To validate Quote " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

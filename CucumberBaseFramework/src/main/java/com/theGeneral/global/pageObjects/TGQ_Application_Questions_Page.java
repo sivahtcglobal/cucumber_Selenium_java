@@ -111,7 +111,7 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_answered_applicationQuestions '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_applicationQuestions_" + applicationType + ".png");
 			next_button.click();
 			 Thread.sleep(10000);
@@ -121,7 +121,7 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error in answering Application Questions '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_applicationQuestions_" + applicationType + ".png");
 			throwException("Unable answer Application Questions " + applicationType + "application \n"
 					+ exp.getMessage() + "\n");

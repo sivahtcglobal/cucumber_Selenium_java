@@ -83,7 +83,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_filled in paymentTab '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_paymentTab_" + applicationType + ".png");
 			process_payment_button.click();
 			 Thread.sleep(10000);
@@ -93,7 +93,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error in payment tab '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_paymentTab_" + applicationType + ".png");
 			throwException("Unable To do payment " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

@@ -295,7 +295,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Created_" + applicationType + ".png");
 			get_quote.click();
 			 Thread.sleep(10000);
@@ -305,7 +305,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_" + applicationType + ".png");
 			throwException("Unable Create " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

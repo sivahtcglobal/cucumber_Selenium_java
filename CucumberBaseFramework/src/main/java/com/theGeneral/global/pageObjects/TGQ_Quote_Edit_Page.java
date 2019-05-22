@@ -71,7 +71,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged_into_ '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Created_quote_" + applicationType + ".png");
 			
 			next_button.click();
@@ -82,7 +82,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_Creating_quote_" + applicationType + ".png");
 			throwException("Unable To create  " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

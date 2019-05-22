@@ -56,7 +56,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_vehiclesedit_ '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_vehiclesedit_" + applicationType + ".png");
 			next_button.click();
 			 Thread.sleep(10000);
@@ -66,7 +66,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error_in_vehiclesedit '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_vehiclesedit_" + applicationType + ".png");
 			throwException(
 					"Unable To Edit in Vehicles tab " + applicationType + "application \n" + exp.getMessage() + "\n");

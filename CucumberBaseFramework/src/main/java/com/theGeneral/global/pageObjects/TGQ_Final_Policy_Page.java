@@ -47,7 +47,7 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Created_Policy_ '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_policy_page_" + applicationType + ".png");
 
 		} catch (Exception exp) {
@@ -56,7 +56,7 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error_in_policyPage '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_policy_page_" + applicationType + ".png");
 			throwException("Unable To get Policy Number " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

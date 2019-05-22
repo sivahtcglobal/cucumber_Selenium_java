@@ -53,14 +53,14 @@ public class GlobalCommonObjects extends BaseClass {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"User Successfully Redirected to '" + screenName + "' screen",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "Verify_Title_" + screenName + ".png");
 		} catch (Exception exp) {
 
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "Error_Verify_Title_" + screenName + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL", "Error redirecting user to '" + screenName,
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "Error_Verify_Title_" + screenName + ".png");
 
 			throwException("UNABLE TO verify page title in " + screenName + " screen \n" + exp.getMessage() + "\n");

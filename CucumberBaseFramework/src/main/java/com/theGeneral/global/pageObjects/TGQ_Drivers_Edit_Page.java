@@ -54,7 +54,7 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged_into_ '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Drivers_are_edited_" + applicationType + ".png");
 			next_button.click();
 			 Thread.sleep(10000);
@@ -64,7 +64,7 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error_in_Drivers_editing '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_in_Drivers_editing_" + applicationType + ".png");
 			throwException("Unable To Edit Driver/s " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}

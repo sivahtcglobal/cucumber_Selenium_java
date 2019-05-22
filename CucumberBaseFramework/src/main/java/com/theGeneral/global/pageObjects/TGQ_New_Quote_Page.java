@@ -68,7 +68,7 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged into '" + applicationType + "' application",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Created_" + applicationType + ".png");
 			MyWait.until(dr, "ELEMENT_CLICKABLE", 30, tgq_next);
 			MyWebElement.clickOnButton(tgq_next);
@@ -79,7 +79,7 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_In_Creating_" + applicationType + ".png");
 			throwException(
 					"Unable To Create New Quote " + applicationType + "application \n" + exp.getMessage() + "\n");

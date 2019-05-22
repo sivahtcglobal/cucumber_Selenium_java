@@ -57,7 +57,7 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
-					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"
+							"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Error_Logging_into_" + applicationType + ".png");
 			throwException("Unable To login to the " + applicationType + "application \n" + exp.getMessage() + "\n");
 		}
