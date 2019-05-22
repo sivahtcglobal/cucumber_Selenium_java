@@ -39,8 +39,7 @@ public class MarsHomePage extends TheGeneralAllPages {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
-			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + testRunTimeStamp
-					+ "\\" + "1_HomePage_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_HomePage_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully '" + applicationType + "' application",
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
