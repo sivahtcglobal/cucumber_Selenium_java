@@ -85,7 +85,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_validatequote_" + applicationType + ".png");
 			tgq_next_btn.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_validating_quote_" + applicationType + ".png");

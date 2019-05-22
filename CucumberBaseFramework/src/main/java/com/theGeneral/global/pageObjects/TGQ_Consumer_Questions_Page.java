@@ -70,60 +70,60 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 					if (tqq_address_text.getText().equals("Address verification will be attempted now")) {
 						tgq_verify_address.click();
 						
-						 Thread.sleep(10000);
+						 Thread.sleep(4000);
 					}
 					MyWait.until(ldriver, "ELEMENT_VISIBLE", 10, tgq_use_entered_address);
 					if (tqq_address_text.getText().equals("Address verification")) {
 						tgq_use_entered_address.click();
-						 Thread.sleep(10000);
+						 Thread.sleep(4000);
 					}
 				}
 				if (MyWebElement.isElementExist("Order MVR")) {
 					tgq_order_mvr.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 					List<WebElement> rdBtn_mvr = dr.findElements(By.name("order[2].action.value"));
 					rdBtn_mvr.get(1).click();
 					tgq_update_mvr.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 				}
 
 			} else {
 				if (MyWebElement.isElementExist("Verify Address")) {
 					if (tqq_address_text.getText().equals("Address verification will be attempted now")) {
 						tgq_verify_address.click();
-						 Thread.sleep(10000);
+						 Thread.sleep(4000);
 					}
 					MyWait.until(ldriver, "ELEMENT_VISIBLE", 10, tgq_use_entered_address);
 					if (tqq_address_text.getText().equals("Address verification")) {
 						tgq_use_entered_address.click();
-						 Thread.sleep(10000);
+						 Thread.sleep(4000);
 					}
 				}
 				if (MyWebElement.isElementExist("Order Credit")) {
 					tgq_action.click();
 					tgq_order_credit.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 				}
 				if (MyWebElement.isElementExist("Order Prior Insurance")) {
 					tgq_Order_Prior_Insurance.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 				}
 				if (MyWebElement.isElementExist("Order MVR")) {
 					tgq_order_mvr.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 					List<WebElement> rdBtn_mvr = dr.findElements(By.name("order[2].action.value"));
 					rdBtn_mvr.get(1).click();
 					tgq_update_mvr.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 				}
 				if (MyWebElement.isElementExist("Order CLUE")) {
 					tgq_order_clue.click();
-					 Thread.sleep(10000);
+					 Thread.sleep(4000);
 				}
 			}
 
 			tgq_save.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 			 BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_consumerquestions_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
@@ -131,7 +131,7 @@ public class TGQ_Consumer_Questions_Page extends TheGeneralAllPages {
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_consumerquestions_" + applicationType + ".png");
 			tgq_next_btn.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_consumerquestions_" + applicationType + ".png");

@@ -59,7 +59,7 @@ public class TGQ_Vehicles_Edit_Page extends TheGeneralAllPages {
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_vehiclesedit_" + applicationType + ".png");
 			next_button.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_vehiclesedit_" + applicationType + ".png");

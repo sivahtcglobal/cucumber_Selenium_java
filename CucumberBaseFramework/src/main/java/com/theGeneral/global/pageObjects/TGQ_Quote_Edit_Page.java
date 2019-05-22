@@ -75,7 +75,7 @@ public class TGQ_Quote_Edit_Page extends TheGeneralAllPages {
 							+ "1_Created_quote_" + applicationType + ".png");
 			
 			next_button.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_Creating_quote_" + applicationType + ".png");

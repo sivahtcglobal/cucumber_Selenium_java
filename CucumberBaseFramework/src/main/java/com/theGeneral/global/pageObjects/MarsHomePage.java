@@ -45,10 +45,10 @@ public class MarsHomePage extends TheGeneralAllPages {
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_HomePage_" + applicationType + ".png");
 			if (applicationType.equals("New Quote")) {
-				Thread.sleep(10);
+				
 				MyWebElement.clickOnButton(new_Quote);
 			} else if (applicationType.equals("QuoteSearch")) {
-				Thread.sleep(10);
+				
 				MyWebElement.clickOnButton(quote_Search);
 
 			}

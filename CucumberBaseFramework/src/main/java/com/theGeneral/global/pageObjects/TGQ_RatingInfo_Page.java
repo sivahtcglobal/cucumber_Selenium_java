@@ -298,7 +298,7 @@ public class TGQ_RatingInfo_Page extends TheGeneralAllPages {
 					"./Results/Screenshots_"+ testRunTimeStamp + "/"
 							+ "1_Created_" + applicationType + ".png");
 			get_quote.click();
-			 Thread.sleep(10000);
+			 Thread.sleep(4000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
 			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_" + applicationType + ".png");
