@@ -39,7 +39,7 @@ public class MarsHomePage extends TheGeneralAllPages {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
 
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + testRunTimeStamp
 					+ "\\" + "1_HomePage_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully '" + applicationType + "' application",
@@ -54,8 +54,7 @@ public class MarsHomePage extends TheGeneralAllPages {
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/"+ "1_Error_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while  '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

@@ -51,8 +51,7 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 			MyWebElement.enterText(quote_number, "11536115");
 			search.click();
 			
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Searched_quote_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Searched_quote_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged_into_ '" + applicationType + "' application",
@@ -64,8 +63,7 @@ public class TGQ_Search_Quote_Page extends TheGeneralAllPages {
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

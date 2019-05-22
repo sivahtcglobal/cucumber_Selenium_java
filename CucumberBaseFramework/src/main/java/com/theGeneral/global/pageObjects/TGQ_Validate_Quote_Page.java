@@ -78,8 +78,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 			// MyWebElement.enterText(alt_num3, prop.getProperty("TGQUserName"));
 			Select closing_method_val = new Select(closing_method);
 			closing_method_val.selectByVisibleText("Fax");
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_validatequote_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_validatequote_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_validated_quote '" + applicationType + "' application",
@@ -89,8 +88,7 @@ public class TGQ_Validate_Quote_Page extends TheGeneralAllPages {
 			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_in_validating_quote_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_validating_quote_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error Validating Quote '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",

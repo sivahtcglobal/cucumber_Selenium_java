@@ -49,8 +49,7 @@ public class GlobalCommonObjects extends BaseClass {
 				assertEquals(actual, expected);
 			}
 
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "Verify_Title_" + screenName + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "Verify_Title_" + screenName + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"User Successfully Redirected to '" + screenName + "' screen",
@@ -58,8 +57,7 @@ public class GlobalCommonObjects extends BaseClass {
 							+ "Verify_Title_" + screenName + ".png");
 		} catch (Exception exp) {
 
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "Error_Verify_Title_" + screenName + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "Error_Verify_Title_" + screenName + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL", "Error redirecting user to '" + screenName,
 					System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp + "\\"

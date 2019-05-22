@@ -79,8 +79,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 			card_expiry_month_val.selectByVisibleText("1");
 			Select card_expiry_year_val = new Select(card_expiry_year);
 			card_expiry_year_val.selectByVisibleText("2028");
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_paymentTab_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_paymentTab_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_filled in paymentTab '" + applicationType + "' application",
@@ -90,8 +89,7 @@ public class TGQ_Payment_Page extends TheGeneralAllPages {
 			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_in_paymentTab_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_paymentTab_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error in payment tab '" + applicationType + "' application: </b></font><br />"
 							+ exp.getMessage() + "<br />",
