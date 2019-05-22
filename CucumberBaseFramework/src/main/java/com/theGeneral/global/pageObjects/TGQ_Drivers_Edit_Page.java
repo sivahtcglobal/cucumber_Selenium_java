@@ -50,8 +50,7 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 			MyWebElement.enterText(dl, currentHash.get("DL"));
 			recalculate_button.click();
 
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Drivers_are_edited_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/"+ "1_Drivers_are_edited_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged_into_ '" + applicationType + "' application",
@@ -61,8 +60,7 @@ public class TGQ_Drivers_Edit_Page extends TheGeneralAllPages {
 			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_in_Drivers_editing_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_Drivers_editing_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error_in_Drivers_editing '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

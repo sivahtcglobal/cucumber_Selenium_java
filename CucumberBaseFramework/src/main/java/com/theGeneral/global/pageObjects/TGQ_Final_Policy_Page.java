@@ -43,8 +43,7 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 			System.out.println(policy_num.getText()+"policy_num");
 			Excel.writeToExcelSheet(policy_num.getText(), quote_num.getText());
 			
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_policy_page_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_policy_page_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Created_Policy_ '" + applicationType + "' application",
@@ -53,8 +52,7 @@ public class TGQ_Final_Policy_Page extends TheGeneralAllPages {
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_in_policy_page_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_policy_page_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error_in_policyPage '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

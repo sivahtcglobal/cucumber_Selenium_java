@@ -64,8 +64,7 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 			// MyWebElement.enterText(tgq_eff_mnth, prop.getProperty("tgq_eff_mnth"));
 			// MyWebElement.enterText(tgq_eff_date, prop.getProperty("TGQUserName"));
 			// MyWebElement.enterText(tgq_eff_year, prop.getProperty("TGQPassword"));
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Created_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Created_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_Logged into '" + applicationType + "' application",
@@ -76,8 +75,7 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_In_Creating_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_In_Creating_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

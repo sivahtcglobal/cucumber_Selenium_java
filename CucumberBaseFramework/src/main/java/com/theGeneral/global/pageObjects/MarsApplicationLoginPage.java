@@ -53,8 +53,7 @@ public class MarsApplicationLoginPage extends TheGeneralAllPages {
 
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_Logging_into_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_Logging_into_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error while Logging into '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",

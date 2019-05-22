@@ -107,8 +107,7 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 				Select busQue_7 = new Select(businessQuestions_7);
 				busQue_7.selectByVisibleText("No");
 			}
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_applicationQuestions_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_applicationQuestions_" + applicationType + ".png");
 
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "PASS",
 					"Successfully_answered_applicationQuestions '" + applicationType + "' application",
@@ -118,8 +117,7 @@ public class TGQ_Application_Questions_Page extends TheGeneralAllPages {
 			 Thread.sleep(10000);
 		} catch (Exception exp) {
 			log.error(exp.getMessage());
-			BaseClass.screenShot(System.getProperty("user.dir") + "\\Results\\Screenshots" + "_" + testRunTimeStamp
-					+ "\\" + "1_Error_in_applicationQuestions_" + applicationType + ".png");
+			BaseClass.screenShot("./Results/Screenshots_" + testRunTimeStamp + "/" + "1_Error_in_applicationQuestions_" + applicationType + ".png");
 			Report.logTestCaseStatusWithSnapShot(parentTestCase, "FAIL",
 					"<font color=red><b>Error in answering Application Questions '" + applicationType
 							+ "' application: </b></font><br />" + exp.getMessage() + "<br />",
