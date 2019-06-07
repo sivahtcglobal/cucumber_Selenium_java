@@ -203,7 +203,7 @@ public class BaseClass {
 		testRunTimeStamp = testRunTimeStamp.replace(" ", "_").replace(":", "_").replace(".", "_");
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
 				+ testRunTimeStamp;		
-		report = Report.initialize("TG_Extend_Report.html", false);
+		report = Report.initialize("TG_Extent_Report.html", false);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");
 		Report.recordSystemInfo(report, "Selenium Version", "3.4");
