@@ -52,6 +52,7 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 			for (String handle1 : ldriver.getWindowHandles()) {
 				ldriver.switchTo().window(handle1);
 			}
+			Thread.sleep(3000);
 			ldriver.manage().window().maximize();
 			Select state = new Select(tgq_state);
 			state.selectByVisibleText(currentHash.get("QuoteState"));
