@@ -31,34 +31,15 @@ public class TestRunner extends BaseClass {
 	@BeforeClass(alwaysRun = true)
 	public void setUpClass() throws Exception {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());	
-				
+			readSpecificTestData(System.getProperty("TestCaseId"));
+	          initialization();
+				initiateReport(System.getProperty("TestCaseId"));	
 	      }
 	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
 	public void runScenario(PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper) throws Throwable {
 		// the 'featureWrapper' parameter solely exists to display the feature file in a
-		// test report
-		String sampleString = System.getProperty("TestCaseId");
-	      String[] items = sampleString.split(",");
-	      List<String> itemList = Arrays.asList(items);
-	      System.out.println(itemList);	     
-	      for (int i = 0; i < itemList.size(); i++) {
-	    	    System.out.println(itemList.get(i));	    
-	          readSpecificTestData(itemList.get(i));
-	          initialization();
-				initiateReport(itemList.get(i));
+		// test report		
 		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
-		Report.writeContents(report);	
-		if (dr == null) {
-			 return;
-			 }
-		 dr.quit();
-			 dr = null;
-
-			if (testNGCucumberRunner == null) {
-				return;
-			}
-			testNGCucumberRunner.finish();
-	}
 	}
 
 	/**
@@ -77,20 +58,21 @@ public class TestRunner extends BaseClass {
 	
 
 
-// 	@AfterClass(alwaysRun = true)
-// 	public void tearDownClass() throws Exception {
-// 		 if (dr == null) {
-// 		 return;
-// 		 }
-// 	 dr.quit();
-// 		 dr = null;
+	@AfterClass(alwaysRun = true)
+	public void tearDownClass() throws Exception {
+              Report.writeContents(report);
+		 if (dr == null) {
+		 return;
+		 }
+	 dr.quit();
+		 dr = null;
 
-// 		if (testNGCucumberRunner == null) {
-// 			return;
-// 		}
-// 		testNGCucumberRunner.finish();
+		if (testNGCucumberRunner == null) {
+			return;
+		}
+		testNGCucumberRunner.finish();
 
-// 	}
+	}
 
 	
 }
