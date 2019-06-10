@@ -47,7 +47,17 @@ public class TestRunner extends BaseClass {
 	          initialization();
 				initiateReport(itemList.get(i));
 		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
-		Report.writeContents(report);		
+		Report.writeContents(report);	
+		if (dr == null) {
+			 return;
+			 }
+		 dr.quit();
+			 dr = null;
+
+			if (testNGCucumberRunner == null) {
+				return;
+			}
+			testNGCucumberRunner.finish();
 	}
 	}
 
