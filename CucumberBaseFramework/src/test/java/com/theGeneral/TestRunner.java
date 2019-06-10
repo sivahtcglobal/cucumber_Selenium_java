@@ -49,7 +49,7 @@ public class TestRunner extends BaseClass {
 		Report.writeContents(report);
 		dr.quit();
 	      }
-		
+
 	}
 
 	/**
@@ -69,13 +69,13 @@ public class TestRunner extends BaseClass {
 
 
 	@AfterClass(alwaysRun = true)
-	public void tearDownClass() throws Exception {//           
+	public void tearDownClass() throws Exception {       
+
 		if (testNGCucumberRunner == null) {
 			return;
 		}
 		testNGCucumberRunner.finish();
 
 	}
-
 	
 }
