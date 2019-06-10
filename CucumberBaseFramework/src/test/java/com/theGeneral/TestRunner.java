@@ -21,7 +21,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(features = "src/test/resources/features",monochrome=false,strict=true, glue = { "com.theGeneral.stepDefinations" }, tags = {
-				"@Login" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
+				"@N" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })
 public class TestRunner extends BaseClass {
@@ -30,13 +30,12 @@ public class TestRunner extends BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public void setUpClass() throws Exception {
-		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());	
-				
+		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	      }
 	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
 	public void runScenario(PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper) throws Throwable {
 		// the 'featureWrapper' parameter solely exists to display the feature file in a
-		// test report
+		// test report		
 		String sampleString = System.getProperty("TestCaseId");
 	      String[] items = sampleString.split(",");
 	      List<String> itemList = Arrays.asList(items);
@@ -46,19 +45,11 @@ public class TestRunner extends BaseClass {
 	          readSpecificTestData(itemList.get(i));
 	          initialization();
 				initiateReport(itemList.get(i));
-		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
-		Report.writeContents(report);	
-		if (dr == null) {
-			 return;
-			 }
-		 dr.quit();
-			 dr = null;
-
-			if (testNGCucumberRunner == null) {
-				return;
-			}
-			testNGCucumberRunner.finish();
-	}
+		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());			
+		Report.writeContents(report);
+		dr.quit();
+	      }
+		
 	}
 
 	/**
@@ -78,13 +69,7 @@ public class TestRunner extends BaseClass {
 
 
 	@AfterClass(alwaysRun = true)
-	public void tearDownClass() throws Exception {
-		 if (dr == null) {
-		 return;
-		 }
-	 dr.quit();
-		 dr = null;
-
+	public void tearDownClass() throws Exception {//           
 		if (testNGCucumberRunner == null) {
 			return;
 		}
@@ -94,6 +79,3 @@ public class TestRunner extends BaseClass {
 
 	
 }
-
-
-
