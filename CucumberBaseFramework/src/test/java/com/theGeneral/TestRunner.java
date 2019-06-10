@@ -77,20 +77,20 @@ public class TestRunner extends BaseClass {
 	
 
 
-	@AfterClass(alwaysRun = true)
-	public void tearDownClass() throws Exception {
-		 if (dr == null) {
-		 return;
-		 }
-	 dr.quit();
-		 dr = null;
+// 	@AfterClass(alwaysRun = true)
+// 	public void tearDownClass() throws Exception {
+// 		 if (dr == null) {
+// 		 return;
+// 		 }
+// 	 dr.quit();
+// 		 dr = null;
 
-		if (testNGCucumberRunner == null) {
-			return;
-		}
-		testNGCucumberRunner.finish();
+// 		if (testNGCucumberRunner == null) {
+// 			return;
+// 		}
+// 		testNGCucumberRunner.finish();
 
-	}
+// 	}
 
 	
 }
