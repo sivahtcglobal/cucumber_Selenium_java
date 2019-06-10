@@ -196,14 +196,14 @@ public class BaseClass {
 		log.info("METHOD(initialization) EXECUTION ENDED SUCCESSFULLY");
 	}
 
-	public static void initiateReport() throws MyOwnException {
+	public static void initiateReport(String Reportname) throws MyOwnException {
 
 		java.util.Date today = new java.util.Date();
 		testRunTimeStamp = new java.sql.Timestamp(today.getTime()).toString();
 		testRunTimeStamp = testRunTimeStamp.replace(" ", "_").replace(":", "_").replace(".", "_");
 		screenShotFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\Results\\Screenshots" + "_"
 				+ testRunTimeStamp;		
-		report = Report.initialize("TG_Extent_Report.html", false);
+		report = Report.initialize("TG_Extent_Report_" + Reportname + ".html", false);
 		Report.recordSystemInfo(report, "Operating System", "WINDOWS OS");
 		Report.recordSystemInfo(report, "Java", "1.8");
 		Report.recordSystemInfo(report, "Selenium Version", "3.4");

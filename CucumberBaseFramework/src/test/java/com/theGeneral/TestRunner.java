@@ -1,7 +1,9 @@
 package com.theGeneral;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,7 +21,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(features = "src/test/resources/features",monochrome=false,strict=true, glue = { "com.theGeneral.stepDefinations" }, tags = {
-				"@NewQuote" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
+				"@Login" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })
 public class TestRunner extends BaseClass {
@@ -28,17 +30,25 @@ public class TestRunner extends BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public void setUpClass() throws Exception {
-		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-		readSpecificTestData(System.getProperty("TestCaseId"));
-		initialization();
-		initiateReport();
-	}
-
+		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());	
+				
+	      }
 	@Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
 	public void runScenario(PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper) throws Throwable {
 		// the 'featureWrapper' parameter solely exists to display the feature file in a
 		// test report
+		String sampleString = System.getProperty("TestCaseId");
+	      String[] items = sampleString.split(",");
+	      List<String> itemList = Arrays.asList(items);
+	      System.out.println(itemList);	     
+	      for (int i = 0; i < itemList.size(); i++) {
+	    	    System.out.println(itemList.get(i));	    
+	          readSpecificTestData(itemList.get(i));
+	          initialization();
+				initiateReport(itemList.get(i));
 		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
+		Report.writeContents(report);		
+	}
 	}
 
 	/**
@@ -54,13 +64,11 @@ public class TestRunner extends BaseClass {
 		}
 		return testNGCucumberRunner.provideScenarios();
 	}
+	
+
 
 	@AfterClass(alwaysRun = true)
 	public void tearDownClass() throws Exception {
-
-		Report.writeContents(report);
-		// sendEmail();
-
 		 if (dr == null) {
 		 return;
 		 }
