@@ -48,6 +48,7 @@ public class TestRunner extends BaseClass {
 		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());			
 		Report.writeContents(report);
 		dr.quit();
+		Thread.sleep(3000);
 	      }
 
 	}
