@@ -49,11 +49,12 @@ public class TGQ_New_Quote_Page extends TheGeneralAllPages {
 	public void newquote(String applicationType) throws MyOwnException, InterruptedException {
 		log.info("METHOD(login) STARTED SUCCESSFULLY");
 		try {
-			for (String handle1 : ldriver.getWindowHandles()) {
+			for (String handle1 : ldriver.getWindowHandles()) {				
 				ldriver.switchTo().window(handle1);
+				ldriver.getTitle();
+				ldriver.manage().window().maximize();
 			}
-			Thread.sleep(3000);
-			ldriver.manage().window().maximize();
+			Thread.sleep(3000);			
 			Select state = new Select(tgq_state);
 			state.selectByVisibleText(currentHash.get("QuoteState"));
 			// MyWebElement.enterText(tgq_state, prop.getProperty("tgq_state"));
